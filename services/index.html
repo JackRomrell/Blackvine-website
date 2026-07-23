@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NK9F37CC');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Automation Services for Service Businesses | Blackvine Media</title>
+<meta name="description" content="Blackvine Media provides CRM automation, email marketing automation, SMS follow-up, missed-call text-back, appointment reminders, rebooking, reactivation, lead capture, and tracking systems for high-ticket service businesses.">
+
+<link rel="canonical" href="https://blackvine.media/services/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0E1116">
+
+<!-- TODO: GA4 config / gtag.js snippet goes here once container ID is confirmed -->
+<!-- TODO: Google Tag Manager container snippet (head + body) once container ID is confirmed -->
+<!-- TODO: Google Ads conversion tracking snippet for booked audits -->
+<!-- TODO: fire "cta_click" event on every .btn click once tracking is wired up -->
+<!-- TODO: fire "book_audit_click" event on links pointing to /revenue-leak-audit/ once tracking is wired up -->
+<!-- TODO: add call click tracking to tel: links once a tracking number (e.g. CallRail) is confirmed -->
+<!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
+<!-- TODO: Organization + Service schema (JSON-LD) — see Website Strategy doc section 20 -->
+
+<style>
+/* ==========================================================================
+   Blackvine Media — Services Page V2
+   Same visual system as the approved Home Page V2 / landing pages /
+   Revenue Leak Audit page.
+   Blackvine Charcoal #0E1116 | Deep Navy #101F33 | Vine Green #3F6B4F
+   Soft Sage #A8B8A3 | Warm Ivory #F6F3EC | Slate Gray #68707A | White #FFFFFF
+   Accent: Muted Amber #C89B4A (leak / opportunity highlight only)
+   ========================================================================== */
+
+:root {
+  --charcoal: #0E1116;
+  --navy: #101F33;
+  --vine: #3F6B4F;
+  --vine-light: #4d7f5e;
+  --sage: #A8B8A3;
+  --ivory: #F6F3EC;
+  --slate: #68707A;
+  --white: #FFFFFF;
+  --amber: #C89B4A;
+  --amber-dim: #8a6d3f;
+  --amber-bright: #E0B664;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-head: Georgia, "Times New Roman", serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+
+  --container-max: 1200px;
+  --section-pad-y: 5.5rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
+ul[class], ol[class] { list-style: none; margin: 0; padding: 0; }
+img, picture, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ivory);
+  background: var(--charcoal);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: 1.25rem; position: relative; z-index: 2; }
+@media (min-width: 768px) { .container { padding-inline: 2.25rem; } }
+
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--vine); color: var(--white); padding: 0.75rem 1rem; z-index: 500; border-radius: 0 0 var(--radius-sm) 0; }
+.skip-link:focus { left: 0; }
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1.14; letter-spacing: -0.01em; color: var(--white); }
+.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.eyebrow::before { content: ""; width: 18px; height: 1px; background: var(--sage); display: inline-block; }
+.section-head { max-width: 720px; margin-bottom: 3rem; }
+.section-head h2 { font-size: clamp(1.65rem, 3.8vw, 2.4rem); margin-bottom: 1rem; }
+.section-head p { color: rgba(246, 243, 236, 0.68); font-size: 1.03rem; }
+.section-head.center { margin-inline: auto; text-align: center; }
+.on-light h1, .on-light h2, .on-light h3, .on-light h4 { color: var(--charcoal); }
+.on-light .section-head p { color: var(--slate); }
+.on-light .eyebrow { color: var(--vine); }
+.on-light .eyebrow::before { background: var(--vine); }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; padding: 0.9rem 1.7rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.96rem; border: 1px solid transparent; transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; white-space: nowrap; }
+.btn-primary { background: var(--vine); color: var(--white); box-shadow: 0 2px 4px rgba(14,17,22,0.3), 0 0 0 1px rgba(168,184,163,0.15); }
+.btn-primary:hover { background: var(--vine-light); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(63,107,79,0.42); }
+.btn-secondary { background: rgba(255,255,255,0.04); color: var(--ivory); border-color: rgba(168,184,163,0.35); backdrop-filter: blur(6px); }
+.btn-secondary:hover { border-color: var(--sage); color: var(--sage); transform: translateY(-2px); background: rgba(168,184,163,0.08); }
+.btn-outline-dark { background: transparent; color: var(--charcoal); border-color: var(--charcoal); }
+.btn-outline-dark:hover { background: var(--charcoal); color: var(--white); }
+
+/* ---------- Scout Insight bar ---------- */
+.scout-insight-bar { display: flex; align-items: center; gap: 1rem; background: rgba(168,184,163,0.07); border: 1px solid rgba(168,184,163,0.28); border-radius: var(--radius-md); padding: 0.85rem 1.75rem; max-width: 980px; margin: 2.75rem auto 0; backdrop-filter: blur(6px); box-shadow: 0 0 30px rgba(168,184,163,0.1); position: relative; z-index: 1; }
+.scout-insight-bar .scout-mark { flex-shrink: 0; width: 26px; height: 26px; color: var(--sage); }
+.scout-insight-bar p { font-size: 0.92rem; color: rgba(246,243,236,0.86); margin: 0; }
+.scout-insight-bar strong { color: var(--sage); font-weight: 700; }
+@media (max-width: 640px) {
+  .scout-insight-bar { flex-direction: column; text-align: center; padding: 1rem 1.25rem; }
+}
+
+/* ---------- Glow + texture utilities ---------- */
+.glow-orb { position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 0; }
+.grain-veil { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 20%, rgba(168,184,163,0.05), transparent 40%), radial-gradient(circle at 85% 70%, rgba(200,155,74,0.04), transparent 45%); pointer-events: none; z-index: 0; }
+
+/* ---------- Header ---------- */
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(14,17,22,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(168,184,163,0.14); }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.logo { display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: 0.01em; }
+.logo .scout-mark { color: var(--sage); filter: drop-shadow(0 0 6px rgba(168,184,163,0.35)); }
+.logo-word span { color: var(--sage); }
+
+.nav-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); padding: 0 8px; }
+.nav-toggle span { display: block; height: 2px; width: 100%; background: var(--white); border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.main-nav { position: fixed; inset: 70px 0 0 0; background: rgba(16,31,51,0.98); padding: 1.5rem 1.25rem 2rem; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s; overflow-y: auto; border-top: 1px solid rgba(168,184,163,0.12); }
+.main-nav.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-list { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 1.5rem; }
+.nav-list a { display: block; padding: 0.85rem 0.25rem; color: var(--ivory); font-weight: 500; font-size: 1.02rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.nav-list a:hover { color: var(--sage); }
+.nav-cta { width: 100%; }
+
+@media (min-width: 960px) {
+  .nav-toggle { display: none; }
+  .main-nav { position: static; inset: auto; background: transparent; padding: 0; opacity: 1; visibility: visible; transform: none; display: flex; align-items: center; gap: 2rem; overflow: visible; border-top: none; }
+  .nav-list { flex-direction: row; gap: 1.75rem; margin-bottom: 0; }
+  .nav-list a { padding: 0.4rem 0; border-bottom: none; font-size: 0.92rem; color: rgba(246,243,236,0.82); position: relative; }
+  .nav-list a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: var(--vine); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
+  .nav-list a:hover::after { transform: scaleX(1); }
+  .nav-cta { width: auto; }
+}
+
+/* ---------- Scene / layered section system ---------- */
+.scene { position: relative; padding: var(--section-pad-y) 0; overflow: hidden; }
+.scene-surface { position: absolute; inset: 0; z-index: 0; }
+.scene-ivory .scene-surface { background: var(--ivory); }
+.scene-charcoal .scene-surface { background: var(--charcoal); }
+.scene-navy .scene-surface { background: linear-gradient(180deg, var(--navy) 0%, var(--charcoal) 100%); }
+
+.scene--angle-top .scene-surface { clip-path: polygon(0 3.5%, 100% 0, 100% 100%, 0 100%); }
+.scene--angle-bottom .scene-surface { clip-path: polygon(0 0, 100% 0, 100% 96.5%, 0 100%); }
+.scene--angle-both .scene-surface { clip-path: polygon(0 3.5%, 100% 0, 100% 96.5%, 0 100%); }
+.scene--raise { margin-top: -48px; }
+.scene--raise .scene-surface { box-shadow: 0 -30px 60px rgba(0,0,0,0.35); }
+
+.cta-row { display: flex; justify-content: center; margin-top: 2.75rem; position: relative; z-index: 2; }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; padding: 3rem 0 6.5rem; overflow: hidden; background: radial-gradient(120% 100% at 80% -10%, rgba(63,107,79,0.28), transparent 55%), linear-gradient(180deg, var(--navy) 0%, var(--charcoal) 100%); }
+.hero .glow-orb--1 { width: 480px; height: 480px; top: -160px; right: -120px; background: rgba(168,184,163,0.16); }
+.hero .glow-orb--2 { width: 320px; height: 320px; bottom: -100px; left: -80px; background: rgba(200,155,74,0.10); }
+.hero-inner { display: grid; gap: 3rem; }
+.hero-copy { max-width: 620px; }
+.hero h1 { font-size: clamp(1.8rem, 4.6vw, 2.7rem); margin-bottom: 1.15rem; }
+.hero-sub { color: rgba(246,243,236,0.78); font-size: 1.04rem; max-width: 56ch; margin-bottom: 2rem; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 0; }
+@media (min-width: 1020px) {
+  .hero-inner { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr); align-items: center; gap: 3.5rem; }
+}
+
+/* ---------- Hero map + Scout Inspection badge ---------- */
+.hero-map { position: relative; z-index: 1; }
+.hero-map-frame { position: relative; background: rgba(255,255,255,0.03); border: 1px solid rgba(168,184,163,0.16); border-radius: var(--radius-lg); padding: 2rem 1.4rem 2.1rem; backdrop-filter: blur(8px); box-shadow: 0 30px 70px rgba(0,0,0,0.4); }
+.hero-map-label { display: block; text-align: center; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 1.6rem; }
+
+.scout-inspect-badge { display: flex; align-items: center; gap: 0.85rem; background: rgba(168,184,163,0.07); border: 1px solid rgba(168,184,163,0.32); border-radius: var(--radius-md); padding: 0.85rem 1.1rem; margin: 0 auto 1.5rem; max-width: 320px; backdrop-filter: blur(6px); box-shadow: 0 0 26px rgba(168,184,163,0.16); }
+.scout-inspect-icon-wrap { position: relative; width: 44px; height: 44px; border-radius: 50%; background: radial-gradient(circle, rgba(63,107,79,0.55), rgba(168,184,163,0.08)); border: 1px solid rgba(168,184,163,0.5); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(168,184,163,0.35); animation: floaty 5s ease-in-out infinite; }
+.scout-inspect-icon-wrap svg { color: var(--sage); }
+.scout-inspect-text { display: flex; flex-direction: column; text-align: left; }
+.scout-inspect-label { font-family: var(--font-body); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.03em; color: var(--white); }
+.scout-inspect-sub { font-size: 0.72rem; color: rgba(246,243,236,0.58); font-style: italic; }
+
+/* ---------- Sequential path flow ---------- */
+.path-flow { position: relative; }
+.path-track { display: flex; flex-direction: column; gap: 0; }
+.path-step { display: flex; align-items: center; gap: 1rem; padding: 0.7rem 0.25rem; }
+.path-step-icon { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.path-step-body { display: flex; flex-direction: column; gap: 0.4rem; }
+.path-step-title { font-weight: 700; font-size: 0.84rem; color: var(--white); }
+.path-pill { display: inline-flex; align-items: center; width: fit-content; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.22rem 0.6rem; border-radius: 999px; }
+
+.path-step--live .path-step-icon { background: radial-gradient(circle, rgba(63,107,79,0.6), rgba(63,107,79,0.14)); border: 1px solid rgba(168,184,163,0.6); color: var(--sage); box-shadow: 0 0 16px rgba(168,184,163,0.32); }
+.path-step--live .path-pill { background: rgba(168,184,163,0.2); border: 1px solid rgba(168,184,163,0.55); color: #d3e0cf; }
+.path-step--opportunity .path-step-icon { background: rgba(200,155,74,0.14); border: 1px dashed rgba(200,155,74,0.65); color: var(--amber-bright); }
+.path-step--opportunity .path-pill { background: rgba(200,155,74,0.22); border: 1px solid rgba(200,155,74,0.6); color: #f4d9a4; }
+
+.path-arrow { display: flex; align-items: center; justify-content: center; padding-left: 22px; height: 26px; }
+.path-arrow-bar { position: relative; width: 3px; height: 100%; border-radius: 2px; }
+.path-arrow-bar::after { content: ""; position: absolute; left: 50%; bottom: -2px; width: 0; height: 0; transform: translateX(-50%); border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid currentColor; }
+.path-arrow--live { color: var(--sage); }
+.path-arrow--live .path-arrow-bar { background: var(--sage); }
+.path-arrow--opportunity { color: var(--amber-bright); }
+.path-arrow--opportunity .path-arrow-bar { background: rgba(200,155,74,0.75); }
+.path-arrow--out { color: var(--amber-bright); }
+.path-arrow--out .path-arrow-bar { background: linear-gradient(180deg, var(--sage), var(--amber-bright)); }
+.path-arrow--in { color: var(--sage); }
+.path-arrow--in .path-arrow-bar { background: linear-gradient(180deg, var(--amber-bright), var(--sage)); }
+
+@media (min-width: 640px) {
+  .path-track { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
+  .path-step { flex-direction: column; text-align: center; gap: 0.6rem; flex: 1; min-width: 100px; }
+  .path-arrow { flex: 0 0 auto; width: 26px; height: auto; padding-left: 0; align-self: center; margin-top: 23px; }
+  .path-arrow-bar { width: 100%; height: 3px; }
+  .path-arrow-bar::after { left: auto; right: -2px; bottom: 50%; top: 50%; transform: translateY(-50%); border-left: 7px solid currentColor; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-right: none; }
+  .path-arrow--out .path-arrow-bar { background: linear-gradient(90deg, var(--sage), var(--amber-bright)); }
+  .path-arrow--in .path-arrow-bar { background: linear-gradient(90deg, var(--amber-bright), var(--sage)); }
+}
+
+/* Compact variant of the path flow for smaller explanatory in-section visuals */
+.path-flow--compact { background: rgba(255,255,255,0.03); border: 1px solid rgba(168,184,163,0.16); border-radius: var(--radius-lg); padding: 1.75rem 1.4rem; backdrop-filter: blur(6px); }
+.on-light .path-flow--compact { background: rgba(63,107,79,0.04); border: 1px solid rgba(63,107,79,0.16); }
+.on-light .path-step--live .path-step-icon { background: rgba(63,107,79,0.12); border: 1px solid rgba(63,107,79,0.4); color: var(--vine); box-shadow: none; }
+.on-light .path-step--live .path-pill { background: rgba(63,107,79,0.12); border: 1px solid rgba(63,107,79,0.35); color: var(--vine); }
+.on-light .path-step-title { color: var(--charcoal); }
+
+/* ---------- Board / glass tile grid ---------- */
+.board-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; position: relative; z-index: 1; }
+@media (min-width: 700px) { .board-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .board-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.tile-glass { background: rgba(255,255,255,0.035); border: 1px solid rgba(168,184,163,0.14); border-radius: var(--radius-md); padding: 1.6rem; backdrop-filter: blur(6px); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; position: relative; overflow: hidden; }
+.tile-glass::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--vine), var(--sage)); opacity: 0.8; }
+.tile-glass:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.35); border-color: rgba(168,184,163,0.35); }
+.tile-glass-icon { width: 42px; height: 42px; border-radius: 12px; background: rgba(63,107,79,0.18); color: var(--sage); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
+.tile-glass h3 { font-size: 1.02rem; margin-bottom: 0.55rem; color: var(--white); }
+.tile-glass p { font-size: 0.9rem; color: rgba(246,243,236,0.68); }
+.tile-glass--light { background: #F7F7F4; border: 1px solid rgba(63,107,79,0.18); box-shadow: 0 8px 22px rgba(14,17,22,0.09); }
+.tile-glass--light:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(14,17,22,0.15); border-color: rgba(63,107,79,0.4); }
+.tile-glass--light .tile-glass-icon { background: rgba(63,107,79,0.14); color: #3F6B4F; }
+.tile-glass--light h3 { color: #0E1116; }
+.tile-glass--light p { color: #4A5560; }
+.tile-glass--light .tile-index { color: #9AA79D; }
+.tile-index { position: absolute; top: 1.2rem; right: 1.3rem; font-family: var(--font-head); font-size: 0.78rem; color: rgba(168,184,163,0.45); }
+.tile-link { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 1rem; font-size: 0.82rem; font-weight: 600; color: var(--sage); }
+.tile-link svg { width: 13px; height: 13px; transition: transform 0.2s ease; }
+.tile-glass:hover .tile-link svg { transform: translateX(3px); }
+.tile-glass--light .tile-link { color: var(--vine); }
+
+/* ---------- Chip grid (status boards / audit-style groupings) ---------- */
+.chip-panel { position: relative; z-index: 1; border: 1px solid rgba(168,184,163,0.28); border-radius: var(--radius-lg); background: rgba(255,255,255,0.03); backdrop-filter: blur(8px); padding: 2rem 1.5rem; }
+.on-light .chip-panel { border-color: rgba(63,107,79,0.22); background: rgba(63,107,79,0.04); }
+.chip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (min-width: 700px) { .chip-grid { grid-template-columns: repeat(4, 1fr); } }
+.chip { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.6rem; padding: 1.1rem 0.75rem; border: 1px solid rgba(168,184,163,0.18); border-radius: var(--radius-md); background: rgba(255,255,255,0.02); transition: border-color 0.2s ease, transform 0.2s ease; }
+.chip:hover { border-color: rgba(168,184,163,0.5); transform: translateY(-3px); }
+.chip-icon { width: 34px; height: 34px; border-radius: 50%; background: rgba(63,107,79,0.18); color: var(--sage); display: flex; align-items: center; justify-content: center; }
+.chip span { font-size: 0.8rem; font-weight: 600; color: var(--white); }
+.on-light .chip { background: rgba(255,255,255,0.6); border-color: rgba(63,107,79,0.18); }
+.on-light .chip-icon { background: rgba(63,107,79,0.12); color: var(--vine); }
+.on-light .chip span { color: var(--charcoal); }
+
+/* ---------- Feature / bullet list ---------- */
+.feature-list { display: flex; flex-direction: column; gap: 0.85rem; position: relative; z-index: 1; }
+.feature-list-item { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.94rem; color: rgba(246,243,236,0.8); }
+.feature-list-item svg { flex-shrink: 0; width: 19px; height: 19px; color: var(--sage); margin-top: 2px; }
+.on-light .feature-list-item { color: var(--slate); }
+.on-light .feature-list-item svg { color: var(--vine); }
+
+/* ---------- Industry Path Cards ---------- */
+.industry-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; position: relative; z-index: 1; }
+@media (min-width: 640px) { .industry-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .industry-grid { grid-template-columns: repeat(4, 1fr); } }
+.industry-card { background: var(--white); border-radius: var(--radius-md); padding: 1.6rem 1.5rem; box-shadow: 0 10px 24px rgba(14,17,22,0.12); border-top: 3px solid var(--sage); height: 100%; display: flex; flex-direction: column; }
+.industry-card .card-icon { width: 42px; height: 42px; border-radius: 12px; background: rgba(63,107,79,0.1); color: var(--vine); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
+.industry-card h3 { color: var(--charcoal); font-size: 1.04rem; margin-bottom: 0.55rem; }
+.industry-card p { font-size: 0.88rem; color: var(--slate); flex-grow: 1; margin-bottom: 1.1rem; }
+.industry-card .industry-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.84rem; font-weight: 700; color: var(--vine); }
+.industry-card .industry-link svg { width: 13px; height: 13px; transition: transform 0.2s ease; }
+.industry-card:hover .industry-link svg { transform: translateX(3px); }
+
+/* ---------- Split Path (Disconnected Tools vs Revenue Infrastructure) ---------- */
+.split-wrap { display: grid; grid-template-columns: 1fr; gap: 1.75rem; position: relative; z-index: 1; }
+@media (min-width: 860px) { .split-wrap { grid-template-columns: 1fr 1fr; gap: 2.25rem; } }
+.split-col { border-radius: var(--radius-lg); padding: 1.9rem 1.6rem; position: relative; }
+.split-col-a { background: rgba(200,155,74,0.045); border: 1px solid rgba(200,155,74,0.28); }
+.split-col-b { background: rgba(63,107,79,0.07); border: 1px solid rgba(168,184,163,0.3); }
+.split-label { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.35rem; }
+.split-col-a .split-label { color: var(--amber); }
+.split-col-b .split-label { color: var(--sage); }
+.split-step { display: flex; align-items: center; gap: 0.85rem; padding: 0.6rem 0; font-weight: 700; font-size: 0.92rem; }
+.split-col-a .split-step { color: rgba(246,243,236,0.55); }
+.split-col-b .split-step { color: var(--white); }
+.split-step-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.split-col-a .split-step-dot { background: transparent; border: 1px dashed var(--amber-dim); }
+.split-col-b .split-step-dot { background: var(--sage); box-shadow: 0 0 10px rgba(168,184,163,0.55); }
+.split-connector { width: 2px; height: 16px; margin-left: 4px; }
+.split-col-a .split-connector { background: repeating-linear-gradient(180deg, var(--amber-dim) 0 3px, transparent 3px 7px); opacity: 0.7; }
+.split-col-b .split-connector { background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); }
+
+/* ---------- Final CTA band ---------- */
+.cta-band { position: relative; padding: 4.5rem 0; overflow: hidden; background: linear-gradient(180deg, var(--charcoal) 0%, var(--navy) 60%, var(--charcoal) 100%); }
+.cta-band-vine { width: 2px; height: 42px; margin: 0 auto 1.25rem; background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); position: relative; z-index: 1; }
+.cta-band-head { text-align: center; max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+.cta-band h2 { font-size: clamp(1.6rem, 4.2vw, 2.2rem); margin-bottom: 1rem; }
+.cta-band p { color: rgba(246,243,236,0.72); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--navy); color: rgba(246,243,236,0.85); padding: 3.5rem 0 1.75rem; position: relative; z-index: 1; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.25rem; margin-bottom: 2.5rem; }
+@media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+.footer-brand .logo { color: var(--white); margin-bottom: 0.9rem; }
+.footer-brand p { font-size: 0.9rem; color: rgba(246,243,236,0.68); max-width: 34ch; }
+.footer-col h4 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-col a { font-size: 0.9rem; color: rgba(246,243,236,0.78); }
+.footer-col a:hover { color: var(--white); }
+.footer-contact li { font-size: 0.9rem; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.8rem; color: rgba(246,243,236,0.55); }
+@media (min-width: 720px) { .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; } }
+
+/* ---------- Utility ---------- */
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK9F37CC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="icon-scout" viewBox="0 0 64 64">
+      <polyline points="4,26 22,4 24,28" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="60,26 42,4 40,28" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="8,27 32,58 56,27" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M28 11c1.5-2.2 4.5-2.2 6 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="31" y1="6" x2="31" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="24" y1="34" x2="28" y2="37" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <line x1="40" y1="34" x2="36" y2="37" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-phone-missed" viewBox="0 0 24 24"><path d="M4 5c0 8.3 6.7 15 15 15l1-4.2-4.8-2-2 2c-2-1-3.7-2.7-4.7-4.7l2-2-2-4.8L4 5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 4l5 5M20 4h-5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-crm-nodes" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 8v3a2 2 0 002 2h2M18 8v3a2 2 0 01-2 2h-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-calendar-check" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0113.7-5.7L20 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M20 4v4h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12a8 8 0 01-13.7 5.7L4 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 20v-4h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4V5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-inbox" viewBox="0 0 24 24"><path d="M4 12h4l2 3h4l2-3h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="6" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="icon-envelope" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-megaphone" viewBox="0 0 24 24"><path d="M3 10v4h3l6 4V6l-6 4H3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 9a4 4 0 010 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-tooth" viewBox="0 0 24 24"><path d="M12 3c-3 0-5.2 2-5.2 5 0 3 1 4.2 1.2 7.2.1 2 1 3.8 1.8 3.8s1-2.6 2.2-5c1.2 2.4 1.4 5 2.2 5s1.7-1.8 1.8-3.8C16.2 12.2 17.2 11 17.2 8c0-3-2.2-5-5.2-5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-spine" viewBox="0 0 24 24"><path d="M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 6h8M8 10h8M8 14h8M8 18h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 10-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 005.4-5.4l-2.6 2.6-2-2 2.6-2.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo" aria-label="Blackvine Media home">
+      <svg class="scout-mark" width="26" height="26"><use href="#icon-scout"></use></svg>
+      <span class="logo-word">Blackvine <span>Media</span></span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="primary-navigation" data-main-nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/industries/">Industries</a></li>
+        <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="/revenue-leak-audit/">Book Free Audit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ==========================================================================
+       SECTION 1 — Hero
+       ========================================================================== -->
+  <section class="hero">
+    <div class="glow-orb glow-orb--1"></div>
+    <div class="glow-orb glow-orb--2"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Marketing Automation Services</span>
+          <h1>The Revenue Infrastructure Behind Better Lead Follow-Up</h1>
+          <p class="hero-sub">Blackvine Media builds CRM automation, email marketing automation, SMS follow-up, missed-call text-back, appointment reminders, rebooking, reactivation, lead capture, and tracking systems for high-ticket service businesses.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
+          </div>
+        </div>
+
+        <div class="hero-map reveal">
+          <div class="hero-map-frame">
+            <div class="scout-inspect-badge">
+              <span class="scout-inspect-icon-wrap"><svg width="24" height="24"><use href="#icon-scout"></use></svg></span>
+              <span class="scout-inspect-text">
+                <span class="scout-inspect-label">Scout Inspection</span>
+                <span class="scout-inspect-sub">Mapping the service system</span>
+              </span>
+            </div>
+            <span class="hero-map-label">Revenue Infrastructure System</span>
+
+            <div class="path-flow">
+              <div class="path-track" aria-label="Service system: CRM Automation to Email Automation to SMS Follow-Up to Missed-Call Text-Back to Appointment Reminders to Rebooking/Reactivation to Tracking">
+                <div class="path-step path-step--live">
+                  <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-crm-nodes"></use></svg></span>
+                  <span class="path-step-body">
+                    <span class="path-step-title">CRM Automation</span>
+                    <span class="path-pill">Connected</span>
+                  </span>
+                </div>
+                <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+                <div class="path-step path-step--live">
+                  <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-envelope"></use></svg></span>
+                  <span class="path-step-body">
+                    <span class="path-step-title">Email Automation</span>
+                    <span class="path-pill">Connected</span>
+                  </span>
+                </div>
+                <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+                <div class="path-step path-step--live">
+                  <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-chat"></use></svg></span>
+                  <span class="path-step-body">
+                    <span class="path-step-title">SMS Follow-Up</span>
+                    <span class="path-pill">Connected</span>
+                  </span>
+                </div>
+                <div class="path-arrow path-arrow--out"><span class="path-arrow-bar"></span></div>
+
+                <div class="path-step path-step--opportunity">
+                  <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-phone-missed"></use></svg></span>
+                  <span class="path-step-body">
+                    <span class="path-step-title">Missed-Call Text-Back</span>
+                    <span class="path-pill">Opportunity</span>
+                  </span>
+                </div>
+                <div class="path-arrow path-arrow--in"><span class="path-arrow-bar"></span></div>
+
+                <div class="path-step path-step--live">
+                  <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-calendar-check"></use></svg></span>
+                  <span class="path-step-body">
+                    <span class="path-step-title">Appointment Reminders</span>
+                    <span class="path-pill">Connected</span>
+                  </span>
+                </div>
+                <div class="path-arrow path-arrow--out"><span class="path-arrow-bar"></span></div>
+
+                <div class="path-step path-step--opportunity">
+                  <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-refresh"></use></svg></span>
+                  <span class="path-step-body">
+                    <span class="path-step-title">Rebooking / Reactivation</span>
+                    <span class="path-pill">Opportunity</span>
+                  </span>
+                </div>
+                <div class="path-arrow path-arrow--in"><span class="path-arrow-bar"></span></div>
+
+                <div class="path-step path-step--live">
+                  <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-target"></use></svg></span>
+                  <span class="path-step-body">
+                    <span class="path-step-title">Tracking</span>
+                    <span class="path-pill">Connected</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scout-insight-bar reveal">
+        <svg class="scout-mark" width="28" height="28"><use href="#icon-scout"></use></svg>
+        <p><strong>Scout Insight:</strong> Marketing does not end when someone clicks, calls, or fills out a form. The backend system determines whether that opportunity is followed up with, booked, reminded, rebooked, reactivated, and tracked.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2 — Services Overview
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Service System</span>
+        <h2>Every Service Connects to the Same Revenue Path</h2>
+        <p>Blackvine Media does not build random automations in isolation. Each service supports a connected revenue path: capture the opportunity, organize it in the CRM, follow up through email and SMS, reduce missed appointments, bring past customers back, and track what is working. Lead follow-up is the foundation everything else is built on.</p>
+      </div>
+
+      <div class="board-grid">
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">01</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-crm-nodes"></use></svg></span>
+          <h3>CRM Automation</h3>
+          <p>Structure your CRM around lead stages, customer segments, source tracking, statuses, and next-step follow-up.</p>
+          <a class="tile-link" href="#crm-automation">Learn More <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">02</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-envelope"></use></svg></span>
+          <h3>Email Marketing Automation</h3>
+          <p>Create email follow-up paths for inquiries, estimates, consultations, rebooking, treatment interest, and reactivation.</p>
+          <a class="tile-link" href="#email-automation">Learn More <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">03</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
+          <h3>SMS Follow-Up Automation</h3>
+          <p>Use SMS follow-up, missed-call text-back, appointment reminders, and rebooking prompts to keep momentum moving.</p>
+          <a class="tile-link" href="#sms-automation">Learn More <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">04</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
+          <h3>Lead Capture and Missed Calls</h3>
+          <p>Connect calls, forms, landing pages, and missed-call text-back so high-intent opportunities are easier to catch.</p>
+          <a class="tile-link" href="#lead-capture">Learn More <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">05</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
+          <h3>Rebooking and Reactivation</h3>
+          <p>Bring past customers, inactive patients, old leads, dormant lists, and open opportunities back into the conversation.</p>
+          <a class="tile-link" href="#reactivation">Learn More <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">06</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
+          <h3>Tracking and Visibility</h3>
+          <p>Connect ads, calls, forms, Google Business Profile, landing pages, and CRM records so opportunity sources are easier to trace.</p>
+          <a class="tile-link" href="#tracking">Learn More <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Audit My Revenue System</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3 — CRM Automation
+       ========================================================================== -->
+  <section class="scene scene-navy scene--angle-both scene--raise" id="crm-automation">
+    <div class="scene-surface">
+      <div class="glow-orb" style="width:420px;height:420px;top:-140px;left:-100px;background:rgba(168,184,163,0.12);"></div>
+    </div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">CRM Automation</span>
+        <h2>Turn a Messy CRM Into a Clear Follow-Up System</h2>
+        <p>CRM automation gives your team a cleaner way to manage leads, customers, patients, clients, stages, sources, statuses, and next steps. Instead of relying on memory or scattered notes, your CRM should show what each opportunity is, where it came from, and what should happen next. The goal is not just software configuration — it is a clear follow-up system your team can actually use.</p>
+      </div>
+
+      <div class="chip-panel reveal">
+        <div class="chip-grid">
+          <div class="chip"><span class="chip-icon"><svg width="17" height="17"><use href="#icon-target"></use></svg></span><span>New Lead</span></div>
+          <div class="chip"><span class="chip-icon"><svg width="17" height="17"><use href="#icon-phone-missed"></use></svg></span><span>Missed Call</span></div>
+          <div class="chip"><span class="chip-icon"><svg width="17" height="17"><use href="#icon-envelope"></use></svg></span><span>Estimate Requested</span></div>
+          <div class="chip"><span class="chip-icon"><svg width="17" height="17"><use href="#icon-sparkle"></use></svg></span><span>Consultation Interest</span></div>
+          <div class="chip"><span class="chip-icon"><svg width="17" height="17"><use href="#icon-calendar-check"></use></svg></span><span>Appointment Scheduled</span></div>
+          <div class="chip"><span class="chip-icon"><svg width="17" height="17"><use href="#icon-clock"></use></svg></span><span>Needs Reminder</span></div>
+          <div class="chip"><span class="chip-icon"><svg width="17" height="17"><use href="#icon-refresh"></use></svg></span><span>Ready to Rebook</span></div>
+          <div class="chip"><span class="chip-icon"><svg width="17" height="17"><use href="#icon-inbox"></use></svg></span><span>Inactive Customer</span></div>
+        </div>
+      </div>
+
+      <div style="height:2.5rem;"></div>
+
+      <ul class="feature-list reveal">
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Lead and customer segmentation</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Pipeline and stage organization</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Source and status visibility</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Follow-up task logic</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>CRM cleanup and structure</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Connection to email and SMS workflows</span></li>
+      </ul>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Review My CRM</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4 — Email Marketing Automation
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="email-automation">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Email Automation</span>
+        <h2>Follow Up Without Depending on Manual Reminders</h2>
+        <p>Email marketing automation helps service businesses stay in front of leads, customers, patients, and clients after the first point of interest. It can support inquiries, estimates, treatment interest, consultation follow-up, reminders, rebooking, and reactivation. Email works best when it supports the larger follow-up system instead of operating alone.</p>
+      </div>
+
+      <div class="board-grid">
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-envelope"></use></svg></span>
+          <h3>New Inquiry Follow-Up</h3>
+          <p>Keep new inquiries warm with a structured email sequence after the first point of contact.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
+          <h3>Estimate or Quote Follow-Up</h3>
+          <p>Follow up on open estimates and quotes so they do not quietly go cold.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-sparkle"></use></svg></span>
+          <h3>Consultation Follow-Up</h3>
+          <p>Support consultation interest with clear next-step email communication.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
+          <h3>Rebooking Campaigns</h3>
+          <p>Prompt customers and patients to rebook before too much time passes.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-inbox"></use></svg></span>
+          <h3>Customer Education</h3>
+          <p>Build trust and stay visible with helpful, ongoing customer communication.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
+          <h3>Reactivation Campaigns</h3>
+          <p>Re-engage past customers and dormant leads with targeted email sequences.</p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Find My Follow-Up Gaps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5 — SMS Follow-Up Automation
+       ========================================================================== -->
+  <section class="scene scene-navy scene--angle-both scene--raise" id="sms-automation">
+    <div class="scene-surface">
+      <div class="glow-orb" style="width:420px;height:420px;bottom:-140px;right:-100px;background:rgba(200,155,74,0.08);"></div>
+    </div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">SMS Automation</span>
+        <h2>Keep Momentum Moving With Faster Follow-Up</h2>
+        <p>SMS follow-up helps businesses respond faster when someone shows intent. It can support missed-call text-back, appointment reminders, cancellation recovery, no-show follow-up, rebooking prompts, and short follow-up sequences. SMS is built for speed, because a fast reply often matters more than a long one.</p>
+      </div>
+
+      <div class="path-flow path-flow--compact reveal">
+        <div class="path-track" aria-label="SMS flow: Missed Call to Text-Back to Reply or Booking Link to Reminder to Rebooking Prompt">
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-phone-missed"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Missed Call</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-chat"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Text-Back</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-calendar-check"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Reply / Booking Link</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-clock"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Reminder</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-refresh"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Rebooking Prompt</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:2.5rem;"></div>
+
+      <ul class="feature-list reveal">
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Missed-call text-back</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>New lead SMS follow-up</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Appointment reminders</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Cancellation recovery</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>No-show follow-up</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Rebooking prompts</span></li>
+      </ul>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Audit My SMS Follow-Up</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6 — Lead Capture and Missed Calls
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="lead-capture">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Lead Capture</span>
+        <h2>Make Every Call, Form, and Landing Page Easier to Track</h2>
+        <p>Lead capture systems help connect inbound demand to the backend follow-up process. Calls, forms, landing pages, Google Business Profile, and paid ads should not create disconnected records. They should feed the CRM and trigger the right next step instead of depending on a manual checklist.</p>
+      </div>
+
+      <div class="board-grid">
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-inbox"></use></svg></span>
+          <h3>Website Forms</h3>
+          <p>Route website form submissions directly into the CRM with the right context.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
+          <h3>Landing Page Forms</h3>
+          <p>Connect landing page submissions to follow-up workflows the moment they come in.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
+          <h3>Missed-Call Text-Back</h3>
+          <p>Respond automatically by text when a call cannot be answered live.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
+          <h3>Call Source Visibility</h3>
+          <p>See which calls are coming from which sources so response can be prioritized.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-map-pin"></use></svg></span>
+          <h3>Google Business Profile Leads</h3>
+          <p>Capture calls, messages, and direction requests coming from your Google Business Profile.</p>
+        </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-megaphone"></use></svg></span>
+          <h3>Paid Ad Lead Routing</h3>
+          <p>Send paid ad leads straight into the CRM with the source attached.</p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Check My Lead Capture</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7 — Rebooking and Reactivation
+       ========================================================================== -->
+  <section class="scene scene-navy scene--angle-both scene--raise" id="reactivation">
+    <div class="scene-surface">
+      <div class="glow-orb" style="width:420px;height:420px;top:-140px;left:-100px;background:rgba(168,184,163,0.12);"></div>
+    </div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Rebooking and Reactivation</span>
+        <h2>Past Customers Are Often the Fastest Revenue Opportunity</h2>
+        <p>Many service businesses already have valuable opportunities sitting inside past customer lists, inactive patients, old leads, open estimates, unbooked consultations, and dormant CRM records. Rebooking automation and reactivation systems help bring those opportunities back into the conversation.</p>
+      </div>
+
+      <div class="path-flow path-flow--compact reveal">
+        <div class="path-track" aria-label="Recovery path: Past Customer or Old Lead to CRM Segment to Email and SMS Reactivation to Rebooking Prompt to Scheduled Opportunity">
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-inbox"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Past Customer / Old Lead</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-crm-nodes"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">CRM Segment</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-chat"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Email + SMS Reactivation</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-refresh"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Rebooking Prompt</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-calendar-check"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Scheduled Opportunity</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:2.5rem;"></div>
+
+      <div class="board-grid">
+        <div class="tile-glass reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
+          <h3>Past Customer Reactivation</h3>
+          <p>Re-engage customers who have not returned in a while with timely outreach.</p>
+        </div>
+        <div class="tile-glass reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-inbox"></use></svg></span>
+          <h3>Inactive Patient or Client Lists</h3>
+          <p>Turn dormant patient and client lists back into scheduled opportunities.</p>
+        </div>
+        <div class="tile-glass reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-clock"></use></svg></span>
+          <h3>Old Lead Follow-Up</h3>
+          <p>Revisit older leads that never received a proper follow-up sequence.</p>
+        </div>
+        <div class="tile-glass reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-envelope"></use></svg></span>
+          <h3>Open Estimate Follow-Up</h3>
+          <p>Follow back up on estimates and quotes that were never closed out.</p>
+        </div>
+        <div class="tile-glass reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
+          <h3>Seasonal Rebooking</h3>
+          <p>Prompt seasonal or recurring services back onto the calendar at the right time.</p>
+        </div>
+        <div class="tile-glass reveal">
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-crm-nodes"></use></svg></span>
+          <h3>Dormant CRM Recovery</h3>
+          <p>Surface records that have gone quiet in the CRM and give them a next step.</p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Reactivate Past Opportunities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8 — Tracking and Source Visibility
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="tracking">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Tracking</span>
+        <h2>Know Which Sources Create Real Opportunities</h2>
+        <p>Tracking and source visibility help connect marketing activity to real opportunities. Calls, forms, ads, landing pages, Google Business Profile, CRM records, and follow-up activity should be easier to trace so the business can see where demand is coming from and where follow-up is breaking down.</p>
+      </div>
+
+      <div class="path-flow path-flow--compact reveal">
+        <div class="path-track" aria-label="Tracking map: Ad, Google Business Profile, Website, or Referral to Call or Form to CRM Record to Follow-Up Workflow to Booked Opportunity">
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-megaphone"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Ad / GBP / Website / Referral</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-phone-missed"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Call or Form</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-crm-nodes"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">CRM Record</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-chat"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Follow-Up Workflow</span></span>
+          </div>
+          <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
+
+          <div class="path-step path-step--live">
+            <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-calendar-check"></use></svg></span>
+            <span class="path-step-body"><span class="path-step-title">Booked Opportunity</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:2.5rem;"></div>
+
+      <ul class="feature-list reveal">
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>UTM and source visibility</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Call and form source tracking</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Landing page tracking</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>CRM opportunity attribution</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Follow-up event tracking</span></li>
+        <li class="feature-list-item"><svg><use href="#icon-check"></use></svg><span>Conversion tracking preparation</span></li>
+      </ul>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Review My Tracking Setup</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9 — How It All Works Together
+       ========================================================================== -->
+  <section class="scene scene-charcoal scene--angle-top scene--raise">
+    <div class="scene-surface"><div class="grain-veil"></div></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Connected System</span>
+        <h2>The Services Work Best When They Are Built Together</h2>
+        <p>A CRM cleanup helps organize opportunities. Email and SMS follow-up move those opportunities forward. Missed-call text-back catches demand faster. Appointment reminders reduce drop-off. Reactivation brings past opportunities back. Tracking shows which sources and systems are actually creating movement.</p>
+      </div>
+
+      <div class="split-wrap reveal">
+        <div class="split-col split-col-a">
+          <span class="split-label">Path A &mdash; Disconnected Tools</span>
+          <div class="split-step"><span class="split-step-dot"></span>Calls and forms land in different places</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>CRM is hard to trust</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Follow-up depends on memory</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Past customers are not reactivated</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Tracking is unclear</div>
+        </div>
+
+        <div class="split-col split-col-b">
+          <span class="split-label">Path B &mdash; Revenue Infrastructure</span>
+          <div class="split-step"><span class="split-step-dot"></span>Calls and forms feed the CRM</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Segments trigger the right follow-up</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Email and SMS move opportunities forward</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Reminders and rebooking protect momentum</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Tracking connects source to opportunity</div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Build My Revenue Infrastructure</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 10 — Industries CTA
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Industry Applications</span>
+        <h2>Built Around the Way Your Business Actually Books Revenue</h2>
+        <p>The same backend system can support different high-value service businesses, but the follow-up paths should fit the industry. Dental practices, med spas, chiropractors, and service businesses each have different lead, booking, rebooking, and reactivation patterns, which is why each industry needs a slightly different follow-up path.</p>
+      </div>
+
+      <div class="industry-grid">
+        <div class="industry-card reveal">
+          <span class="card-icon"><svg width="20" height="20"><use href="#icon-tooth"></use></svg></span>
+          <h3>Dental Practices</h3>
+          <p>New patients, missed calls, treatment plans, recall, and inactive patients.</p>
+          <a class="industry-link" href="/dental-marketing-automation/">Dental Automation <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="industry-card reveal">
+          <span class="card-icon"><svg width="20" height="20"><use href="#icon-sparkle"></use></svg></span>
+          <h3>Med Spas</h3>
+          <p>Consultation leads, treatment interest, rebooking, and inactive clients.</p>
+          <a class="industry-link" href="/med-spa-marketing-automation/">Med Spa Automation <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="industry-card reveal">
+          <span class="card-icon"><svg width="20" height="20"><use href="#icon-spine"></use></svg></span>
+          <h3>Chiropractors</h3>
+          <p>New patient inquiries, care-plan retention, reminders, and reactivation.</p>
+          <a class="industry-link" href="/chiropractor-marketing-automation/">Chiropractor Automation <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="industry-card reveal">
+          <span class="card-icon"><svg width="20" height="20"><use href="#icon-wrench"></use></svg></span>
+          <h3>Service Businesses</h3>
+          <p>Lead inquiries, missed calls, estimate follow-up, and customer reactivation.</p>
+          <a class="industry-link" href="/service-business-marketing-automation/">Service Business Automation <svg><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/industries/">Explore Industries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 11 — Final CTA
+       ========================================================================== -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-vine"></div>
+      <div class="cta-band-head reveal">
+        <h2>Find the Backend Leaks Before You Spend More on Traffic</h2>
+        <p>Start with a free Revenue Leak Audit and see where your CRM, lead response, email and SMS follow-up, reminders, rebooking, reactivation, and tracking may be losing revenue.</p>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==========================================================================
+     Footer
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Blackvine Media home">
+          <svg class="scout-mark" width="24" height="24"><use href="#icon-scout"></use></svg>
+          <span class="logo-word">Blackvine <span>Media</span></span>
+        </a>
+        <p>Blackvine Media builds CRM, email, and SMS automation systems for high-ticket service businesses. We help teams capture leads faster, recover missed opportunities, reactivate past customers, reduce no-shows, and turn more inquiries into booked appointments.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="/dental-marketing-automation/">Dental Practices</a></li>
+          <li><a href="/med-spa-marketing-automation/">Med Spas</a></li>
+          <li><a href="/chiropractor-marketing-automation/">Chiropractors</a></li>
+          <li><a href="/service-business-marketing-automation/">Service Businesses</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><a href="tel:+17208692292">(720) 869-2292</a></li>
+          <li><a href="mailto:Jack@blackvine.media">Jack@blackvine.media</a></li>
+        </ul>
+        <!-- TODO: add call-tracking number (e.g. CallRail) once confirmed -->
+        <!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved.</span>
+      <span>CRM, Email &amp; SMS Automation for High-Ticket Service Businesses</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+  /* ---------- Mobile nav toggle ---------- */
+  var navToggle = document.querySelector('[data-nav-toggle]');
+  var mainNav = document.querySelector('[data-main-nav]');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = mainNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mainNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('is-open')) {
+        mainNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  /* ---------- Smooth scroll for in-page anchors ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = link.getAttribute('href');
+      if (targetId.length > 1) {
+        var target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  /* ---------- Subtle scroll reveal (IntersectionObserver, cheap + non-jank) ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---------------------------------------------------------------------
+     TODO: Analytics + Conversion Tracking
+     -----------------------------------------------------------------------
+     - Insert GA4 config / gtag.js snippet in <head>.
+     - Insert Google Tag Manager container snippet once container ID is confirmed.
+     - Fire a "cta_click" event on every .btn click, labeled by which CTA was used
+       (hero, overview, CRM, email, SMS, lead capture, reactivation, tracking,
+       connected system, industries, final CTA).
+     - Fire a "book_audit_click" event on every link pointing to
+       /revenue-leak-audit/ to track intent to convert from the services page.
+     - Add Google Ads conversion tracking once the audit booking event is confirmed.
+     - Add call click tracking to tel: links once a tracking number (e.g. CallRail)
+       is confirmed.
+     - Add email click tracking to mailto: links.
+     - Add Organization + Service schema (JSON-LD) once finalized.
+  ------------------------------------------------------------------------ */
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NK9F37CC');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Business Marketing Automation &amp; CRM Follow-Up Systems | Blackvine Media</title>
+<meta name="description" content="Blackvine Media builds CRM, email, SMS, missed-call text-back, estimate follow-up, reactivation, appointment reminder, and lead capture automation systems for service businesses.">
+
+<link rel="canonical" href="https://blackvine.media/service-business-marketing-automation/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0E1116">
+
+<!-- TODO: GA4 config / gtag.js snippet goes here once container ID is confirmed -->
+<!-- TODO: Google Tag Manager container snippet (head + body) once container ID is confirmed -->
+<!-- TODO: Google Ads conversion tracking snippet for booked audits -->
+<!-- TODO: fire "cta_click" event on every .btn click once tracking is wired up -->
+<!-- TODO: fire "book_audit_click" event on links to /revenue-leak-audit/ once tracking is wired up -->
+<!-- TODO: add call click tracking to tel: links once a tracking number (e.g. CallRail) is confirmed -->
+<!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
+<!-- TODO: Organization + Service schema (JSON-LD) — see Website Strategy doc section 20 -->
+
+<style>
+/* ==========================================================================
+   Blackvine Media — Service Businesses Landing Page V2
+   Same visual system as Homepage V2 / Services V2 / Industries V2 / Dental V2 /
+   Med Spa V2 / Chiropractor V2.
+   Paid-traffic landing page: focused, fewer distractions, every section
+   supports the Free Revenue Leak Audit CTA.
+   Blackvine Charcoal #0E1116 | Deep Navy #101F33 | Vine Green #3F6B4F
+   Soft Sage #A8B8A3 | Warm Ivory #F6F3EC | Slate Gray #68707A | White #FFFFFF
+   Accent: Muted Amber #C89B4A (leak / discovered-opportunity highlight only)
+   ========================================================================== */
+
+:root {
+  --charcoal: #0E1116;
+  --navy: #101F33;
+  --vine: #3F6B4F;
+  --vine-light: #4d7f5e;
+  --sage: #A8B8A3;
+  --ivory: #F6F3EC;
+  --slate: #68707A;
+  --white: #FFFFFF;
+  --amber: #C89B4A;
+  --amber-dim: #8a6d3f;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-head: Georgia, "Times New Roman", serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+
+  --container-max: 1200px;
+  --section-pad-y: 5.5rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
+ul[class], ol[class] { list-style: none; margin: 0; padding: 0; }
+img, picture, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ivory);
+  background: var(--charcoal);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: 1.25rem; position: relative; z-index: 2; }
+@media (min-width: 768px) { .container { padding-inline: 2.25rem; } }
+
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--vine); color: var(--white); padding: 0.75rem 1rem; z-index: 500; border-radius: 0 0 var(--radius-sm) 0; }
+.skip-link:focus { left: 0; }
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1.14; letter-spacing: -0.01em; color: var(--white); }
+.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.eyebrow::before { content: ""; width: 18px; height: 1px; background: var(--sage); display: inline-block; }
+.section-head { max-width: 720px; margin-bottom: 3rem; }
+.section-head h2 { font-size: clamp(1.65rem, 3.8vw, 2.4rem); margin-bottom: 1rem; }
+.section-head p { color: rgba(246, 243, 236, 0.68); font-size: 1.03rem; }
+.section-head.center { margin-inline: auto; text-align: center; }
+.on-light h1, .on-light h2, .on-light h3, .on-light h4 { color: var(--charcoal); }
+.on-light .section-head p { color: var(--slate); }
+.on-light .eyebrow { color: var(--vine); }
+.on-light .eyebrow::before { background: var(--vine); }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; padding: 0.9rem 1.7rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.96rem; border: 1px solid transparent; transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; white-space: nowrap; }
+.btn-primary { background: var(--vine); color: var(--white); box-shadow: 0 2px 4px rgba(14,17,22,0.3), 0 0 0 1px rgba(168,184,163,0.15); }
+.btn-primary:hover { background: var(--vine-light); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(63,107,79,0.42); }
+.btn-secondary { background: rgba(255,255,255,0.04); color: var(--ivory); border-color: rgba(168,184,163,0.35); backdrop-filter: blur(6px); }
+.btn-secondary:hover { border-color: var(--sage); color: var(--sage); transform: translateY(-2px); background: rgba(168,184,163,0.08); }
+.btn-outline-dark { background: transparent; color: var(--charcoal); border-color: var(--charcoal); }
+.btn-outline-dark:hover { background: var(--charcoal); color: var(--white); }
+
+/* ---------- Scout badge ---------- */
+.scout-badge { display: inline-flex; align-items: flex-start; gap: 0.75rem; background: rgba(168,184,163,0.07); border: 1px solid rgba(168,184,163,0.25); border-radius: var(--radius-md); padding: 1rem 1.15rem; max-width: 560px; backdrop-filter: blur(4px); }
+.scout-badge .scout-mark { flex-shrink: 0; width: 28px; height: 28px; color: var(--sage); }
+.scout-badge p { font-size: 0.9rem; color: rgba(246,243,236,0.86); }
+.scout-badge strong { color: var(--sage); font-weight: 700; }
+.on-light .scout-badge { background: rgba(63,107,79,0.06); border-color: rgba(63,107,79,0.22); }
+.on-light .scout-badge .scout-mark { color: var(--vine); }
+.on-light .scout-badge p { color: var(--slate); }
+.on-light .scout-badge strong { color: var(--vine); }
+
+/* ---------- Glow + texture utilities ---------- */
+.glow-orb { position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 0; }
+.grain-veil { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 20%, rgba(168,184,163,0.05), transparent 40%), radial-gradient(circle at 85% 70%, rgba(200,155,74,0.04), transparent 45%); pointer-events: none; z-index: 0; }
+
+/* ---------- Header ---------- */
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(14,17,22,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(168,184,163,0.14); }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.logo { display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: 0.01em; }
+.logo .scout-mark { color: var(--sage); filter: drop-shadow(0 0 6px rgba(168,184,163,0.35)); }
+.logo-word span { color: var(--sage); }
+
+.nav-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); padding: 0 8px; }
+.nav-toggle span { display: block; height: 2px; width: 100%; background: var(--white); border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.main-nav { position: fixed; inset: 70px 0 0 0; background: rgba(16,31,51,0.98); padding: 1.5rem 1.25rem 2rem; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s; overflow-y: auto; border-top: 1px solid rgba(168,184,163,0.12); }
+.main-nav.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-list { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 1.5rem; }
+.nav-list a { display: block; padding: 0.85rem 0.25rem; color: var(--ivory); font-weight: 500; font-size: 1.02rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.nav-list a:hover { color: var(--sage); }
+.nav-cta { width: 100%; }
+
+@media (min-width: 960px) {
+  .nav-toggle { display: none; }
+  .main-nav { position: static; inset: auto; background: transparent; padding: 0; opacity: 1; visibility: visible; transform: none; display: flex; align-items: center; gap: 2rem; overflow: visible; border-top: none; }
+  .nav-list { flex-direction: row; gap: 1.75rem; margin-bottom: 0; }
+  .nav-list a { padding: 0.4rem 0; border-bottom: none; font-size: 0.92rem; color: rgba(246,243,236,0.82); position: relative; }
+  .nav-list a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: var(--vine); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
+  .nav-list a:hover::after { transform: scaleX(1); }
+  .nav-cta { width: auto; }
+}
+
+/* ---------- Scene / layered section system ---------- */
+.scene { position: relative; padding: var(--section-pad-y) 0; overflow: hidden; }
+.scene-surface { position: absolute; inset: 0; z-index: 0; }
+.scene-ivory .scene-surface { background: var(--ivory); }
+.scene-charcoal .scene-surface { background: var(--charcoal); }
+.scene-navy .scene-surface { background: linear-gradient(180deg, var(--navy) 0%, var(--charcoal) 100%); }
+
+.scene--angle-top .scene-surface { clip-path: polygon(0 3.5%, 100% 0, 100% 100%, 0 100%); }
+.scene--angle-bottom .scene-surface { clip-path: polygon(0 0, 100% 0, 100% 96.5%, 0 100%); }
+.scene--angle-both .scene-surface { clip-path: polygon(0 3.5%, 100% 0, 100% 96.5%, 0 100%); }
+.scene--raise { margin-top: -48px; }
+.scene--raise .scene-surface { box-shadow: 0 -30px 60px rgba(0,0,0,0.35); }
+.scene--compact { padding: 3.25rem 0; }
+
+.cta-row { display: flex; justify-content: center; margin-top: 2.75rem; position: relative; z-index: 2; }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; padding: 3rem 0 6.5rem; overflow: hidden; background: radial-gradient(120% 100% at 80% -10%, rgba(63,107,79,0.28), transparent 55%), linear-gradient(180deg, var(--navy) 0%, var(--charcoal) 100%); }
+.hero .glow-orb--1 { width: 480px; height: 480px; top: -160px; right: -120px; background: rgba(168,184,163,0.16); }
+.hero .glow-orb--2 { width: 320px; height: 320px; bottom: -100px; left: -80px; background: rgba(200,155,74,0.10); }
+.hero-inner { display: grid; gap: 3rem; }
+.hero-copy { max-width: 620px; }
+.hero h1 { font-size: clamp(1.8rem, 4.6vw, 2.7rem); margin-bottom: 1.15rem; }
+.hero-sub { color: rgba(246,243,236,0.78); font-size: 1.04rem; max-width: 56ch; margin-bottom: 1.85rem; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.75rem; }
+@media (min-width: 1020px) {
+  .hero-inner { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr); align-items: center; gap: 3.5rem; }
+}
+
+/* ---------- Hero revenue path map + Scout Inspection badge ---------- */
+.hero-map { position: relative; z-index: 1; }
+.hero-map-frame { position: relative; background: rgba(255,255,255,0.03); border: 1px solid rgba(168,184,163,0.16); border-radius: var(--radius-lg); padding: 2rem 1.4rem 1.6rem; backdrop-filter: blur(8px); box-shadow: 0 30px 70px rgba(0,0,0,0.4); }
+.hero-map-label { display: block; text-align: center; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 1.6rem; }
+
+.scout-inspect-badge { display: flex; align-items: center; gap: 0.85rem; background: rgba(168,184,163,0.07); border: 1px solid rgba(168,184,163,0.32); border-radius: var(--radius-md); padding: 0.85rem 1.1rem; margin: 0 auto 1.5rem; max-width: 300px; backdrop-filter: blur(6px); box-shadow: 0 0 26px rgba(168,184,163,0.16); }
+.scout-inspect-icon-wrap { position: relative; width: 44px; height: 44px; border-radius: 50%; background: radial-gradient(circle, rgba(63,107,79,0.55), rgba(168,184,163,0.08)); border: 1px solid rgba(168,184,163,0.5); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(168,184,163,0.35); animation: floaty 5s ease-in-out infinite; }
+.scout-inspect-icon-wrap svg { color: var(--sage); }
+.scout-inspect-text { display: flex; flex-direction: column; text-align: left; }
+.scout-inspect-label { font-family: var(--font-body); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.03em; color: var(--white); }
+.scout-inspect-sub { font-size: 0.72rem; color: rgba(246,243,236,0.58); font-style: italic; }
+
+.map-track { display: flex; flex-direction: column; gap: 0; position: relative; }
+.map-node { display: flex; align-items: center; gap: 0.9rem; padding: 0.65rem 0.25rem; }
+.map-node-icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; }
+.map-node-title { font-weight: 700; font-size: 0.86rem; color: var(--white); }
+.map-node-state { display: block; font-size: 0.7rem; margin-top: 0.15rem; }
+
+.map-node--live .map-node-icon { background: radial-gradient(circle, rgba(63,107,79,0.55), rgba(63,107,79,0.12)); border: 1px solid rgba(168,184,163,0.55); color: var(--sage); box-shadow: 0 0 16px rgba(168,184,163,0.3); }
+.map-node--live .map-node-state { color: var(--sage); }
+.map-node--leak .map-node-icon { background: rgba(200,155,74,0.08); border: 1px dashed rgba(200,155,74,0.55); color: var(--amber); }
+.map-node--leak .map-node-state { color: var(--amber); }
+.map-node--leak .map-node-title { color: rgba(246,243,236,0.55); }
+
+.map-connector { display: flex; align-items: center; padding-left: 20px; height: 20px; }
+.map-connector .stub { width: 2px; height: 100%; }
+.map-connector--live .stub { background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); }
+.map-connector--leak .stub { background: repeating-linear-gradient(180deg, var(--amber-dim) 0 3px, transparent 3px 7px); opacity: 0.7; }
+
+@media (min-width: 640px) {
+  .map-track { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
+  .map-node { flex-direction: column; text-align: center; flex: 1; min-width: 100px; }
+  .map-connector { flex: 0 0 auto; width: 24px; height: auto; align-items: center; justify-content: center; padding-left: 0; align-self: center; margin-top: 21px; }
+  .map-connector .stub { width: 100%; height: 2px; }
+  .map-connector--live .stub { background: repeating-linear-gradient(90deg, var(--sage) 0 4px, transparent 4px 8px); }
+  .map-connector--leak .stub { background: repeating-linear-gradient(90deg, var(--amber-dim) 0 3px, transparent 3px 7px); }
+}
+
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes pulseGlow { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+
+/* ---------- Leak Map (Section 2) ---------- */
+.leak-map { position: relative; max-width: 880px; margin-inline: auto; }
+.leak-node { position: relative; display: flex; align-items: center; gap: 1.25rem; padding: 1.15rem 0; }
+.leak-node-icon { width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(200,155,74,0.08); border: 1px solid rgba(200,155,74,0.4); color: var(--amber); }
+.leak-panel { background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 1.1rem 1.3rem; flex: 1; }
+.leak-panel h3 { font-size: 1rem; margin-bottom: 0.3rem; color: var(--white); }
+.leak-panel p { font-size: 0.9rem; color: rgba(246,243,236,0.65); }
+.leak-tag-inline { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.35rem; }
+
+.leak-connector { display: flex; padding-left: 22px; height: 26px; }
+.leak-connector .stub { width: 2px; height: 100%; background: repeating-linear-gradient(180deg, var(--amber-dim) 0 3px, transparent 3px 7px); position: relative; }
+.leak-connector .crack { position: absolute; left: -5px; top: 45%; width: 12px; height: 12px; color: var(--amber); }
+
+@media (min-width: 760px) {
+  .leak-node:nth-child(4n+3), .leak-node:nth-child(4n) { flex-direction: row-reverse; text-align: right; }
+  .leak-node:nth-child(4n+3) .leak-connector, .leak-node:nth-child(4n) .leak-connector { padding-left: 0; padding-right: 22px; justify-content: flex-end; }
+}
+
+.on-light .leak-panel { background: #F7F7F4; border: 1px solid rgba(63,107,79,0.16); box-shadow: 0 8px 20px rgba(14,17,22,0.07); }
+.on-light .leak-panel h3 { color: #0E1116; }
+.on-light .leak-panel p { color: #4A5560; }
+.on-light .leak-node-icon { background: rgba(200,155,74,0.1); border: 1px solid rgba(200,155,74,0.45); color: #8a6d3f; }
+.on-light .leak-tag-inline { color: #8a6d3f; }
+
+/* ---------- System Path (Section 3) ---------- */
+.system-path { position: relative; z-index: 1; background: rgba(255,255,255,0.03); border: 1px solid rgba(168,184,163,0.16); border-radius: var(--radius-lg); padding: 2.25rem 1.5rem; backdrop-filter: blur(6px); }
+.system-track { display: flex; flex-direction: column; gap: 0; }
+.system-tile { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 0.5rem; }
+.system-tile-icon { width: 46px; height: 46px; border-radius: 14px; background: linear-gradient(135deg, rgba(63,107,79,0.5), rgba(168,184,163,0.12)); border: 1px solid rgba(168,184,163,0.5); box-shadow: 0 0 18px rgba(168,184,163,0.28); display: flex; align-items: center; justify-content: center; color: var(--sage); flex-shrink: 0; animation: floaty 6s ease-in-out infinite; }
+.system-tile:nth-child(odd) .system-tile-icon { animation-delay: 0.4s; }
+.system-tile-title { font-weight: 700; font-size: 0.86rem; color: var(--white); }
+.system-connector { display: flex; align-items: center; padding-left: 24px; height: 24px; }
+.system-connector .stub { width: 2px; height: 100%; background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); position: relative; }
+.system-connector .stub::after { content: ""; position: absolute; top: 50%; left: 50%; width: 6px; height: 6px; border-radius: 50%; background: var(--vine-light); transform: translate(-50%,-50%); box-shadow: 0 0 8px rgba(168,184,163,0.6); animation: pulseGlow 2.4s ease-in-out infinite; }
+
+@media (min-width: 900px) {
+  .system-track { flex-direction: row; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+  .system-tile { flex-direction: column; text-align: center; flex: 1 1 120px; min-width: 0; }
+  .system-connector { flex: 0 0 auto; width: 28px; height: auto; padding-left: 0; align-self: center; margin-top: 23px; }
+  .system-connector .stub { width: 100%; height: 2px; background: repeating-linear-gradient(90deg, var(--sage) 0 4px, transparent 4px 8px); }
+}
+
+/* ---------- System Board (glass tiles) ---------- */
+.board-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; position: relative; z-index: 1; }
+@media (min-width: 700px) { .board-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .board-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.tile-glass { background: rgba(255,255,255,0.035); border: 1px solid rgba(168,184,163,0.14); border-radius: var(--radius-md); padding: 1.6rem; backdrop-filter: blur(6px); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; position: relative; overflow: hidden; }
+.tile-glass::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--vine), var(--sage)); opacity: 0.8; }
+.tile-glass:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.35); border-color: rgba(168,184,163,0.35); }
+.tile-glass-icon { width: 42px; height: 42px; border-radius: 12px; background: rgba(63,107,79,0.18); color: var(--sage); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
+.tile-glass h3 { font-size: 1.02rem; margin-bottom: 0.55rem; color: var(--white); }
+.tile-glass p { font-size: 0.9rem; color: rgba(246,243,236,0.68); }
+.tile-glass--light { background: #F7F7F4; border: 1px solid rgba(63,107,79,0.18); box-shadow: 0 8px 22px rgba(14,17,22,0.09); }
+.tile-glass--light:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(14,17,22,0.15); border-color: rgba(63,107,79,0.4); }
+.tile-glass--light .tile-glass-icon { background: rgba(63,107,79,0.14); color: #3F6B4F; }
+.tile-glass--light h3 { color: #0E1116; }
+.tile-glass--light p { color: #4A5560; }
+.tile-glass--light .tile-index { color: #9AA79D; }
+.tile-index { position: absolute; top: 1.2rem; right: 1.3rem; font-family: var(--font-head); font-size: 0.78rem; color: rgba(168,184,163,0.45); }
+
+/* ---------- Split Path (Section 5) ---------- */
+.split-wrap { display: grid; grid-template-columns: 1fr; gap: 1.75rem; position: relative; z-index: 1; }
+@media (min-width: 860px) { .split-wrap { grid-template-columns: 1fr 1fr; gap: 2.25rem; } }
+.split-col { border-radius: var(--radius-lg); padding: 1.9rem 1.6rem; position: relative; }
+.split-col-a { background: rgba(200,155,74,0.045); border: 1px solid rgba(200,155,74,0.28); }
+.split-col-b { background: rgba(63,107,79,0.07); border: 1px solid rgba(168,184,163,0.3); }
+.split-label { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.35rem; }
+.split-col-a .split-label { color: var(--amber); }
+.split-col-b .split-label { color: var(--sage); }
+.split-step { display: flex; align-items: center; gap: 0.85rem; padding: 0.6rem 0; font-weight: 700; font-size: 0.92rem; }
+.split-col-a .split-step { color: rgba(246,243,236,0.55); }
+.split-col-b .split-step { color: var(--white); }
+.split-step-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.split-col-a .split-step-dot { background: transparent; border: 1px dashed var(--amber-dim); }
+.split-col-b .split-step-dot { background: var(--sage); box-shadow: 0 0 10px rgba(168,184,163,0.55); }
+.split-connector { width: 2px; height: 16px; margin-left: 4px; }
+.split-col-a .split-connector { background: repeating-linear-gradient(180deg, var(--amber-dim) 0 3px, transparent 3px 7px); opacity: 0.7; }
+.split-col-b .split-connector { background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); }
+.split-result { margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px dashed rgba(255,255,255,0.12); font-size: 0.88rem; }
+.split-col-a .split-result { color: var(--amber); }
+.split-col-b .split-result { color: var(--sage); }
+
+/* ---------- Scout Audit Lens ---------- */
+.lens-wrap { position: relative; display: flex; flex-direction: column; align-items: center; z-index: 1; }
+.lens-glow { position: absolute; top: 50%; left: 50%; width: 560px; height: 560px; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(168,184,163,0.14), transparent 65%); z-index: 0; pointer-events: none; }
+.lens-scout { width: 60px; height: 60px; color: var(--sage); margin-bottom: 1rem; filter: drop-shadow(0 0 12px rgba(168,184,163,0.4)); position: relative; z-index: 1; }
+.lens-panel { position: relative; z-index: 1; border: 1px solid rgba(168,184,163,0.28); border-radius: var(--radius-lg); background: rgba(255,255,255,0.03); backdrop-filter: blur(8px); padding: 2rem 1.5rem; max-width: 800px; width: 100%; }
+.lens-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (min-width: 700px) { .lens-grid { grid-template-columns: repeat(3, 1fr); } }
+.lens-chip { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.6rem; padding: 1.1rem 0.75rem; border: 1px solid rgba(168,184,163,0.18); border-radius: var(--radius-md); background: rgba(255,255,255,0.02); transition: border-color 0.2s ease, transform 0.2s ease; }
+.lens-chip:hover { border-color: rgba(168,184,163,0.5); transform: translateY(-3px); }
+.lens-chip-icon { width: 34px; height: 34px; border-radius: 50%; background: rgba(63,107,79,0.18); color: var(--sage); display: flex; align-items: center; justify-content: center; }
+.lens-chip span { font-size: 0.8rem; font-weight: 600; color: var(--white); }
+.cta-band-secondary { display: inline-flex; align-items: center; font-size: 0.9rem; color: rgba(246,243,236,0.65); text-decoration: underline; text-underline-offset: 3px; }
+.cta-band-secondary:hover { color: var(--sage); }
+
+/* ---------- Explore More (compact) ---------- */
+.explore-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; position: relative; z-index: 1; }
+.explore-link { font-size: 0.86rem; font-weight: 600; color: var(--vine); background: rgba(63,107,79,0.06); border: 1px solid rgba(63,107,79,0.25); border-radius: 999px; padding: 0.55rem 1.1rem; transition: background 0.2s ease, border-color 0.2s ease; }
+.explore-link:hover { background: rgba(63,107,79,0.12); border-color: rgba(63,107,79,0.45); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--navy); color: rgba(246,243,236,0.85); padding: 3.5rem 0 1.75rem; position: relative; z-index: 1; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.25rem; margin-bottom: 2.5rem; }
+@media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+.footer-brand .logo { color: var(--white); margin-bottom: 0.9rem; }
+.footer-brand p { font-size: 0.9rem; color: rgba(246,243,236,0.68); max-width: 34ch; }
+.footer-col h4 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-col a { font-size: 0.9rem; color: rgba(246,243,236,0.78); }
+.footer-col a:hover { color: var(--white); }
+.footer-contact li { font-size: 0.9rem; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.8rem; color: rgba(246,243,236,0.55); }
+@media (min-width: 720px) { .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; } }
+
+/* ---------- Utility ---------- */
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK9F37CC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="icon-scout" viewBox="0 0 64 64">
+      <polyline points="4,26 22,4 24,28" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="60,26 42,4 40,28" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="8,27 32,58 56,27" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M28 11c1.5-2.2 4.5-2.2 6 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="31" y1="6" x2="31" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="24" y1="34" x2="28" y2="37" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <line x1="40" y1="34" x2="36" y2="37" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-crack" viewBox="0 0 24 24"><path d="M12 2l-3 8 4 1-5 11 2-9-4-1z" fill="currentColor"/></symbol>
+    <symbol id="icon-phone-missed" viewBox="0 0 24 24"><path d="M4 5c0 8.3 6.7 15 15 15l1-4.2-4.8-2-2 2c-2-1-3.7-2.7-4.7-4.7l2-2-2-4.8L4 5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 4l5 5M20 4h-5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-crm-nodes" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 8v3a2 2 0 002 2h2M18 8v3a2 2 0 01-2 2h-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-calendar-check" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0113.7-5.7L20 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M20 4v4h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12a8 8 0 01-13.7 5.7L4 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 20v-4h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4V5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-inbox" viewBox="0 0 24 24"><path d="M4 12h4l2 3h4l2-3h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="6" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="icon-envelope" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 10-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 005.4-5.4l-2.6 2.6-2-2 2.6-2.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo" aria-label="Blackvine Media home">
+      <svg class="scout-mark" width="26" height="26"><use href="#icon-scout"></use></svg>
+      <span class="logo-word">Blackvine <span>Media</span></span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="primary-navigation" data-main-nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/industries/">Industries</a></li>
+        <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="/revenue-leak-audit/">Book Free Audit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ==========================================================================
+       SECTION 1 — Hero: Service Business Revenue Leaks
+       ========================================================================== -->
+  <section class="hero">
+    <div class="glow-orb glow-orb--1"></div>
+    <div class="glow-orb glow-orb--2"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Service Business Marketing Automation</span>
+        <h1>Service Businesses Lose Revenue When Lead Follow-Up and Estimate Follow-Up Depend on Memory</h1>
+        <p class="hero-sub">Blackvine Media builds CRM, email, and SMS automation systems that help service businesses follow up with missed calls, form fills, estimate requests, open estimates, canceled appointments, inactive customers, and past customers who are ready to book again.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
+          <a class="btn btn-secondary" href="#service-business-leaks">See Service Business Leak Points</a>
+        </div>
+        <div class="scout-badge">
+          <svg class="scout-mark" width="28" height="28"><use href="#icon-scout"></use></svg>
+          <p><strong>Scout Insight:</strong> Service businesses often do not need more random leads first. They need a clearer system for capturing inquiries, following up on estimates, rebooking past customers, and tracking what happened after the first contact.</p>
+        </div>
+      </div>
+
+      <div class="hero-map reveal">
+        <div class="hero-map-frame">
+          <div class="scout-inspect-badge">
+            <span class="scout-inspect-icon-wrap"><svg width="24" height="24"><use href="#icon-scout"></use></svg></span>
+            <span class="scout-inspect-text">
+              <span class="scout-inspect-label">Scout Inspection</span>
+              <span class="scout-inspect-sub">Mapping service business follow-up leaks</span>
+            </span>
+          </div>
+          <span class="hero-map-label">Service Business Revenue Path Map</span>
+
+          <div class="map-track" aria-label="Service business revenue path: Lead Inquiry to CRM Segment to Follow-Up to Estimate/Booking to Reminder to Rebooking/Reactivation, showing which stages are connected and which are leaking">
+            <div class="map-node map-node--live">
+              <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-wrench"></use></svg></span>
+              <span>
+                <span class="map-node-title">Lead Inquiry</span>
+                <span class="map-node-state">Connected</span>
+              </span>
+            </div>
+            <div class="map-connector map-connector--live"><span class="stub"></span></div>
+
+            <div class="map-node map-node--leak">
+              <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-crm-nodes"></use></svg></span>
+              <span>
+                <span class="map-node-title">CRM Segment</span>
+                <span class="map-node-state">Leaking</span>
+              </span>
+            </div>
+            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+
+            <div class="map-node map-node--leak">
+              <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-chat"></use></svg></span>
+              <span>
+                <span class="map-node-title">Follow-Up</span>
+                <span class="map-node-state">Leaking</span>
+              </span>
+            </div>
+            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+
+            <div class="map-node map-node--live">
+              <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-calendar-check"></use></svg></span>
+              <span>
+                <span class="map-node-title">Estimate / Booking</span>
+                <span class="map-node-state">Connected</span>
+              </span>
+            </div>
+            <div class="map-connector map-connector--live"><span class="stub"></span></div>
+
+            <div class="map-node map-node--live">
+              <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-clock"></use></svg></span>
+              <span>
+                <span class="map-node-title">Reminder</span>
+                <span class="map-node-state">Connected</span>
+              </span>
+            </div>
+            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+
+            <div class="map-node map-node--leak">
+              <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-refresh"></use></svg></span>
+              <span>
+                <span class="map-node-title">Rebooking / Reactivation</span>
+                <span class="map-node-state">Leaking</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2 — Service Business Leak Points
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="service-business-leaks">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Where Revenue Slips</span>
+        <h2>Common Service Business Follow-Up Leaks</h2>
+        <p>Most service businesses already have valuable opportunities inside calls, forms, quote requests, open estimates, job history, and customer lists. The problem is that those opportunities are not always followed up with consistently.</p>
+      </div>
+
+      <div class="leak-map">
+        <div class="leak-node reveal">
+          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
+          <div class="leak-panel">
+            <span class="leak-tag-inline">Leak 01</span>
+            <h3>Missed Calls</h3>
+            <p>High-intent prospects often call while the team is on a job, driving, or helping another customer. Many will call another company if they do not get a quick response.</p>
+          </div>
+        </div>
+        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
+
+        <div class="leak-node reveal">
+          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
+          <div class="leak-panel">
+            <span class="leak-tag-inline">Leak 02</span>
+            <h3>Slow Lead Response</h3>
+            <p>Form fills, messages, and quote requests need fast, organized follow-up before the prospect loses urgency or books someone else.</p>
+          </div>
+        </div>
+        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
+
+        <div class="leak-node reveal">
+          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-inbox"></use></svg></span>
+          <div class="leak-panel">
+            <span class="leak-tag-inline">Leak 03</span>
+            <h3>Open Estimates</h3>
+            <p>Estimates that are sent but not followed up on can quietly turn into lost jobs.</p>
+          </div>
+        </div>
+        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
+
+        <div class="leak-node reveal">
+          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
+          <div class="leak-panel">
+            <span class="leak-tag-inline">Leak 04</span>
+            <h3>Canceled or Unscheduled Appointments</h3>
+            <p>Canceled walkthroughs, inspections, consultations, or service appointments need a fast rebooking path.</p>
+          </div>
+        </div>
+        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
+
+        <div class="leak-node reveal">
+          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
+          <div class="leak-panel">
+            <span class="leak-tag-inline">Leak 05</span>
+            <h3>Past Customers Not Rebooked</h3>
+            <p>Customers who already know and trust the business may need a timely reminder, seasonal prompt, or next-service offer.</p>
+          </div>
+        </div>
+        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
+
+        <div class="leak-node reveal">
+          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
+          <div class="leak-panel">
+            <span class="leak-tag-inline">Leak 06</span>
+            <h3>Poor Source Visibility</h3>
+            <p>Calls, forms, landing pages, GBP, and ads need to connect clearly to the CRM so the business can see what produced real opportunities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Find My Service Business Revenue Leaks</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3 — The Service Business Revenue Infrastructure System
+       ========================================================================== -->
+  <section class="scene scene-navy scene--angle-both scene--raise">
+    <div class="scene-surface">
+      <div class="glow-orb" style="width:420px;height:420px;top:-140px;left:-100px;background:rgba(168,184,163,0.12);"></div>
+    </div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">The System</span>
+        <h2>A Connected Backend for Leads, Estimates, Follow-Up, Rebooking, and Reactivation</h2>
+        <p>Blackvine connects the systems that help service businesses capture inquiries, organize leads by source and status, respond faster, follow up on estimates, remind before appointments, rebook past customers, and reactivate older opportunities.</p>
+      </div>
+
+      <div class="system-path reveal" aria-label="System path: Lead Capture to CRM Segmentation to SMS Follow-Up to Email Nurture to Estimate Follow-Up to Rebooking/Reactivation to Tracking">
+        <div class="system-track">
+          <div class="system-tile">
+            <span class="system-tile-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
+            <span class="system-tile-title">Lead Capture</span>
+          </div>
+          <div class="system-connector"><span class="stub"></span></div>
+
+          <div class="system-tile">
+            <span class="system-tile-icon"><svg width="20" height="20"><use href="#icon-crm-nodes"></use></svg></span>
+            <span class="system-tile-title">CRM Segmentation</span>
+          </div>
+          <div class="system-connector"><span class="stub"></span></div>
+
+          <div class="system-tile">
+            <span class="system-tile-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
+            <span class="system-tile-title">SMS Follow-Up</span>
+          </div>
+          <div class="system-connector"><span class="stub"></span></div>
+
+          <div class="system-tile">
+            <span class="system-tile-icon"><svg width="20" height="20"><use href="#icon-envelope"></use></svg></span>
+            <span class="system-tile-title">Email Nurture</span>
+          </div>
+          <div class="system-connector"><span class="stub"></span></div>
+
+          <div class="system-tile">
+            <span class="system-tile-icon"><svg width="20" height="20"><use href="#icon-clock"></use></svg></span>
+            <span class="system-tile-title">Estimate Follow-Up</span>
+          </div>
+          <div class="system-connector"><span class="stub"></span></div>
+
+          <div class="system-tile">
+            <span class="system-tile-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
+            <span class="system-tile-title">Rebooking / Reactivation</span>
+          </div>
+          <div class="system-connector"><span class="stub"></span></div>
+
+          <div class="system-tile">
+            <span class="system-tile-icon"><svg width="20" height="20"><use href="#icon-inbox"></use></svg></span>
+            <span class="system-tile-title">Tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:2.25rem; display:flex; justify-content:center;">
+        <div class="scout-badge">
+          <svg class="scout-mark" width="28" height="28"><use href="#icon-scout"></use></svg>
+          <p><strong>Scout Insight:</strong> The goal is not to chase every lead manually. The goal is to make sure every real opportunity has a visible status, a clear next step, and a follow-up path.</p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Audit My Service Business Follow-Up System</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4 — What We Build for Service Businesses
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">What We Build</span>
+        <h2>Automation Systems Built Around the Service Business Customer Journey</h2>
+      </div>
+
+      <div class="board-grid">
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">01</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
+          <h3>Missed-Call Text-Back</h3>
+          <p>A fast SMS response path for high-intent callers when the business misses a call.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">02</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
+          <h3>Lead Inquiry Follow-Up</h3>
+          <p>Email and SMS follow-up for quote requests, website forms, messages, landing pages, and appointment requests.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">03</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-clock"></use></svg></span>
+          <h3>Estimate Follow-Up</h3>
+          <p>Structured follow-up for open estimates, proposals, inspections, walkthroughs, and unscheduled jobs.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">04</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
+          <h3>Rebooking and Seasonal Campaigns</h3>
+          <p>Segmented campaigns that prompt past customers to book the next service, seasonal work, maintenance, upgrades, or related offers.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">05</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
+          <h3>Appointment Reminders and Cancellation Recovery</h3>
+          <p>Confirmation, reminder, cancellation recovery, and rebooking workflows.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">06</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
+          <h3>Tracking and Source Visibility</h3>
+          <p>Connect calls, forms, landing pages, GBP, and ads to the backend follow-up system.</p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Book My Free Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5 — Before You Spend More on Service Business Ads
+       ========================================================================== -->
+  <section class="scene scene-charcoal scene--angle-top scene--raise">
+    <div class="scene-surface"><div class="grain-veil"></div></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Before You Scale</span>
+        <h2>More Service Business Leads Only Help If You Can Catch and Convert Them</h2>
+        <p>Google Ads, local SEO, Google Business Profile, landing pages, and referral campaigns can create demand. But if missed calls, quote requests, open estimates, and past customers are not followed up with clearly, more traffic can simply expose the same backend leaks.</p>
+      </div>
+
+      <div class="split-wrap reveal">
+        <div class="split-col split-col-a">
+          <span class="split-label">Path A &mdash; More Leads, Weak Backend</span>
+          <div class="split-step"><span class="split-step-dot"></span>Service Business Ads</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Missed Calls</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Slow Lead Response</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Open Estimates Go Cold</div>
+          <div class="split-result">Result: rising ad spend, same leaks.</div>
+        </div>
+
+        <div class="split-col split-col-b">
+          <span class="split-label">Path B &mdash; Revenue Infrastructure First</span>
+          <div class="split-step"><span class="split-step-dot"></span>CRM Segments</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>SMS/Email Follow-Up</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Estimate Follow-Up</div>
+          <div class="split-connector"></div>
+          <div class="split-step"><span class="split-step-dot"></span>Rebooking / Reactivation</div>
+          <div class="split-result">Result: demand becomes trackable growth.</div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Check If My Business Is Ready for More Leads</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6 — Free Service Business Revenue Leak Audit
+       ========================================================================== -->
+  <section class="scene scene-charcoal scene--angle-top scene--raise">
+    <div class="scene-surface"><div class="grain-veil"></div></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Free Revenue Leak Audit</span>
+        <h2>Find the Follow-Up Leaks Inside Your Service Business</h2>
+        <p>The audit reviews your current lead response, missed-call handling, CRM setup, estimate follow-up, appointment reminders, rebooking opportunities, reactivation opportunities, and tracking setup so you can see what should be fixed first.</p>
+      </div>
+
+      <div class="lens-wrap reveal">
+        <div class="lens-glow"></div>
+        <svg class="lens-scout" viewBox="0 0 64 64"><use href="#icon-scout"></use></svg>
+        <div class="lens-panel">
+          <div class="lens-grid">
+            <div class="lens-chip">
+              <span class="lens-chip-icon"><svg width="17" height="17"><use href="#icon-phone-missed"></use></svg></span>
+              <span>Missed Calls</span>
+            </div>
+            <div class="lens-chip">
+              <span class="lens-chip-icon"><svg width="17" height="17"><use href="#icon-chat"></use></svg></span>
+              <span>Lead Response</span>
+            </div>
+            <div class="lens-chip">
+              <span class="lens-chip-icon"><svg width="17" height="17"><use href="#icon-inbox"></use></svg></span>
+              <span>Estimates</span>
+            </div>
+            <div class="lens-chip">
+              <span class="lens-chip-icon"><svg width="17" height="17"><use href="#icon-clock"></use></svg></span>
+              <span>Reminders</span>
+            </div>
+            <div class="lens-chip">
+              <span class="lens-chip-icon"><svg width="17" height="17"><use href="#icon-calendar-check"></use></svg></span>
+              <span>Rebooking</span>
+            </div>
+            <div class="lens-chip">
+              <span class="lens-chip-icon"><svg width="17" height="17"><use href="#icon-refresh"></use></svg></span>
+              <span>Reactivation</span>
+            </div>
+            <div class="lens-chip">
+              <span class="lens-chip-icon"><svg width="17" height="17"><use href="#icon-target"></use></svg></span>
+              <span>Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
+      </div>
+      <div style="text-align:center; margin-top:1.25rem; position:relative; z-index:1;">
+        <a class="cta-band-secondary" href="/contact/">Contact Blackvine Media</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7 — Other Industry Paths
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--compact">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal" style="margin-bottom:1.75rem;">
+        <h2 style="font-size:1.4rem;">Not a Service Business?</h2>
+      </div>
+      <div class="explore-links reveal">
+        <a class="explore-link" href="/dental-marketing-automation/">Dental Practices</a>
+        <a class="explore-link" href="/med-spa-marketing-automation/">Med Spas</a>
+        <a class="explore-link" href="/chiropractor-marketing-automation/">Chiropractors</a>
+        <a class="explore-link" href="/industries/">Industries</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==========================================================================
+     Footer
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Blackvine Media home">
+          <svg class="scout-mark" width="24" height="24"><use href="#icon-scout"></use></svg>
+          <span class="logo-word">Blackvine <span>Media</span></span>
+        </a>
+        <p>Blackvine Media builds CRM, email, and SMS automation systems for high-ticket service businesses. We help teams capture leads faster, recover missed opportunities, reactivate past customers, reduce no-shows, and turn more inquiries into booked appointments.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="/dental-marketing-automation/">Dental Practices</a></li>
+          <li><a href="/med-spa-marketing-automation/">Med Spas</a></li>
+          <li><a href="/chiropractor-marketing-automation/">Chiropractors</a></li>
+          <li><a href="/service-business-marketing-automation/">Service Businesses</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><a href="tel:+17208692292">(720) 869-2292</a></li>
+          <li><a href="mailto:Jack@blackvine.media">Jack@blackvine.media</a></li>
+        </ul>
+        <!-- TODO: add call-tracking number (e.g. CallRail) once confirmed -->
+        <!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved.</span>
+      <span>CRM, Email &amp; SMS Automation for Service Businesses</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+  /* ---------- Mobile nav toggle ---------- */
+  var navToggle = document.querySelector('[data-nav-toggle]');
+  var mainNav = document.querySelector('[data-main-nav]');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = mainNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mainNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('is-open')) {
+        mainNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  /* ---------- Smooth scroll for in-page anchors ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = link.getAttribute('href');
+      if (targetId.length > 1) {
+        var target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  /* ---------- Subtle scroll reveal (IntersectionObserver, cheap + non-jank) ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---------------------------------------------------------------------
+     TODO: Analytics + Conversion Tracking
+     -----------------------------------------------------------------------
+     - Insert GA4 config / gtag.js snippet in <head>.
+     - Insert Google Tag Manager container snippet once container ID is confirmed.
+     - Fire a "cta_click" event on every .btn click, labeled by which CTA was used
+       (hero, service business leak map, system path, board, split path, audit
+       lens, explore more).
+     - Fire a "book_audit_click" event specifically for links pointing to
+       /revenue-leak-audit/ to track intent to convert from this landing page.
+     - Add Google Ads conversion tracking once the audit booking event is confirmed.
+     - Add call click tracking to tel: links once a tracking number (e.g. CallRail)
+       is confirmed.
+     - Add email click tracking to mailto: links.
+  ------------------------------------------------------------------------ */
+
+});
+</script>
+</body>
+</html>
