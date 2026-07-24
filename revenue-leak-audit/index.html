@@ -230,6 +230,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--sage); background: rgba(255,255,255,0.09); }
 .form-row textarea { resize: vertical; min-height: 88px; }
 .form-note { font-size: 0.74rem; color: rgba(246,243,236,0.5); margin-top: 1rem; text-align: center; }
+.hs-form-frame { width: 100%; margin-top: 0.25rem; }
 
 /* ---------- Diagnostic Board (Section 2) ---------- */
 .board-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; position: relative; z-index: 1; }
@@ -384,7 +385,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container hero-inner">
       <div class="hero-copy">
         <span class="eyebrow">Free Revenue Leak Audit</span>
-        <h1>Find Where Revenue Is Slipping Through Your Follow-Up System</h1>
+        <h1>Find Where Revenue Is Slipping Through Your System</h1>
         <p class="hero-sub">Blackvine Media reviews your CRM, lead response, email and SMS follow-up, reminders, reactivation opportunities, and tracking setup so you can see which backend leaks should be fixed first.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#audit-form">Start My Free Audit</a>
@@ -404,7 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="reveal">
-        <div class="audit-form-card">
+        <div class="audit-form-card" id="audit-form">
           <div class="lens-mini">
             <span class="lens-mini-scout-wrap"><svg width="20" height="20"><use href="#icon-scout"></use></svg></span>
             <div class="lens-mini-tags">
@@ -415,68 +416,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2>Request Your Free Revenue Leak Audit</h2>
           <p class="audit-form-helper">Tell us where your business is now. We&rsquo;ll review the biggest follow-up and tracking gaps first.</p>
 
-          <!-- TODO: replace form action below with HubSpot (or chosen CRM) form action/embed once available -->
-          <!-- TODO: fire "form_submit" and "book_audit_click" tracking events on successful submission -->
-          <!-- TODO: fire Google Ads booked-audit conversion event on successful submission -->
-          <form id="audit-form" action="/thank-you/" method="POST">
-            <div class="form-grid-2">
-              <div class="form-row">
-                <label for="af-name">Name</label>
-                <input type="text" id="af-name" name="name" placeholder="Your name" required>
-              </div>
-              <div class="form-row">
-                <label for="af-email">Email</label>
-                <input type="email" id="af-email" name="email" placeholder="you@business.com" required>
-              </div>
-            </div>
-            <div class="form-grid-2">
-              <div class="form-row">
-                <label for="af-phone">Phone</label>
-                <input type="tel" id="af-phone" name="phone" placeholder="(555) 555-5555" required>
-              </div>
-              <div class="form-row">
-                <label for="af-business">Business Name</label>
-                <input type="text" id="af-business" name="business_name" placeholder="Business name" required>
-              </div>
-            </div>
-            <div class="form-grid-2">
-              <div class="form-row">
-                <label for="af-industry">Industry</label>
-                <select id="af-industry" name="industry" required>
-                  <option value="">Select one</option>
-                  <option value="dental">Dental Practice</option>
-                  <option value="med-spa">Med Spa</option>
-                  <option value="chiropractor">Chiropractor</option>
-                  <option value="service-business">Service Business</option>
-                  <option value="other">Other High-Ticket Service Business</option>
-                </select>
-              </div>
-              <div class="form-row">
-                <label for="af-website">Website URL</label>
-                <input type="url" id="af-website" name="website" placeholder="https://">
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="af-problem">Biggest Follow-Up Problem</label>
-              <select id="af-problem" name="biggest_problem">
-                <option value="">Select one</option>
-                <option value="missed-calls">Missed calls</option>
-                <option value="slow-response">Slow lead response</option>
-                <option value="weak-crm">Weak CRM organization</option>
-                <option value="no-follow-up">No email/SMS follow-up</option>
-                <option value="reminders-no-shows">Appointment reminders / no-shows</option>
-                <option value="rebooking-reactivation">Rebooking / reactivation</option>
-                <option value="tracking">Tracking / source visibility</option>
-                <option value="not-sure">Not sure yet</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="af-notes">What do you want us to look at? (optional)</label>
-              <textarea id="af-notes" name="notes" placeholder="Anything specific you'd like reviewed..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Request My Free Audit</button>
-            <p class="form-note">No fake guarantees &mdash; just a clear look at what to fix first.</p>
-          </form>
+          <!-- HubSpot Revenue Leak Audit Main Form: redirects to /thank-you/?audit_submitted=true -->
+          <script src="https://js-na2.hsforms.net/forms/embed/246064271.js" defer></script>
+          <div class="hs-form-frame" data-region="na2" data-form-id="89c5e762-a509-412b-a270-84818e0cfb38" data-portal-id="246064271"></div>
         </div>
       </div>
     </div>
@@ -698,52 +640,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Submit the audit request and we&rsquo;ll review where your current follow-up, CRM, reminders, reactivation, and tracking may be losing opportunities.</p>
       </div>
 
-      <div class="cta-band-form-wrap reveal">
-        <div class="audit-form-card">
-          <!-- TODO: replace form action below with HubSpot (or chosen CRM) form action/embed once available -->
-          <!-- TODO: fire "form_submit" and "book_audit_click" tracking events on successful submission -->
-          <!-- TODO: fire Google Ads booked-audit conversion event on successful submission -->
-          <form id="audit-form-secondary" action="/thank-you/" method="POST">
-            <div class="form-grid-2">
-              <div class="form-row">
-                <label for="af2-name">Name</label>
-                <input type="text" id="af2-name" name="name" placeholder="Your name" required>
-              </div>
-              <div class="form-row">
-                <label for="af2-email">Email</label>
-                <input type="email" id="af2-email" name="email" placeholder="you@business.com" required>
-              </div>
-            </div>
-            <div class="form-grid-2">
-              <div class="form-row">
-                <label for="af2-phone">Phone</label>
-                <input type="tel" id="af2-phone" name="phone" placeholder="(555) 555-5555" required>
-              </div>
-              <div class="form-row">
-                <label for="af2-business">Business Name</label>
-                <input type="text" id="af2-business" name="business_name" placeholder="Business name" required>
-              </div>
-            </div>
-            <div class="form-grid-2">
-              <div class="form-row">
-                <label for="af2-industry">Industry</label>
-                <select id="af2-industry" name="industry" required>
-                  <option value="">Select one</option>
-                  <option value="dental">Dental Practice</option>
-                  <option value="med-spa">Med Spa</option>
-                  <option value="chiropractor">Chiropractor</option>
-                  <option value="service-business">Service Business</option>
-                  <option value="other">Other High-Ticket Service Business</option>
-                </select>
-              </div>
-              <div class="form-row">
-                <label for="af2-website">Website URL</label>
-                <input type="url" id="af2-website" name="website" placeholder="https://">
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Request My Free Audit</button>
-          </form>
-        </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#audit-form">Start My Free Revenue Leak Audit</a>
       </div>
     </div>
   </section>
@@ -887,23 +785,40 @@ document.addEventListener('DOMContentLoaded', function () {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* ---------- Populate hidden tracking fields on the audit form ---------- */
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var trackingFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+    document.querySelectorAll('form').forEach(function (form) {
+      var pageUrlField = form.querySelector('.js-page-url');
+      if (pageUrlField) { pageUrlField.value = window.location.href; }
+      trackingFields.forEach(function (key) {
+        var field = form.querySelector('.js-' + key.replace(/_/g, '-'));
+        if (field && params.get(key)) { field.value = params.get(key); }
+      });
+    });
+  })();
+
   /* ---------------------------------------------------------------------
      TODO: Analytics + Conversion Tracking
      -----------------------------------------------------------------------
-     - Insert GA4 config / gtag.js snippet in <head>.
-     - Insert Google Tag Manager container snippet once container ID is confirmed.
+     - Insert GA4 config / gtag.js snippet in <head> only if a direct GA4
+       install is explicitly requested later. GA4 is currently configured
+       inside Google Tag Manager, not directly in this HTML.
      - Fire a "cta_click" event on every .btn click, labeled by which CTA was used
        (hero form, audit checks, audit path, fit check, expectations, final
-       form, explore more).
+       CTA, explore more).
      - Fire a "book_audit_click" event on any button/link that scrolls to or
-       submits either audit form.
-     - Fire a "form_submit" event on both #audit-form and #audit-form-secondary
-       submissions once tracking is wired up.
-     - Add Google Ads conversion tracking once the audit booking event is confirmed.
+       submits the audit form.
+     - Fire a "form_submit" event on #audit-form submission once tracking is
+       wired up.
+     - Add Google Ads conversion tracking for booked audits guarded behind a
+       confirmed submission signal (e.g. arrival at /thank-you/?audit_submitted=true),
+       not on every page view.
      - Add call click tracking to tel: links once a tracking number (e.g. CallRail)
        is confirmed.
      - Add email click tracking to mailto: links.
-     - Connect both audit forms to HubSpot (or chosen CRM) once the form
+     - Connect the audit form to HubSpot (or chosen CRM) once the form
        action/embed is available.
   ------------------------------------------------------------------------ */
 

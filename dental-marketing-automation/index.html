@@ -328,6 +328,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .cta-band-secondary { display: inline-flex; align-items: center; font-size: 0.9rem; color: rgba(246,243,236,0.65); text-decoration: underline; text-underline-offset: 3px; }
 .cta-band-secondary:hover { color: var(--sage); }
 
+/* ---------- Audit Form Card (paid-traffic conversion form) ---------- */
+.audit-form-card { position: relative; z-index: 1; background: rgba(255,255,255,0.045); border: 1px solid rgba(168,184,163,0.24); border-radius: var(--radius-lg); padding: 1.9rem 1.6rem 2.1rem; backdrop-filter: blur(10px); box-shadow: 0 30px 70px rgba(0,0,0,0.45); }
+.hs-form-frame { width: 100%; margin-top: 0.25rem; }
+
 /* ---------- Explore More (compact) ---------- */
 .explore-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; position: relative; z-index: 1; }
 .explore-link { font-size: 0.86rem; font-weight: 600; color: var(--vine); background: rgba(63,107,79,0.06); border: 1px solid rgba(63,107,79,0.25); border-radius: 999px; padding: 0.55rem 1.1rem; transition: background 0.2s ease, border-color 0.2s ease; }
@@ -423,8 +427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>Dental Practices Lose Revenue When Follow-Up Depends on Memory</h1>
         <p class="hero-sub">Blackvine Media builds CRM, email, and SMS automation systems that help dental practices follow up with new patient inquiries, missed calls, unbooked treatment plans, overdue recall patients, canceled appointments, and inactive patients.</p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
-          <a class="btn btn-secondary" href="#dental-leaks">See Dental Leak Points</a>
+          <a class="btn btn-primary" href="#dental-audit-form">Book a Free Revenue Leak Audit</a>
         </div>
         <div class="scout-badge">
           <svg class="scout-mark" width="28" height="28"><use href="#icon-scout"></use></svg>
@@ -443,39 +446,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <span class="hero-map-label">Dental Revenue Path Map</span>
 
-          <div class="map-track" aria-label="Dental revenue path: New Patient Inquiry to CRM Segment to Follow-Up to Appointment to Reminder to Recall/Reactivation, showing which stages are connected and which are leaking">
+          <div class="map-track" aria-label="Dental revenue path: New Patient Inquiry, CRM Segment, Follow-Up, Appointment, Reminder, Recall/Reactivation">
             <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-tooth"></use></svg></span>
               <span>
                 <span class="map-node-title">New Patient Inquiry</span>
-                <span class="map-node-state">Connected</span>
               </span>
             </div>
             <div class="map-connector map-connector--live"><span class="stub"></span></div>
 
-            <div class="map-node map-node--leak">
+            <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-crm-nodes"></use></svg></span>
               <span>
                 <span class="map-node-title">CRM Segment</span>
-                <span class="map-node-state">Leaking</span>
               </span>
             </div>
-            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+            <div class="map-connector map-connector--live"><span class="stub"></span></div>
 
-            <div class="map-node map-node--leak">
+            <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-chat"></use></svg></span>
               <span>
                 <span class="map-node-title">Follow-Up</span>
-                <span class="map-node-state">Leaking</span>
               </span>
             </div>
-            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+            <div class="map-connector map-connector--live"><span class="stub"></span></div>
 
             <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-calendar-check"></use></svg></span>
               <span>
                 <span class="map-node-title">Appointment</span>
-                <span class="map-node-state">Connected</span>
               </span>
             </div>
             <div class="map-connector map-connector--live"><span class="stub"></span></div>
@@ -484,16 +483,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-clock"></use></svg></span>
               <span>
                 <span class="map-node-title">Reminder</span>
-                <span class="map-node-state">Connected</span>
               </span>
             </div>
-            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+            <div class="map-connector map-connector--live"><span class="stub"></span></div>
 
-            <div class="map-node map-node--leak">
+            <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-refresh"></use></svg></span>
               <span>
                 <span class="map-node-title">Recall / Reactivation</span>
-                <span class="map-node-state">Leaking</span>
               </span>
             </div>
           </div>
@@ -503,80 +500,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ==========================================================================
-       SECTION 2 — Dental Leak Points
+       SECTION 2 — Dental Revenue Leak Audit Form (paid-traffic primary conversion point)
        ========================================================================== -->
-  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="dental-leaks">
+  <section class="scene scene-charcoal scene--angle-top scene--raise" id="dental-audit-form">
+    <div class="scene-surface"><div class="grain-veil"></div></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Free Revenue Leak Audit</span>
+        <h2>Book a Free Dental Revenue Leak Audit</h2>
+        <p>Tell us about your practice. We&rsquo;ll review your biggest new patient, follow-up, recall, and reactivation gaps first.</p>
+      </div>
+
+      <div class="reveal" style="max-width:640px; margin-inline:auto;">
+        <div class="audit-form-card">
+          <!-- HubSpot Dental Revenue Leak Audit Form: redirects to /thank-you/?audit_submitted=true -->
+          <script src="https://js-na2.hsforms.net/forms/embed/246064271.js" defer></script>
+          <div class="hs-form-frame" data-region="na2" data-form-id="37afaef6-e697-4f8a-8588-d018db1054bd" data-portal-id="246064271"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3 — Dental Follow-Up Leaks We Help Fix (combined leak points + build list)
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
     <div class="scene-surface"></div>
     <div class="container">
       <div class="section-head center reveal">
         <span class="eyebrow">Where Revenue Slips</span>
-        <h2>Common Dental Follow-Up Leaks</h2>
+        <h2>Dental Follow-Up Leaks We Help Fix</h2>
         <p>Most dental practices already have valuable opportunities inside their phones, forms, schedules, treatment plans, and patient lists. The problem is that those opportunities are not always followed up with consistently.</p>
       </div>
 
-      <div class="leak-map">
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 01</span>
-            <h3>Missed Calls</h3>
-            <p>High-intent new patients often call while staff are busy, and many do not wait long before calling another office.</p>
-          </div>
+      <div class="board-grid">
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">01</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
+          <h3>Missed Calls</h3>
+          <p>High-intent new patients often call while staff are busy, and many do not wait long before calling another office.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 02</span>
-            <h3>New Patient Inquiry Follow-Up</h3>
-            <p>Form fills and calls need quick, organized follow-up before urgency fades.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">02</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
+          <h3>New Patient Inquiry Follow-Up</h3>
+          <p>Form fills and calls need quick, organized follow-up before urgency fades.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-tooth"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 03</span>
-            <h3>Unbooked Treatment Plans</h3>
-            <p>Patients who leave without scheduling can quietly disappear without a structured follow-up path.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">03</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-tooth"></use></svg></span>
+          <h3>Unbooked Treatment Plans</h3>
+          <p>Patients who leave without scheduling can quietly disappear without a structured follow-up path.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-clock"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 04</span>
-            <h3>Overdue Recall</h3>
-            <p>Hygiene and recall opportunities can sit untapped when reminders are inconsistent.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">04</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-clock"></use></svg></span>
+          <h3>Overdue Recall Patients</h3>
+          <p>Hygiene and recall opportunities can sit untapped when reminders are inconsistent.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 05</span>
-            <h3>Cancellations and No-Shows</h3>
-            <p>Canceled appointments need a fast rebooking path before the slot is lost.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">05</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
+          <h3>Cancellations and No-Shows</h3>
+          <p>Canceled appointments need a fast rebooking path before the slot is lost.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 06</span>
-            <h3>Inactive Patients</h3>
-            <p>Past patients may return when the practice has a clear reactivation system.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">06</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
+          <h3>Inactive Patients</h3>
+          <p>Past patients may return when the practice has a clear reactivation system.</p>
         </div>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Find My Dental Revenue Leaks</a>
+        <a class="btn btn-primary" href="#dental-audit-form">Find My Dental Revenue Leaks</a>
       </div>
     </div>
   </section>
@@ -648,74 +650,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Audit My Dental Follow-Up System</a>
+        <a class="btn btn-primary" href="#dental-audit-form">Audit My Dental Follow-Up System</a>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SECTION 4 — What We Build for Dental Practices
-       ========================================================================== -->
-  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
-    <div class="scene-surface"></div>
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow">What We Build</span>
-        <h2>Automation Systems Built Around the Dental Patient Journey</h2>
-      </div>
-
-      <div class="board-grid">
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">01</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
-          <h3>Missed-Call Text-Back</h3>
-          <p>A fast SMS response path for high-intent callers when the office misses a call.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">02</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
-          <h3>New Patient Follow-Up</h3>
-          <p>Email and SMS follow-up for new patient calls, forms, and appointment requests.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">03</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-tooth"></use></svg></span>
-          <h3>Treatment Plan Follow-Up</h3>
-          <p>Structured reminders and education for patients who have not scheduled recommended treatment.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">04</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
-          <h3>Recall and Hygiene Reactivation</h3>
-          <p>Segmented campaigns for overdue hygiene, recall, and inactive patient lists.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">05</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
-          <h3>Appointment Reminders and Rebooking</h3>
-          <p>Confirmation, reminder, cancellation recovery, and rebooking workflows.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">06</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
-          <h3>Tracking and Source Visibility</h3>
-          <p>Connect calls, forms, landing pages, GBP, and ads to the backend follow-up system.</p>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Book My Free Audit</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 5 — Before You Spend More on Dental Ads
+       SECTION 4 — Before You Spend More on Dental Ads
        ========================================================================== -->
   <section class="scene scene-charcoal scene--angle-top scene--raise">
     <div class="scene-surface"><div class="grain-veil"></div></div>
@@ -753,7 +694,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Check If My Practice Is Ready for More Leads</a>
+        <a class="btn btn-primary" href="#dental-audit-form">Check If My Practice Is Ready for More Leads</a>
       </div>
     </div>
   </section>
@@ -808,7 +749,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
+        <a class="btn btn-primary" href="#dental-audit-form">Book a Free Revenue Leak Audit</a>
       </div>
       <div style="text-align:center; margin-top:1.25rem; position:relative; z-index:1;">
         <a class="cta-band-secondary" href="/contact/">Contact Blackvine Media</a>
@@ -952,17 +893,33 @@ document.addEventListener('DOMContentLoaded', function () {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* ---------- Populate hidden tracking fields on the audit form ---------- */
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var trackingFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+    document.querySelectorAll('form').forEach(function (form) {
+      var pageUrlField = form.querySelector('.js-page-url');
+      if (pageUrlField) { pageUrlField.value = window.location.href; }
+      trackingFields.forEach(function (key) {
+        var field = form.querySelector('.js-' + key.replace(/_/g, '-'));
+        if (field && params.get(key)) { field.value = params.get(key); }
+      });
+    });
+  })();
+
   /* ---------------------------------------------------------------------
      TODO: Analytics + Conversion Tracking
      -----------------------------------------------------------------------
-     - Insert GA4 config / gtag.js snippet in <head>.
-     - Insert Google Tag Manager container snippet once container ID is confirmed.
+     - Insert GA4 config / gtag.js snippet in <head> only if a direct GA4
+       install is explicitly requested later. GA4 is currently configured
+       inside Google Tag Manager, not directly in this HTML.
      - Fire a "cta_click" event on every .btn click, labeled by which CTA was used
-       (hero, dental leak map, system path, board, split path, audit lens,
-       explore more).
-     - Fire a "book_audit_click" event specifically for links pointing to
-       /revenue-leak-audit/ to track intent to convert from this landing page.
-     - Add Google Ads conversion tracking once the audit booking event is confirmed.
+       (hero, audit form, system path, split path, audit lens, explore more).
+     - Fire a "form_submit" and "book_audit_click" event on successful submission
+       of #dental-audit-form-fields once the CRM/HubSpot form handler is wired up.
+     - Add Google Ads conversion tracking for booked audits guarded behind a
+       confirmed submission signal (e.g. arrival at /thank-you/?audit_submitted=true),
+       not on every page view.
      - Add call click tracking to tel: links once a tracking number (e.g. CallRail)
        is confirmed.
      - Add email click tracking to mailto: links.

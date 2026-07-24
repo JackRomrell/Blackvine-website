@@ -327,6 +327,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .cta-band-secondary { display: inline-flex; align-items: center; font-size: 0.9rem; color: rgba(246,243,236,0.65); text-decoration: underline; text-underline-offset: 3px; }
 .cta-band-secondary:hover { color: var(--sage); }
 
+/* ---------- Audit Form Card (paid-traffic conversion form) ---------- */
+.audit-form-card { position: relative; z-index: 1; background: rgba(255,255,255,0.045); border: 1px solid rgba(168,184,163,0.24); border-radius: var(--radius-lg); padding: 1.9rem 1.6rem 2.1rem; backdrop-filter: blur(10px); box-shadow: 0 30px 70px rgba(0,0,0,0.45); }
+.hs-form-frame { width: 100%; margin-top: 0.25rem; }
+
 /* ---------- Explore More (compact) ---------- */
 .explore-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; position: relative; z-index: 1; }
 .explore-link { font-size: 0.86rem; font-weight: 600; color: var(--vine); background: rgba(63,107,79,0.06); border: 1px solid rgba(63,107,79,0.25); border-radius: 999px; padding: 0.55rem 1.1rem; transition: background 0.2s ease, border-color 0.2s ease; }
@@ -422,8 +426,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>Service Businesses Lose Revenue When Lead Follow-Up and Estimate Follow-Up Depend on Memory</h1>
         <p class="hero-sub">Blackvine Media builds CRM, email, and SMS automation systems that help service businesses follow up with missed calls, form fills, estimate requests, open estimates, canceled appointments, inactive customers, and past customers who are ready to book again.</p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
-          <a class="btn btn-secondary" href="#service-business-leaks">See Service Business Leak Points</a>
+          <a class="btn btn-primary" href="#service-business-audit-form">Book a Free Revenue Leak Audit</a>
         </div>
         <div class="scout-badge">
           <svg class="scout-mark" width="28" height="28"><use href="#icon-scout"></use></svg>
@@ -442,39 +445,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <span class="hero-map-label">Service Business Revenue Path Map</span>
 
-          <div class="map-track" aria-label="Service business revenue path: Lead Inquiry to CRM Segment to Follow-Up to Estimate/Booking to Reminder to Rebooking/Reactivation, showing which stages are connected and which are leaking">
+          <div class="map-track" aria-label="Service business revenue path: Lead Inquiry, CRM Segment, Follow-Up, Estimate/Booking, Reminder, Rebooking/Reactivation">
             <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-wrench"></use></svg></span>
               <span>
                 <span class="map-node-title">Lead Inquiry</span>
-                <span class="map-node-state">Connected</span>
               </span>
             </div>
             <div class="map-connector map-connector--live"><span class="stub"></span></div>
 
-            <div class="map-node map-node--leak">
+            <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-crm-nodes"></use></svg></span>
               <span>
                 <span class="map-node-title">CRM Segment</span>
-                <span class="map-node-state">Leaking</span>
               </span>
             </div>
-            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+            <div class="map-connector map-connector--live"><span class="stub"></span></div>
 
-            <div class="map-node map-node--leak">
+            <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-chat"></use></svg></span>
               <span>
                 <span class="map-node-title">Follow-Up</span>
-                <span class="map-node-state">Leaking</span>
               </span>
             </div>
-            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+            <div class="map-connector map-connector--live"><span class="stub"></span></div>
 
             <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-calendar-check"></use></svg></span>
               <span>
                 <span class="map-node-title">Estimate / Booking</span>
-                <span class="map-node-state">Connected</span>
               </span>
             </div>
             <div class="map-connector map-connector--live"><span class="stub"></span></div>
@@ -483,16 +482,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-clock"></use></svg></span>
               <span>
                 <span class="map-node-title">Reminder</span>
-                <span class="map-node-state">Connected</span>
               </span>
             </div>
-            <div class="map-connector map-connector--leak"><span class="stub"></span></div>
+            <div class="map-connector map-connector--live"><span class="stub"></span></div>
 
-            <div class="map-node map-node--leak">
+            <div class="map-node map-node--live">
               <span class="map-node-icon"><svg width="18" height="18"><use href="#icon-refresh"></use></svg></span>
               <span>
                 <span class="map-node-title">Rebooking / Reactivation</span>
-                <span class="map-node-state">Leaking</span>
               </span>
             </div>
           </div>
@@ -502,80 +499,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ==========================================================================
-       SECTION 2 — Service Business Leak Points
+       SECTION 2 — Service Business Revenue Leak Audit Form (paid-traffic primary conversion point)
        ========================================================================== -->
-  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="service-business-leaks">
+  <section class="scene scene-charcoal scene--angle-top scene--raise" id="service-business-audit-form">
+    <div class="scene-surface"><div class="grain-veil"></div></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Free Revenue Leak Audit</span>
+        <h2>Book a Free Service Business Revenue Leak Audit</h2>
+        <p>Tell us about your business. We&rsquo;ll review your biggest lead, estimate, follow-up, and rebooking gaps first.</p>
+      </div>
+
+      <div class="reveal" style="max-width:640px; margin-inline:auto;">
+        <div class="audit-form-card">
+          <!-- HubSpot Service Business Revenue Leak Audit Form: redirects to /thank-you/?audit_submitted=true -->
+          <script src="https://js-na2.hsforms.net/forms/embed/246064271.js" defer></script>
+          <div class="hs-form-frame" data-region="na2" data-form-id="de28f649-f8ae-41e3-8174-b9bbb03f861e" data-portal-id="246064271"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3 — Service Business Follow-Up Leaks We Help Fix (combined leak points + build list)
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
     <div class="scene-surface"></div>
     <div class="container">
       <div class="section-head center reveal">
         <span class="eyebrow">Where Revenue Slips</span>
-        <h2>Common Service Business Follow-Up Leaks</h2>
+        <h2>Service Business Follow-Up Leaks We Help Fix</h2>
         <p>Most service businesses already have valuable opportunities inside calls, forms, quote requests, open estimates, job history, and customer lists. The problem is that those opportunities are not always followed up with consistently.</p>
       </div>
 
-      <div class="leak-map">
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 01</span>
-            <h3>Missed Calls</h3>
-            <p>High-intent prospects often call while the team is on a job, driving, or helping another customer. Many will call another company if they do not get a quick response.</p>
-          </div>
+      <div class="board-grid">
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">01</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
+          <h3>Missed Calls</h3>
+          <p>High-intent prospects often call while the team is on a job, driving, or helping another customer. Many will call another company if they do not get a quick response.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 02</span>
-            <h3>Slow Lead Response</h3>
-            <p>Form fills, messages, and quote requests need fast, organized follow-up before the prospect loses urgency or books someone else.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">02</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
+          <h3>Slow Lead Follow-Up</h3>
+          <p>Form fills, messages, and quote requests need fast, organized follow-up before the prospect loses urgency or books someone else.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-inbox"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 03</span>
-            <h3>Open Estimates</h3>
-            <p>Estimates that are sent but not followed up on can quietly turn into lost jobs.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">03</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-inbox"></use></svg></span>
+          <h3>Open Estimates and Quotes</h3>
+          <p>Estimates and quotes that are sent but not followed up on can quietly turn into lost jobs.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 04</span>
-            <h3>Canceled or Unscheduled Appointments</h3>
-            <p>Canceled walkthroughs, inspections, consultations, or service appointments need a fast rebooking path.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">04</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
+          <h3>Unbooked Jobs or Appointments</h3>
+          <p>Walkthroughs, inspections, consultations, or jobs that never get scheduled can quietly disappear without a structured follow-up path.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 05</span>
-            <h3>Past Customers Not Rebooked</h3>
-            <p>Customers who already know and trust the business may need a timely reminder, seasonal prompt, or next-service offer.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">05</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-clock"></use></svg></span>
+          <h3>Cancellations and No-Shows</h3>
+          <p>Canceled or missed appointments need a fast rebooking path before the job and momentum are lost.</p>
         </div>
-        <div class="leak-connector"><span class="stub"></span><svg class="crack"><use href="#icon-crack"></use></svg></div>
 
-        <div class="leak-node reveal">
-          <span class="leak-node-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
-          <div class="leak-panel">
-            <span class="leak-tag-inline">Leak 06</span>
-            <h3>Poor Source Visibility</h3>
-            <p>Calls, forms, landing pages, GBP, and ads need to connect clearly to the CRM so the business can see what produced real opportunities.</p>
-          </div>
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">06</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
+          <h3>Past Customers Who Do Not Rebook</h3>
+          <p>Customers who already know and trust the business may need a timely reminder, seasonal prompt, or next-service offer.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light reveal">
+          <span class="tile-index">07</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
+          <h3>Inactive Customer Lists</h3>
+          <p>Older customer lists can hold real repeat-business opportunities when there is a clear reactivation system.</p>
         </div>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Find My Service Business Revenue Leaks</a>
+        <a class="btn btn-primary" href="#service-business-audit-form">Find My Service Business Revenue Leaks</a>
       </div>
     </div>
   </section>
@@ -647,74 +656,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Audit My Service Business Follow-Up System</a>
+        <a class="btn btn-primary" href="#service-business-audit-form">Audit My Service Business Follow-Up System</a>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SECTION 4 — What We Build for Service Businesses
-       ========================================================================== -->
-  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
-    <div class="scene-surface"></div>
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow">What We Build</span>
-        <h2>Automation Systems Built Around the Service Business Customer Journey</h2>
-      </div>
-
-      <div class="board-grid">
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">01</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
-          <h3>Missed-Call Text-Back</h3>
-          <p>A fast SMS response path for high-intent callers when the business misses a call.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">02</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
-          <h3>Lead Inquiry Follow-Up</h3>
-          <p>Email and SMS follow-up for quote requests, website forms, messages, landing pages, and appointment requests.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">03</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-clock"></use></svg></span>
-          <h3>Estimate Follow-Up</h3>
-          <p>Structured follow-up for open estimates, proposals, inspections, walkthroughs, and unscheduled jobs.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">04</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
-          <h3>Rebooking and Seasonal Campaigns</h3>
-          <p>Segmented campaigns that prompt past customers to book the next service, seasonal work, maintenance, upgrades, or related offers.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">05</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
-          <h3>Appointment Reminders and Cancellation Recovery</h3>
-          <p>Confirmation, reminder, cancellation recovery, and rebooking workflows.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-index">06</span>
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
-          <h3>Tracking and Source Visibility</h3>
-          <p>Connect calls, forms, landing pages, GBP, and ads to the backend follow-up system.</p>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Book My Free Audit</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 5 — Before You Spend More on Service Business Ads
+       SECTION 4 — Before You Spend More on Service Business Ads
        ========================================================================== -->
   <section class="scene scene-charcoal scene--angle-top scene--raise">
     <div class="scene-surface"><div class="grain-veil"></div></div>
@@ -752,7 +700,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Check If My Business Is Ready for More Leads</a>
+        <a class="btn btn-primary" href="#service-business-audit-form">Check If My Business Is Ready for More Leads</a>
       </div>
     </div>
   </section>
@@ -807,7 +755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
+        <a class="btn btn-primary" href="#service-business-audit-form">Book a Free Revenue Leak Audit</a>
       </div>
       <div style="text-align:center; margin-top:1.25rem; position:relative; z-index:1;">
         <a class="cta-band-secondary" href="/contact/">Contact Blackvine Media</a>
@@ -951,17 +899,34 @@ document.addEventListener('DOMContentLoaded', function () {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* ---------- Populate hidden tracking fields on the audit form ---------- */
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var trackingFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+    document.querySelectorAll('form').forEach(function (form) {
+      var pageUrlField = form.querySelector('.js-page-url');
+      if (pageUrlField) { pageUrlField.value = window.location.href; }
+      trackingFields.forEach(function (key) {
+        var field = form.querySelector('.js-' + key.replace(/_/g, '-'));
+        if (field && params.get(key)) { field.value = params.get(key); }
+      });
+    });
+  })();
+
   /* ---------------------------------------------------------------------
      TODO: Analytics + Conversion Tracking
      -----------------------------------------------------------------------
-     - Insert GA4 config / gtag.js snippet in <head>.
-     - Insert Google Tag Manager container snippet once container ID is confirmed.
+     - Insert GA4 config / gtag.js snippet in <head> only if a direct GA4
+       install is explicitly requested later. GA4 is currently configured
+       inside Google Tag Manager, not directly in this HTML.
      - Fire a "cta_click" event on every .btn click, labeled by which CTA was used
-       (hero, service business leak map, system path, board, split path, audit
-       lens, explore more).
-     - Fire a "book_audit_click" event specifically for links pointing to
-       /revenue-leak-audit/ to track intent to convert from this landing page.
-     - Add Google Ads conversion tracking once the audit booking event is confirmed.
+       (hero, audit form, system path, split path, audit lens, explore more).
+     - Fire a "form_submit" and "book_audit_click" event on successful submission
+       of #service-business-audit-form-fields once the CRM/HubSpot form handler
+       is wired up.
+     - Add Google Ads conversion tracking for booked audits guarded behind a
+       confirmed submission signal (e.g. arrival at /thank-you/?audit_submitted=true),
+       not on every page view.
      - Add call click tracking to tel: links once a tracking number (e.g. CallRail)
        is confirmed.
      - Add email click tracking to mailto: links.
