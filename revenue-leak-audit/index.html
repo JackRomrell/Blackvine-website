@@ -27,10 +27,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- TODO: Google Ads conversion tracking snippet for booked audits -->
 <!-- TODO: fire "cta_click" event on every .btn click once tracking is wired up -->
 <!-- TODO: fire "book_audit_click" event on links/buttons that scroll to or submit the audit form -->
-<!-- TODO: fire "form_submit" event on both audit form submissions once tracking is wired up -->
+<!-- TODO: fire "form_submit" event on the audit form submission once tracking is wired up -->
 <!-- TODO: add call click tracking to tel: links once a tracking number (e.g. CallRail) is confirmed -->
 <!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
-<!-- TODO: connect both audit forms to HubSpot (or chosen CRM) form action/embed once available -->
+<!-- TODO: connect the audit form to HubSpot (or chosen CRM) form action/embed once available -->
 <!-- TODO: Organization + Service schema (JSON-LD) — see Website Strategy doc section 20 -->
 
 <style>
@@ -88,8 +88,8 @@ body {
 .container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: 1.25rem; position: relative; z-index: 2; }
 @media (min-width: 768px) { .container { padding-inline: 2.25rem; } }
 
-.skip-link { position: absolute; left: -999px; top: 0; background: var(--vine); color: var(--white); padding: 0.75rem 1rem; z-index: 500; border-radius: 0 0 var(--radius-sm) 0; }
-.skip-link:focus { left: 0; }
+.skip-link { position: absolute; top: 0; left: 0; transform: translateY(-120%); opacity: 0; pointer-events: none; z-index: 10000; background: var(--vine); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius-sm) 0; font-weight: 700; text-decoration: none; transition: transform 0.2s ease, opacity 0.2s ease; }
+.skip-link:focus, .skip-link:focus-visible { transform: translateY(0); opacity: 1; pointer-events: auto; outline: 3px solid #F4B860; outline-offset: 2px; }
 
 /* ---------- Typography ---------- */
 h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1.14; letter-spacing: -0.01em; color: var(--white); }
@@ -131,31 +131,31 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 /* ---------- Header ---------- */
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(14,17,22,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(168,184,163,0.14); }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 70px; }
-.logo { display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: 0.01em; }
+.logo { display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: 0.01em; position: relative; z-index: 10000; }
 .logo .scout-mark { color: var(--sage); filter: drop-shadow(0 0 6px rgba(168,184,163,0.35)); }
 .logo-word span { color: var(--sage); }
 
-.nav-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); padding: 0 8px; }
+.nav-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); padding: 0 8px; position: relative; z-index: 10000; }
 .nav-toggle span { display: block; height: 2px; width: 100%; background: var(--white); border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.main-nav { position: fixed; inset: 70px 0 0 0; background: rgba(16,31,51,0.98); padding: 1.5rem 1.25rem 2rem; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s; overflow-y: auto; border-top: 1px solid rgba(168,184,163,0.12); }
+.main-nav { position: fixed; top: 0; left: 0; right: 0; bottom: 0; height: 100vh; height: 100dvh; background: var(--charcoal); padding: 5.5rem 1.5rem 2.5rem; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s; overflow-y: auto; -webkit-overflow-scrolling: touch; border-top: 1px solid rgba(168,184,163,0.12); z-index: 9999; display: flex; flex-direction: column; }
 .main-nav.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
-.nav-list { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 1.5rem; }
-.nav-list a { display: block; padding: 0.85rem 0.25rem; color: var(--ivory); font-weight: 500; font-size: 1.02rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.nav-list { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
+.nav-list a { display: block; padding: 1rem 0.25rem; color: var(--ivory); font-weight: 500; font-size: 1.15rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .nav-list a:hover { color: var(--sage); }
-.nav-cta { width: 100%; }
+.nav-cta { width: 100%; display: none; }
 
 @media (min-width: 960px) {
   .nav-toggle { display: none; }
-  .main-nav { position: static; inset: auto; background: transparent; padding: 0; opacity: 1; visibility: visible; transform: none; display: flex; align-items: center; gap: 2rem; overflow: visible; border-top: none; }
+  .main-nav { position: static; inset: auto; height: auto; background: transparent; padding: 0; opacity: 1; visibility: visible; transform: none; display: flex; flex-direction: row; align-items: center; gap: 2rem; overflow: visible; border-top: none; z-index: auto; }
   .nav-list { flex-direction: row; gap: 1.75rem; margin-bottom: 0; }
   .nav-list a { padding: 0.4rem 0; border-bottom: none; font-size: 0.92rem; color: rgba(246,243,236,0.82); position: relative; }
   .nav-list a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: var(--vine); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
   .nav-list a:hover::after { transform: scaleX(1); }
-  .nav-cta { width: auto; }
+  .nav-cta { width: auto; display: inline-flex; }
 }
 
 /* ---------- Scene / layered section system ---------- */
@@ -431,7 +431,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="hero-sub">Blackvine Media reviews your CRM, lead response, email and SMS follow-up, reminders, reactivation opportunities, and tracking setup so you can see which backend leaks should be fixed first.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#audit-form">Start My Free Audit</a>
-          <a class="text-link" href="#audit-checks">See What We Review</a>
         </div>
         <div class="scout-badge">
           <svg class="scout-mark" width="28" height="28"><use href="#icon-scout"></use></svg>
