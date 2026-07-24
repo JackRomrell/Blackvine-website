@@ -230,81 +230,48 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--sage); background: rgba(255,255,255,0.09); }
 .form-row textarea { resize: vertical; min-height: 88px; }
 .form-note { font-size: 0.74rem; color: rgba(246,243,236,0.5); margin-top: 1rem; text-align: center; }
-.hs-form-frame { width: 100%; max-width: 100%; margin: 0.25rem auto 0; display: block; }
-.hs-form-frame iframe { width: 100% !important; border: none; }
-
-/* ---------------------------------------------------------------------
-   HubSpot form styling — read before editing
-   -----------------------------------------------------------------------
-   This form uses HubSpot's standard "hs-form-frame" embed
-   (forms/embed/{portalId}.js). HubSpot renders that embed inside a
-   sandboxed, cross-origin iframe, so this page's CSS/JS cannot reach the
-   labels, inputs, placeholders, or submit button inside it -- browsers
-   block that by design (same-origin policy), regardless of selector
-   specificity or !important. Only the outer .hs-form-frame box and its
-   iframe element (sizing/centering above) are actually controllable from
-   here.
-
-   The rules below target the class names HubSpot uses in its "raw HTML"
-   embed mode (Marketing Hub / CMS Hub Professional+ only, via "Set as
-   raw HTML form" on the form's embed options). They are included in case
-   this form is ever switched to that embed mode, but they currently have
-   NO visible effect and are not a bug if labels still look unstyled.
-
-   TO FIX LABEL / INPUT / BUTTON COLORS ON THE CURRENT EMBED:
-   In HubSpot, go to Marketing > Lead Capture > Forms > this form > Style
-   tab (or Settings > Website > Forms for an account-wide default) and set:
-     - Label color: #F6F3EC (or rgba(246,243,236,0.88))
-     - Input background: light (e.g. #F6F3EC) with dark text (#0E1116)
-     - Button background: #3F6B4F, text #FFFFFF, hover #355C43
-     - Field spacing: ~18px between fields
-   ------------------------------------------------------------------------ */
-.hbspt-form form { width: 100%; }
-.hbspt-form .hs-form-field { margin-bottom: 18px; }
-.hbspt-form label,
-.hbspt-form .hs-form-field > label,
-.hbspt-form legend {
-  color: rgba(246, 243, 236, 0.9) !important;
-  font-weight: 600;
+/* ---------- HubSpot Intake Card (premium ivory card inside dark section) ---------- */
+.hubspot-intake-card {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 48px);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(168, 184, 163, 0.18), transparent 34%),
+    #F6F3EC;
+  border: 1px solid rgba(168, 184, 163, 0.45);
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  position: relative;
+  z-index: 1;
 }
-.hbspt-form .hs-input,
-.hbspt-form input,
-.hbspt-form select,
-.hbspt-form textarea {
-  width: 100% !important;
-  background: #F6F3EC !important;
-  color: #0E1116 !important;
-  border: 1px solid rgba(168, 184, 163, 0.35) !important;
-  border-radius: 8px !important;
-  min-height: 46px;
-  padding: 12px 14px !important;
-  font-size: 15px;
+.hubspot-intake-card__eyebrow {
+  display: block;
+  color: #3F6B4F;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 10px;
 }
-.hbspt-form input::placeholder,
-.hbspt-form textarea::placeholder {
-  color: rgba(14, 17, 22, 0.55) !important;
+.hubspot-intake-card__title {
+  color: #0E1116;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  margin-bottom: 10px;
 }
-.hbspt-form .hs-button,
-.hbspt-form input[type="submit"] {
-  background: #3F6B4F !important;
-  color: #FFFFFF !important;
-  border: 0 !important;
-  border-radius: 8px !important;
-  padding: 14px 24px !important;
-  font-weight: 700 !important;
-  cursor: pointer;
+.hubspot-intake-card__copy {
+  color: #68707A;
+  max-width: 620px;
+  font-size: 0.96rem;
+  margin-bottom: 28px;
 }
-.hbspt-form .hs-button:hover,
-.hbspt-form input[type="submit"]:hover {
-  background: #355C43 !important;
-}
-.hbspt-form .hs-error-msg,
-.hbspt-form .hs-error-msgs label {
-  color: #F4B860 !important;
-}
-
-@media (max-width: 640px) {
-  .hs-form-frame { max-width: 100%; }
+.hs-form-frame { width: 100%; }
+@media (max-width: 700px) {
+  .hubspot-intake-card {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
 }
 
 /* ---------- Diagnostic Board (Section 2) ---------- */
@@ -480,19 +447,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="reveal">
-        <div class="audit-form-card" id="audit-form">
-          <div class="lens-mini">
-            <span class="lens-mini-scout-wrap"><svg width="20" height="20"><use href="#icon-scout"></use></svg></span>
-            <div class="lens-mini-tags">
-              <span>CRM</span><span>Lead Response</span><span>Follow-Up</span><span>Reminders</span><span>Reactivation</span><span>Tracking</span>
-            </div>
-          </div>
-
-          <h2>Request Your Free Revenue Leak Audit</h2>
-          <p class="audit-form-helper">Tell us where your business is now. We&rsquo;ll review the biggest follow-up and tracking gaps first.</p>
+        <div class="hubspot-intake-card" id="audit-form">
+          <span class="hubspot-intake-card__eyebrow">Free Revenue Leak Audit</span>
+          <h2 class="hubspot-intake-card__title">Tell Us Where to Start</h2>
+          <p class="hubspot-intake-card__copy">Share a few details about your business so we can review the follow-up, rebooking, reactivation, and tracking gaps that may matter most.</p>
 
           <!-- HubSpot Revenue Leak Audit Main Form: redirects to /thank-you/?audit_submitted=true -->
-          <!-- NOTE: Label/input/button colors for this HubSpot form cannot be set from this page's CSS because the hs-form-frame embed renders in a cross-origin iframe. Adjust colors inside HubSpot's own Form Style settings (Marketing > Lead Capture > Forms > this form > Style tab). See the ".hbspt-form" CSS comment in <style> for full details. -->
           <script src="https://js-na2.hsforms.net/forms/embed/246064271.js" defer></script>
           <div class="hs-form-frame" data-region="na2" data-form-id="89c5e762-a509-412b-a270-84818e0cfb38" data-portal-id="246064271"></div>
         </div>
