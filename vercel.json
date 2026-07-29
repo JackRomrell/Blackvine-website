@@ -1,4 +1,10 @@
 {
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/our-mission", "destination": "/about/", "permanent": true },
+    { "source": "/our-mission/", "destination": "/about/", "permanent": true },
+    { "source": "/client-waitlist", "destination": "/revenue-leak-audit/", "permanent": true },
+    { "source": "/client-waitlist/", "destination": "/revenue-leak-audit/", "permanent": true }
+  ]
 }

@@ -29,7 +29,197 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- TODO: fire "book_audit_click" event on links pointing to /revenue-leak-audit/ once tracking is wired up -->
 <!-- TODO: add call click tracking to tel: links once a tracking number (e.g. CallRail) is confirmed -->
 <!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
-<!-- TODO: Organization + Service schema (JSON-LD) — see Website Strategy doc section 20 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://blackvine.media/services/#service",
+      "name": "CRM, Email & SMS Revenue Infrastructure Services",
+      "serviceType": "CRM automation, email marketing automation, and SMS follow-up systems",
+      "provider": { "@id": "https://blackvine.media/#organization" },
+      "areaServed": "United States",
+      "url": "https://blackvine.media/services/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blackvine.media/services/#webpage",
+      "url": "https://blackvine.media/services/",
+      "name": "Marketing Automation Services for Service Businesses | Blackvine Media",
+      "isPartOf": { "@id": "https://blackvine.media/#website" },
+      "about": { "@id": "https://blackvine.media/#organization" },
+      "publisher": { "@id": "https://blackvine.media/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://blackvine.media/services/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackvine.media/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://blackvine.media/services/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blackvine.media/services/#faq",
+      "mainEntity": [
+      {
+            "@type": "Question",
+            "name": "Can Blackvine work inside our existing CRM?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Often, yes. When your existing CRM can support the required data structure, segmentation, automation, integrations, permissions, and reporting, we build inside that system rather than requiring a migration."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Does Blackvine provide its own CRM?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Blackvine does not own or resell proprietary CRM software. We build inside platforms such as HubSpot and GoHighLevel, or other platforms your business already uses. See Technology for the full platform list."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Will we be required to migrate?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not automatically. Migration is only recommended when your current system cannot reliably support the required workflows. In that case, we explain the limitation and the available options first."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Which platforms can Blackvine support?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Primary platforms include HubSpot CRM, GoHighLevel, Mailchimp, Google Analytics 4, Google Tag Manager, Google Ads conversion tracking, HubSpot forms, website forms, and landing-page routing. We may also work with other compatible email, SMS, scheduling, and practice-management platforms. We do not support every CRM or integration."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Can Blackvine integrate with scheduling or practice-management software?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We evaluate your scheduling and practice-management tools as part of the audit, and integrate when the platform's access and capabilities support the approved scope."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "What happens when a direct integration is unavailable?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We identify the limitation and explain the available options, which may include cleaning up the existing system, connecting additional tools, changing the process, migrating to another CRM, or replacing the current platform."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Who writes the email and SMS messages?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Blackvine generally drafts the operational email and SMS copy used in your workflows, and runs an internal quality and risk review before it goes to you."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Who approves messages?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You do. You review and approve message content, timing, offers, and business rules before launch, unless a different approval process is agreed to in writing. Material changes may require renewed review."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Who owns the accounts, data, workflows, and reporting?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You do. The client retains ownership of its accounts, data, contacts, domains, phone numbers, workflows, reporting assets, and approved message content. See Data, Privacy & Communications for the complete policy."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "What access does Blackvine need?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Only what's required for the approved scope, granted through individual user access with appropriate permissions rather than shared passwords, and reduced or removed when it's no longer required."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "How does onboarding work?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Onboarding starts with business and system intake, then moves through revenue-path mapping, an implementation proposal, build and testing, and client approval before launch. See How We Work for the full process."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "What does the client's staff need to do?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Provide account access or information needed for the audit, review and approve message content and workflow logic, and confirm the accuracy of the services, pricing, and policies used in messaging."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "How long does implementation take?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Implementation timing depends on the condition of the current systems, the number and complexity of workflows, integration requirements, available access, data quality, client review speed, and the approved scope. The expected timeline is defined after the Revenue Leak Audit and technical review."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Is reporting included?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Blackvine builds reporting around your actual revenue path. The exact KPIs depend on the available data, systems, tracking quality, business model, and approved scope."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "How are leads, bookings, and revenue attributed?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We may report attributed or influenced revenue when the underlying systems provide sufficient data to connect marketing activity, CRM activity, bookings, and completed transactions. We don't promise perfect attribution."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Does Blackvine provide ongoing management?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, optionally. Our preferred model includes initial implementation plus optional ongoing monthly management, but ongoing management is not mandatory for every client."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "How are revisions and scope changes handled?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Material changes to approved messages, workflows, or scope may require renewed client review before they go live."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "How are unsubscribes and SMS opt-outs managed?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our systems are built to support email unsubscribe links, SMS STOP instructions, suppression lists, and revoked-consent handling, so opted-out contacts are not messaged again."
+            }
+      },
+      {
+            "@type": "Question",
+            "name": "Does Blackvine access protected health information?",
+            "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our standard practice is to avoid accessing protected health information unless it is necessary for the approved scope and appropriate safeguards, such as a Business Associate Agreement, are established first. Blackvine does not claim universal HIPAA compliance."
+            }
+      }
+      ]
+    }
+  ]
+}
+</script>
 
 <style>
 /* ==========================================================================
@@ -317,6 +507,20 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .split-col-a .split-connector { background: repeating-linear-gradient(180deg, var(--amber-dim) 0 3px, transparent 3px 7px); opacity: 0.7; }
 .split-col-b .split-connector { background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); }
 
+/* ---------- What We Actually Build (detailed) ---------- */
+.build-detail-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; max-width: 980px; margin: 0 auto; position: relative; z-index: 1; }
+@media (min-width: 700px) { .build-detail-grid { grid-template-columns: repeat(2, 1fr); } }
+.build-detail-item { display: flex; gap: 0.65rem; align-items: flex-start; }
+.build-detail-item svg { flex-shrink: 0; width: 16px; height: 16px; margin-top: 0.3rem; color: var(--vine); }
+.build-detail-item strong { display: block; font-size: 0.94rem; color: var(--charcoal); margin-bottom: 0.2rem; }
+.build-detail-item span { font-size: 0.86rem; color: var(--slate); }
+
+/* ---------- Services FAQ ---------- */
+.faq-list { display: flex; flex-direction: column; gap: 1rem; max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+.faq-item { background: #FFFFFF; border: 1px solid rgba(63,107,79,0.16); border-radius: var(--radius-md); padding: 1.4rem 1.6rem; box-shadow: 0 8px 22px rgba(14,17,22,0.06); }
+.faq-item h3 { font-size: 0.98rem; margin-bottom: 0.55rem; color: var(--charcoal); }
+.faq-item p { font-size: 0.9rem; color: var(--slate); }
+
 /* ---------- Final CTA band ---------- */
 .cta-band { position: relative; padding: 4.5rem 0; overflow: hidden; background: linear-gradient(180deg, var(--charcoal) 0%, var(--navy) 60%, var(--charcoal) 100%); }
 .cta-band-vine { width: 2px; height: 42px; margin: 0 auto 1.25rem; background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); position: relative; z-index: 1; }
@@ -327,7 +531,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy); color: rgba(246,243,236,0.85); padding: 3.5rem 0 1.75rem; position: relative; z-index: 1; }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.25rem; margin-bottom: 2.5rem; }
-@media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+@media (min-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .footer-grid { grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; } }
 .footer-brand .logo { color: var(--white); margin-bottom: 0.9rem; }
 .footer-brand p { font-size: 0.9rem; color: rgba(246,243,236,0.68); max-width: 34ch; }
 .footer-col h4 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
@@ -987,6 +1192,192 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ==========================================================================
+       SECTION 9B — What We Actually Build (detailed)
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="what-we-build">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Implementation Detail</span>
+        <h2>What We Actually Build</h2>
+        <p>The Revenue Leak Audit determines which of these apply to your business. The final scope is based on the Revenue Leak Audit. Not every client requires every component.</p>
+      </div>
+
+      <div class="build-detail-grid reveal">
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>CRM audit and cleanup</strong><span>Reviewing existing records, fields, and structure before building anything new.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Lifecycle stages</strong><span>Defining clear stages so every contact has a known status.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Pipelines and statuses</strong><span>Structuring opportunity stages so nothing stalls unnoticed.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Contact properties</strong><span>Building the data fields needed to segment and route contacts correctly.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Segmentation</strong><span>Grouping contacts by source, status, or interest for targeted follow-up.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Lead-source tracking</strong><span>Connecting calls, forms, and ads back to the CRM record.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Form routing</strong><span>Making sure website and landing-page submissions reach the right workflow.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Speed-to-lead workflows</strong><span>Triggering a fast first response the moment a lead comes in.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Missed-call follow-up</strong><span>Automatic text-back when a call can&rsquo;t be answered live.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Email and SMS workflows</strong><span>Structured follow-up sequences for inquiries, consultations, and estimates.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Appointment reminders</strong><span>Reducing no-shows with timed reminder sequences.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Cancellation and no-show recovery</strong><span>Re-engaging contacts after a missed or canceled appointment.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Rebooking</strong><span>Prompting past patients, clients, or customers to schedule again.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Reactivation</strong><span>Re-engaging inactive contacts and dormant lists.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Conversion tracking</strong><span>Connecting form fills, calls, and bookings to Google Ads, GA4, and the CRM.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Reporting</strong><span>Building visibility into what&rsquo;s actually creating booked revenue.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Quality assurance</strong><span>Testing workflows, triggers, and messages before launch.</span></div>
+        </div>
+        <div class="build-detail-item">
+          <svg><use href="#icon-check"></use></svg>
+          <div><strong>Documentation and staff handoff</strong><span>Explaining how the system works so your team can operate it.</span></div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Find Out What Applies to My Business</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9C — Frequently Asked Questions
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="faq">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Frequently Asked Questions</span>
+        <h2>Ownership, Access, Timeline, and How We Work</h2>
+        <p>Answers to the questions we hear most before a business books a Revenue Leak Audit.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <h3>Can Blackvine work inside our existing CRM?</h3>
+          <p>Often, yes. When your existing CRM can support the required data structure, segmentation, automation, integrations, permissions, and reporting, we build inside that system rather than requiring a migration.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does Blackvine provide its own CRM?</h3>
+          <p>No. Blackvine does not own or resell proprietary CRM software. We build inside platforms such as HubSpot and GoHighLevel, or other platforms your business already uses. See <a href="/technology/" style="color:var(--vine); font-weight:600;">Technology</a> for the full platform list.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Will we be required to migrate?</h3>
+          <p>Not automatically. Migration is only recommended when your current system cannot reliably support the required workflows. In that case, we explain the limitation and the available options first.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Which platforms can Blackvine support?</h3>
+          <p>Primary platforms include HubSpot CRM, GoHighLevel, Mailchimp, Google Analytics 4, Google Tag Manager, Google Ads conversion tracking, HubSpot forms, website forms, and landing-page routing. We may also work with other compatible email, SMS, scheduling, and practice-management platforms. We do not support every CRM or integration.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can Blackvine integrate with scheduling or practice-management software?</h3>
+          <p>We evaluate your scheduling and practice-management tools as part of the audit, and integrate when the platform's access and capabilities support the approved scope.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What happens when a direct integration is unavailable?</h3>
+          <p>We identify the limitation and explain the available options, which may include cleaning up the existing system, connecting additional tools, changing the process, migrating to another CRM, or replacing the current platform.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Who writes the email and SMS messages?</h3>
+          <p>Blackvine generally drafts the operational email and SMS copy used in your workflows, and runs an internal quality and risk review before it goes to you.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Who approves messages?</h3>
+          <p>You do. You review and approve message content, timing, offers, and business rules before launch, unless a different approval process is agreed to in writing. Material changes may require renewed review.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Who owns the accounts, data, workflows, and reporting?</h3>
+          <p>You do. The client retains ownership of its accounts, data, contacts, domains, phone numbers, workflows, reporting assets, and approved message content. See <a href="/data-privacy-and-communications/" style="color:var(--vine); font-weight:600;">Data, Privacy &amp; Communications</a> for the complete policy.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What access does Blackvine need?</h3>
+          <p>Only what's required for the approved scope, granted through individual user access with appropriate permissions rather than shared passwords, and reduced or removed when it's no longer required.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How does onboarding work?</h3>
+          <p>Onboarding starts with business and system intake, then moves through revenue-path mapping, an implementation proposal, build and testing, and client approval before launch. See <a href="/how-we-work/" style="color:var(--vine); font-weight:600;">How We Work</a> for the full process.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What does the client's staff need to do?</h3>
+          <p>Provide account access or information needed for the audit, review and approve message content and workflow logic, and confirm the accuracy of the services, pricing, and policies used in messaging.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does implementation take?</h3>
+          <p>Implementation timing depends on the condition of the current systems, the number and complexity of workflows, integration requirements, available access, data quality, client review speed, and the approved scope. The expected timeline is defined after the Revenue Leak Audit and technical review.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is reporting included?</h3>
+          <p>Blackvine builds reporting around your actual revenue path. The exact KPIs depend on the available data, systems, tracking quality, business model, and approved scope.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How are leads, bookings, and revenue attributed?</h3>
+          <p>We may report attributed or influenced revenue when the underlying systems provide sufficient data to connect marketing activity, CRM activity, bookings, and completed transactions. We don't promise perfect attribution.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does Blackvine provide ongoing management?</h3>
+          <p>Yes, optionally. Our preferred model includes initial implementation plus optional ongoing monthly management, but ongoing management is not mandatory for every client.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How are revisions and scope changes handled?</h3>
+          <p>Material changes to approved messages, workflows, or scope may require renewed client review before they go live.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How are unsubscribes and SMS opt-outs managed?</h3>
+          <p>Our systems are built to support email unsubscribe links, SMS STOP instructions, suppression lists, and revoked-consent handling, so opted-out contacts are not messaged again.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does Blackvine access protected health information?</h3>
+          <p>Our standard practice is to avoid accessing protected health information unless it is necessary for the approved scope and appropriate safeguards, such as a Business Associate Agreement, are established first. Blackvine does not claim universal HIPAA compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        SECTION 10 — Industries CTA
        ========================================================================== -->
   <section class="scene scene-ivory on-light scene--angle-top scene--raise">
@@ -1071,10 +1462,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h4>Company</h4>
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/how-we-work/">How We Work</a></li>
           <li><a href="/services/">Services</a></li>
           <li><a href="/industries/">Industries</a></li>
+          <li><a href="/technology/">Technology</a></li>
           <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
           <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Trust</h4>
+        <ul>
+          <li><a href="/data-privacy-and-communications/">Data, Privacy &amp; Communications</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -1100,7 +1502,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="footer-bottom">
-      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved.</span>
+      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved. Blackvine Media is operated by Blackvine Creative LLC, a Wyoming limited liability company.</span>
       <span>CRM, Email &amp; SMS Automation for High-Ticket Service Businesses</span>
     </div>
   </div>
@@ -1183,7 +1585,6 @@ document.addEventListener('DOMContentLoaded', function () {
      - Add call click tracking to tel: links once a tracking number (e.g. CallRail)
        is confirmed.
      - Add email click tracking to mailto: links.
-     - Add Organization + Service schema (JSON-LD) once finalized.
   ------------------------------------------------------------------------ */
 
 });

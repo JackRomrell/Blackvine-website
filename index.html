@@ -29,7 +29,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- TODO: fire "book_audit_click" event on links pointing to /revenue-leak-audit/ once tracking is wired up -->
 <!-- TODO: add call click tracking to tel: links once a tracking number (e.g. CallRail) is confirmed -->
 <!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
-<!-- TODO: Organization + Service schema (JSON-LD) — see Website Strategy doc section 20 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blackvine.media/#organization",
+      "name": "Blackvine Media",
+      "legalName": "Blackvine Creative LLC",
+      "url": "https://blackvine.media/",
+      "telephone": "+1-720-869-2292",
+      "email": "Jack@blackvine.media",
+      "address": { "@type": "PostalAddress", "addressLocality": "Parker", "addressRegion": "CO", "addressCountry": "US" },
+      "areaServed": "United States"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blackvine.media/#website",
+      "url": "https://blackvine.media/",
+      "name": "Blackvine Media",
+      "publisher": { "@id": "https://blackvine.media/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blackvine.media/#webpage",
+      "url": "https://blackvine.media/",
+      "name": "CRM, Email & SMS Automation for Service Businesses | Blackvine Media",
+      "isPartOf": { "@id": "https://blackvine.media/#website" },
+      "about": { "@id": "https://blackvine.media/#organization" }
+    }
+  ]
+}
+</script>
 
 <style>
 /* ==========================================================================
@@ -317,6 +349,12 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .lens-chip-icon { width: 34px; height: 34px; border-radius: 50%; background: rgba(63,107,79,0.18); color: var(--sage); display: flex; align-items: center; justify-content: center; }
 .lens-chip span { font-size: 0.8rem; font-weight: 600; color: var(--white); }
 
+/* ---------- What We Actually Build checklist ---------- */
+.build-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem 1.5rem; max-width: 980px; margin: 0 auto; position: relative; z-index: 1; }
+@media (min-width: 700px) { .build-grid { grid-template-columns: repeat(3, 1fr); } }
+.build-item { display: flex; align-items: flex-start; gap: 0.55rem; font-size: 0.9rem; font-weight: 600; color: rgba(246,243,236,0.88); }
+.build-item svg { flex-shrink: 0; width: 15px; height: 15px; margin-top: 0.2rem; color: var(--sage); }
+
 /* ---------- Final CTA band ---------- */
 .cta-band { position: relative; padding: 4.5rem 0; overflow: hidden; background: linear-gradient(180deg, var(--charcoal) 0%, var(--navy) 60%, var(--charcoal) 100%); }
 .cta-band-vine { width: 2px; height: 42px; margin: 0 auto 1.25rem; background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); position: relative; z-index: 1; }
@@ -327,7 +365,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy); color: rgba(246,243,236,0.85); padding: 3.5rem 0 1.75rem; position: relative; z-index: 1; }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.25rem; margin-bottom: 2.5rem; }
-@media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+@media (min-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .footer-grid { grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; } }
 .footer-brand .logo { color: var(--white); margin-bottom: 0.9rem; }
 .footer-brand p { font-size: 0.9rem; color: rgba(246,243,236,0.68); max-width: 34ch; }
 .footer-col h4 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
@@ -376,6 +415,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="icon-spine" viewBox="0 0 24 24"><path d="M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 6h8M8 10h8M8 14h8M8 18h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 10-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 005.4-5.4l-2.6 2.6-2-2 2.6-2.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </defs>
 </svg>
 
@@ -633,6 +673,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ==========================================================================
+       SECTION 3B — What We Actually Build
+       ========================================================================== -->
+  <section class="scene scene-charcoal scene--angle-top scene--raise">
+    <div class="scene-surface"><div class="grain-veil"></div></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Implementation Detail</span>
+        <h2>What We Actually Build</h2>
+        <p>Beyond the categories above, here is the practical implementation work involved. The final scope is based on the Revenue Leak Audit. Not every client requires every component.</p>
+      </div>
+
+      <div class="build-grid reveal">
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> CRM audit and cleanup</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Lifecycle stages</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Pipelines and statuses</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Contact properties</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Segmentation</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Lead-source tracking</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Form routing</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Speed-to-lead workflows</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Missed-call follow-up</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Email and SMS workflows</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Appointment reminders</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Cancellation and no-show recovery</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Rebooking</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Reactivation</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Conversion tracking</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Reporting</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Quality assurance</span>
+        <span class="build-item"><svg><use href="#icon-check"></use></svg> Documentation and staff handoff</span>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/services/#what-we-build">See the Full Breakdown on Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        SECTION 4 — Industries
        ========================================================================== -->
   <section class="scene scene-ivory on-light scene--angle-top scene--raise">
@@ -820,10 +899,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h4>Company</h4>
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/how-we-work/">How We Work</a></li>
           <li><a href="/services/">Services</a></li>
           <li><a href="/industries/">Industries</a></li>
+          <li><a href="/technology/">Technology</a></li>
           <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
           <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Trust</h4>
+        <ul>
+          <li><a href="/data-privacy-and-communications/">Data, Privacy &amp; Communications</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -849,7 +939,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="footer-bottom">
-      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved.</span>
+      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved. Blackvine Media is operated by Blackvine Creative LLC, a Wyoming limited liability company.</span>
       <span>CRM, Email &amp; SMS Automation for High-Ticket Service Businesses</span>
     </div>
   </div>
@@ -932,7 +1022,6 @@ document.addEventListener('DOMContentLoaded', function () {
      - Add call click tracking to tel: links once a tracking number (e.g. CallRail)
        is confirmed.
      - Add email click tracking to mailto: links.
-     - Add Organization + Service schema (JSON-LD) once finalized.
   ------------------------------------------------------------------------ */
 
 });

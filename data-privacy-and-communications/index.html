@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NK9F37CC');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data, Privacy &amp; Communications | Blackvine Media</title>
+<meta name="description" content="How Blackvine Media handles operational data access, client account ownership, email and SMS consent, credentials, healthcare-related information, and team access. Operational explanation, not legal advice.">
+
+<link rel="canonical" href="https://blackvine.media/data-privacy-and-communications/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0E1116">
+
+<!-- TODO: GA4 config / gtag.js snippet goes here once container ID is confirmed -->
+<!-- TODO: Google Tag Manager container snippet (head + body) once container ID is confirmed -->
+<!-- TODO: Google Ads conversion tracking snippet for booked audits -->
+<!-- TODO: fire "cta_click" event on every .btn click once tracking is wired up -->
+<!-- TODO: fire "book_audit_click" event on links pointing to /revenue-leak-audit/ once tracking is wired up -->
+<!-- TODO: add call click tracking to tel: links once a tracking number (e.g. CallRail) is confirmed -->
+<!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://blackvine.media/data-privacy-and-communications/#webpage",
+      "url": "https://blackvine.media/data-privacy-and-communications/",
+      "name": "Data, Privacy & Communications | Blackvine Media",
+      "isPartOf": { "@id": "https://blackvine.media/#website" },
+      "about": { "@id": "https://blackvine.media/#organization" },
+      "publisher": { "@id": "https://blackvine.media/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://blackvine.media/data-privacy-and-communications/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackvine.media/" },
+        { "@type": "ListItem", "position": 2, "name": "Data, Privacy & Communications", "item": "https://blackvine.media/data-privacy-and-communications/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+/* ==========================================================================
+   Blackvine Media — Data, Privacy & Communications Page V1
+   Same visual system as the approved Home / Services / About / Contact pages.
+   Blackvine Charcoal #0E1116 | Deep Navy #101F33 | Vine Green #3F6B4F
+   Soft Sage #A8B8A3 | Warm Ivory #F6F3EC | Slate Gray #68707A | White #FFFFFF
+   Accent: Muted Amber #C89B4A (leak / opportunity highlight only)
+   ========================================================================== */
+
+:root {
+  --charcoal: #0E1116;
+  --navy: #101F33;
+  --vine: #3F6B4F;
+  --vine-light: #4d7f5e;
+  --sage: #A8B8A3;
+  --ivory: #F6F3EC;
+  --slate: #68707A;
+  --white: #FFFFFF;
+  --amber: #C89B4A;
+  --amber-dim: #8a6d3f;
+  --amber-bright: #E0B664;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-head: Georgia, "Times New Roman", serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+
+  --container-max: 1200px;
+  --section-pad-y: 5.5rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
+ul[class], ol[class] { list-style: none; margin: 0; padding: 0; }
+img, picture, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ivory);
+  background: var(--charcoal);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.container { width: 100%; max-width: 980px; margin-inline: auto; padding-inline: 1.25rem; position: relative; z-index: 2; }
+.container--wide { max-width: var(--container-max); }
+@media (min-width: 768px) { .container { padding-inline: 2.25rem; } }
+
+.skip-link { position: absolute; top: 0; left: 0; transform: translateY(-120%); opacity: 0; pointer-events: none; z-index: 10000; background: var(--vine); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius-sm) 0; font-weight: 700; text-decoration: none; transition: transform 0.2s ease, opacity 0.2s ease; }
+.skip-link:focus, .skip-link:focus-visible { transform: translateY(0); opacity: 1; pointer-events: auto; outline: 3px solid #F4B860; outline-offset: 2px; }
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1.14; letter-spacing: -0.01em; color: var(--white); }
+.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.eyebrow::before { content: ""; width: 18px; height: 1px; background: var(--sage); display: inline-block; }
+.section-head { max-width: 780px; margin-bottom: 2rem; }
+.section-head h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); margin-bottom: 1rem; }
+.section-head p { color: rgba(246, 243, 236, 0.68); font-size: 1rem; }
+.on-light h1, .on-light h2, .on-light h3, .on-light h4 { color: var(--charcoal); }
+.on-light .section-head p { color: var(--slate); }
+.on-light .eyebrow { color: var(--vine); }
+.on-light .eyebrow::before { background: var(--vine); }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; padding: 0.9rem 1.7rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.96rem; border: 1px solid transparent; transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; white-space: nowrap; }
+.btn-primary { background: var(--vine); color: var(--white); box-shadow: 0 2px 4px rgba(14,17,22,0.3), 0 0 0 1px rgba(168,184,163,0.15); }
+.btn-primary:hover { background: var(--vine-light); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(63,107,79,0.42); }
+
+/* ---------- Header ---------- */
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(14,17,22,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(168,184,163,0.14); }
+.site-header .container { max-width: var(--container-max); display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.logo { display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: 0.01em; position: relative; z-index: 10000; }
+.logo .scout-mark { color: var(--sage); filter: drop-shadow(0 0 6px rgba(168,184,163,0.35)); }
+.logo-word span { color: var(--sage); }
+
+.nav-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); padding: 0 8px; position: relative; z-index: 10000; }
+.nav-toggle span { display: block; height: 2px; width: 100%; background: var(--white); border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.main-nav { position: fixed; top: 0; left: 0; right: 0; bottom: 0; height: 100vh; height: 100dvh; background: var(--charcoal); padding: 5.5rem 1.5rem 2.5rem; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s; overflow-y: auto; -webkit-overflow-scrolling: touch; border-top: 1px solid rgba(168,184,163,0.12); z-index: 9999; display: flex; flex-direction: column; }
+.main-nav.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-list { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
+.nav-list a { display: block; padding: 1rem 0.25rem; color: var(--ivory); font-weight: 500; font-size: 1.15rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.nav-list a:hover { color: var(--sage); }
+.nav-cta { width: 100%; display: none; }
+
+@media (min-width: 960px) {
+  .nav-toggle { display: none; }
+  .main-nav { position: static; inset: auto; height: auto; background: transparent; padding: 0; opacity: 1; visibility: visible; transform: none; display: flex; flex-direction: row; align-items: center; gap: 2rem; overflow: visible; border-top: none; z-index: auto; }
+  .nav-list { flex-direction: row; gap: 1.75rem; margin-bottom: 0; }
+  .nav-list a { padding: 0.4rem 0; border-bottom: none; font-size: 0.92rem; color: rgba(246,243,236,0.82); position: relative; }
+  .nav-list a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: var(--vine); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
+  .nav-list a:hover::after { transform: scaleX(1); }
+  .nav-cta { width: auto; display: inline-flex; }
+}
+
+/* ---------- Doc hero ---------- */
+.doc-hero { position: relative; padding: 3.5rem 0 2.5rem; overflow: hidden; background: linear-gradient(180deg, var(--navy) 0%, var(--charcoal) 100%); }
+.doc-hero h1 { font-size: clamp(1.7rem, 4vw, 2.35rem); margin-bottom: 1rem; }
+.doc-hero p { color: rgba(246,243,236,0.75); font-size: 1rem; max-width: 68ch; }
+
+/* ---------- Doc body ---------- */
+.doc-body { background: var(--ivory); color: var(--charcoal); padding: 3.5rem 0 5rem; }
+.doc-section { padding-bottom: 3rem; margin-bottom: 3rem; border-bottom: 1px solid rgba(14,17,22,0.1); }
+.doc-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.doc-section h2 { font-size: 1.4rem; color: var(--charcoal); margin-bottom: 1rem; scroll-margin-top: 90px; }
+.doc-section h3 { font-size: 1.05rem; color: var(--charcoal); margin: 1.5rem 0 0.65rem; }
+.doc-section p { font-size: 0.96rem; color: var(--slate); margin-bottom: 0.9rem; }
+.doc-section ul { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.75rem 0 1rem; }
+.doc-section li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.92rem; color: var(--slate); }
+.doc-section li svg { flex-shrink: 0; width: 15px; height: 15px; margin-top: 0.2rem; color: var(--vine); }
+.doc-section li.not-item svg { color: var(--amber-dim); }
+.doc-quote { border-left: 3px solid var(--vine); padding-left: 1rem; font-style: italic; color: var(--charcoal); margin: 1rem 0; font-size: 0.96rem; }
+.doc-toc { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+.doc-toc a { font-size: 0.82rem; font-weight: 600; color: var(--vine); background: rgba(63,107,79,0.08); border: 1px solid rgba(63,107,79,0.22); border-radius: 999px; padding: 0.45rem 0.9rem; }
+.doc-toc a:hover { background: rgba(63,107,79,0.14); }
+
+/* ---------- Final CTA band ---------- */
+.cta-band { position: relative; padding: 4.5rem 0; overflow: hidden; background: linear-gradient(180deg, var(--charcoal) 0%, var(--navy) 60%, var(--charcoal) 100%); }
+.cta-band-vine { width: 2px; height: 42px; margin: 0 auto 1.25rem; background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); position: relative; z-index: 1; }
+.cta-band-head { text-align: center; max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+.cta-band h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 1rem; }
+.cta-band p { color: rgba(246,243,236,0.72); }
+.cta-row { display: flex; justify-content: center; margin-top: 2.25rem; position: relative; z-index: 2; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--navy); color: rgba(246,243,236,0.85); padding: 3.5rem 0 1.75rem; position: relative; z-index: 1; }
+.site-footer .container { max-width: var(--container-max); }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.25rem; margin-bottom: 2.5rem; }
+@media (min-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .footer-grid { grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; } }
+.footer-brand .logo { color: var(--white); margin-bottom: 0.9rem; }
+.footer-brand p { font-size: 0.9rem; color: rgba(246,243,236,0.68); max-width: 34ch; }
+.footer-col h4 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-col a { font-size: 0.9rem; color: rgba(246,243,236,0.78); }
+.footer-col a:hover { color: var(--white); }
+.footer-contact li { font-size: 0.9rem; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.8rem; color: rgba(246,243,236,0.55); }
+@media (min-width: 720px) { .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; } }
+
+/* ---------- Utility ---------- */
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK9F37CC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="icon-scout" viewBox="0 0 64 64">
+      <polyline points="4,26 22,4 24,28" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="60,26 42,4 40,28" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="8,27 32,58 56,27" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M28 11c1.5-2.2 4.5-2.2 6 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="31" y1="6" x2="31" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="24" y1="34" x2="28" y2="37" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <line x1="40" y1="34" x2="36" y2="37" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo" aria-label="Blackvine Media home">
+      <svg class="scout-mark" width="26" height="26"><use href="#icon-scout"></use></svg>
+      <span class="logo-word">Blackvine <span>Media</span></span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="primary-navigation" data-main-nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/industries/">Industries</a></li>
+        <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="/revenue-leak-audit/">Book Free Audit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="doc-hero">
+    <div class="container">
+      <span class="eyebrow">Data, Privacy &amp; Communications</span>
+      <h1>How Blackvine Media Handles Data, Access, and Client Communications</h1>
+      <p>This page explains our operational approach to system access, account ownership, email and SMS consent, credentials, and healthcare-related information. It describes how we work &mdash; it is not a legal document and should not be read as legal advice.</p>
+    </div>
+  </section>
+
+  <section class="doc-body">
+    <div class="container">
+
+      <nav class="doc-toc" aria-label="Section navigation">
+        <a href="#system-access">System Access</a>
+        <a href="#account-ownership">Account Ownership</a>
+        <a href="#consent-and-opt-outs">Consent &amp; Opt-Outs</a>
+        <a href="#credentials-and-security">Credentials &amp; Security</a>
+        <a href="#healthcare-information">Healthcare-Related Information</a>
+        <a href="#team-and-contractor-access">Team &amp; Contractor Access</a>
+        <a href="#shared-responsibilities">Shared Responsibilities</a>
+      </nav>
+
+      <div class="doc-section" id="system-access">
+        <h2>How We Access Your Systems</h2>
+        <p>Blackvine follows a minimum-necessary approach to system access: we request only the access required to organize contact records, build segments, configure lifecycle stages and pipelines, build email and SMS workflows, manage rebooking and reactivation, and track sources and conversions.</p>
+        <ul>
+          <li><svg><use href="#icon-check"></use></svg> Access is limited by user role and follows the minimum-necessary principle.</li>
+          <li><svg><use href="#icon-check"></use></svg> Sensitive information is not placed in URLs, tracking parameters, or unnecessary custom fields.</li>
+          <li><svg><use href="#icon-check"></use></svg> Sensitive information is not included in message content beyond what the approved purpose requires.</li>
+          <li><svg><use href="#icon-check"></use></svg> Segmentation uses only the data needed for the approved purpose.</li>
+          <li class="not-item"><svg><use href="#icon-x"></use></svg> We do not use clinical or sensitive details merely because they happen to be available.</li>
+        </ul>
+      </div>
+
+      <div class="doc-section" id="account-ownership">
+        <h2>Client Account Ownership</h2>
+        <p>When you already have the required CRM, email, SMS, analytics, advertising, form, or scheduling accounts, we work inside them. When you don&rsquo;t, we may help create and configure new accounts &mdash; always structured around your ownership, not ours.</p>
+        <ul>
+          <li><svg><use href="#icon-check"></use></svg> New accounts are created in the client&rsquo;s legal business name whenever practical.</li>
+          <li><svg><use href="#icon-check"></use></svg> The client is the primary owner or administrator; billing stays under client control.</li>
+          <li><svg><use href="#icon-check"></use></svg> Blackvine is added through individual user access with appropriate permissions &mdash; shared passwords are avoided whenever individual access is available.</li>
+          <li><svg><use href="#icon-check"></use></svg> The client retains ownership of its accounts, data, contacts, domains, phone numbers, workflows, reporting assets, and approved message content.</li>
+          <li><svg><use href="#icon-check"></use></svg> Blackvine may administer accounts during implementation or ongoing management, but access is reduced or removed when it is no longer required.</li>
+          <li><svg><use href="#icon-check"></use></svg> Credentials and system access are not withheld from the client. Any exception is disclosed and agreed to in writing.</li>
+        </ul>
+        <p>Creating or configuring an account on a client&rsquo;s behalf does not make that account Blackvine&rsquo;s property.</p>
+      </div>
+
+      <div class="doc-section" id="consent-and-opt-outs">
+        <h2>Email &amp; SMS Consent and Opt-Outs</h2>
+        <p>Message systems we build are expected to support:</p>
+        <ul>
+          <li><svg><use href="#icon-check"></use></svg> Email unsubscribe links</li>
+          <li><svg><use href="#icon-check"></use></svg> SMS STOP instructions</li>
+          <li><svg><use href="#icon-check"></use></svg> Suppression lists</li>
+          <li><svg><use href="#icon-check"></use></svg> Revoked-consent handling and avoiding messages after opt-out</li>
+          <li><svg><use href="#icon-check"></use></svg> Accurate sender identification</li>
+          <li><svg><use href="#icon-check"></use></svg> Client-approved message purposes only</li>
+        </ul>
+        <p>Blackvine generally drafts the operational email and SMS copy used in client workflows, and may use internal writing and review tools to check clarity, tone, timing, and flag possible consent, opt-out, privacy, or industry-specific concerns before a message goes to the client for approval. We do not state that Blackvine or an automated tool can guarantee legal or regulatory compliance &mdash; we do not use phrases like &ldquo;guaranteed compliant,&rdquo; &ldquo;fully HIPAA compliant,&rdquo; &ldquo;legally approved,&rdquo; &ldquo;AI-verified compliance,&rdquo; or &ldquo;guarantees TCPA compliance.&rdquo;</p>
+      </div>
+
+      <div class="doc-section" id="credentials-and-security">
+        <h2>Credentials &amp; Access Security</h2>
+        <ul>
+          <li><svg><use href="#icon-check"></use></svg> Individual user accounts are used whenever possible; shared passwords are avoided.</li>
+          <li><svg><use href="#icon-check"></use></svg> Multifactor authentication is enabled where available.</li>
+          <li><svg><use href="#icon-check"></use></svg> Broad administrative access is not granted when a lower permission level is sufficient.</li>
+          <li><svg><use href="#icon-check"></use></svg> Access is removed or reduced when a task or engagement ends.</li>
+        </ul>
+      </div>
+
+      <div class="doc-section" id="healthcare-information">
+        <h2>Healthcare-Related Information</h2>
+        <p>Because several of the industries we work with (dental, med spa, chiropractic) involve health-related contact, our standard operating procedure is to avoid accessing protected health information unless it is genuinely necessary for the approved scope and separately evaluated.</p>
+        <p class="doc-quote">Blackvine generally works with the contact, status, source, appointment, and communication data needed to organize CRM records, segment audiences, and operate approved follow-up systems. Our standard approach is to avoid accessing clinical or protected health information unless it is necessary for the agreed scope and appropriate safeguards are established.</p>
+        <p>We should not intentionally request or use:</p>
+        <ul>
+          <li class="not-item"><svg><use href="#icon-x"></use></svg> Diagnoses</li>
+          <li class="not-item"><svg><use href="#icon-x"></use></svg> Treatment notes</li>
+          <li class="not-item"><svg><use href="#icon-x"></use></svg> Medical histories</li>
+          <li class="not-item"><svg><use href="#icon-x"></use></svg> Clinical records</li>
+          <li class="not-item"><svg><use href="#icon-x"></use></svg> Prescription information</li>
+          <li class="not-item"><svg><use href="#icon-x"></use></svg> Insurance details</li>
+          <li class="not-item"><svg><use href="#icon-x"></use></svg> Other detailed health-condition data</li>
+        </ul>
+        <p>&hellip;unless a project specifically requires it and the legal, contractual, platform, access-control, and Business Associate Agreement requirements have been addressed in advance. Whether a Business Associate Agreement is required is evaluated before any protected health information is accessed. Blackvine does not claim universal HIPAA compliance.</p>
+      </div>
+
+      <div class="doc-section" id="team-and-contractor-access">
+        <h2>Team &amp; Contractor Access</h2>
+        <p>Client-system access may be granted only to people who need it for the approved work. Authorized access may include Jack Romrell, Eli Kaufman, Blackvine team members, approved contractors, and associated specialists engaged for a defined project need.</p>
+        <ul>
+          <li><svg><use href="#icon-check"></use></svg> Access follows the minimum-necessary principle &mdash; each person receives only the permissions required for their role.</li>
+          <li><svg><use href="#icon-check"></use></svg> Individual user accounts are used whenever possible; shared passwords are avoided.</li>
+          <li><svg><use href="#icon-check"></use></svg> Multifactor authentication is enabled where available.</li>
+          <li><svg><use href="#icon-check"></use></svg> Contractors receive access only when needed for an approved business purpose, and access is removed or reduced when the task or engagement ends.</li>
+          <li><svg><use href="#icon-check"></use></svg> Anyone with access is expected to protect client information and follow Blackvine&rsquo;s confidentiality and data-handling requirements.</li>
+          <li><svg><use href="#icon-check"></use></svg> Broad administrative access is not granted when a lower permission level is sufficient, and sensitive or protected information is not accessed merely because it is available.</li>
+          <li><svg><use href="#icon-check"></use></svg> A client may be informed when outside contractors or specialists require meaningful access to sensitive systems or data, where appropriate.</li>
+        </ul>
+        <p>We do not claim that only the founders will ever access client accounts, and we do not imply that every contractor automatically receives access. We do not currently claim a formal security certification, a contractor background-check program, or a formal compliance program &mdash; unless one is later established and verified.</p>
+      </div>
+
+      <div class="doc-section" id="shared-responsibilities" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+        <h2>Shared Responsibilities</h2>
+        <p>Data handling and communications compliance are a shared responsibility between Blackvine and the client:</p>
+        <ul>
+          <li><svg><use href="#icon-check"></use></svg> The client remains responsible for confirming the accuracy and appropriateness of services, offers, pricing, clinical statements, appointment policies, consent language, legal disclosures, industry-specific claims, and geographic or licensing restrictions.</li>
+          <li><svg><use href="#icon-check"></use></svg> The client remains responsible for determining which information may lawfully be used for marketing and operational communication.</li>
+          <li><svg><use href="#icon-check"></use></svg> For regulated communications, qualified legal or compliance review may be appropriate.</li>
+        </ul>
+        <h3>Message Drafting &amp; Approval, in Short</h3>
+        <p>Blackvine drafts the message, conducts an internal quality and risk review, and the client reviews and confirms accuracy before approving it for launch &mdash; unless a different written approval process applies. Material changes may require renewed client review. The full message-approval process is documented on the <a href="/services/" style="color:var(--vine); font-weight:600;">Services</a> page.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-vine"></div>
+      <div class="cta-band-head reveal">
+        <h2>Questions About How We Handle Your Data?</h2>
+        <p>The Revenue Leak Audit conversation is a good place to ask about access, ownership, and communications specifics for your business.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==========================================================================
+     Footer
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Blackvine Media home">
+          <svg class="scout-mark" width="24" height="24"><use href="#icon-scout"></use></svg>
+          <span class="logo-word">Blackvine <span>Media</span></span>
+        </a>
+        <p>Blackvine Media builds CRM, email, and SMS automation systems for high-ticket service businesses. We help teams capture leads faster, recover missed opportunities, reactivate past customers, reduce no-shows, and turn more inquiries into booked appointments.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/how-we-work/">How We Work</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/technology/">Technology</a></li>
+          <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Trust</h4>
+        <ul>
+          <li><a href="/data-privacy-and-communications/">Data, Privacy &amp; Communications</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="/dental-marketing-automation/">Dental Practices</a></li>
+          <li><a href="/med-spa-marketing-automation/">Med Spas</a></li>
+          <li><a href="/chiropractor-marketing-automation/">Chiropractors</a></li>
+          <li><a href="/service-business-marketing-automation/">Service Businesses</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><a href="tel:+17208692292">(720) 869-2292</a></li>
+          <li><a href="mailto:Jack@blackvine.media">Jack@blackvine.media</a></li>
+        </ul>
+        <!-- TODO: add call-tracking number (e.g. CallRail) once confirmed -->
+        <!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved. Blackvine Media is operated by Blackvine Creative LLC, a Wyoming limited liability company.</span>
+      <span>CRM, Email &amp; SMS Automation for High-Ticket Service Businesses</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+  /* ---------- Mobile nav toggle ---------- */
+  var navToggle = document.querySelector('[data-nav-toggle]');
+  var mainNav = document.querySelector('[data-main-nav]');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = mainNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mainNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('is-open')) {
+        mainNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  /* ---------- Smooth scroll for in-page anchors ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = link.getAttribute('href');
+      if (targetId.length > 1) {
+        var target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  /* ---------------------------------------------------------------------
+     TODO: Analytics + Conversion Tracking
+     -----------------------------------------------------------------------
+     - Insert GA4 config / gtag.js snippet in <head>.
+     - Insert Google Tag Manager container snippet once container ID is confirmed.
+     - Fire a "cta_click" event on every .btn click.
+     - Fire a "book_audit_click" event on every link pointing to /revenue-leak-audit/.
+     - Add Google Ads conversion tracking once the audit booking event is confirmed.
+     - Add call click tracking to tel: links once a tracking number is confirmed.
+     - Add email click tracking to mailto: links.
+  ------------------------------------------------------------------------ */
+
+});
+</script>
+</body>
+</html>
