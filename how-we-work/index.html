@@ -11,10 +11,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Blackvine Media | CRM, Email &amp; SMS Automation</title>
-<meta name="description" content="Contact Blackvine Media for CRM automation, email marketing automation, SMS follow-up, missed-call text-back, appointment reminders, rebooking, reactivation, and revenue infrastructure for high-ticket service businesses.">
+<title>How Blackvine Media Works | The Revenue Leak Audit Process</title>
+<meta name="description" content="A founder-led walkthrough of how Blackvine Media works: the Revenue Leak Audit process, audit eligibility, implementation, and the optional post-launch service model.">
 
-<link rel="canonical" href="https://blackvine.media/contact/">
+<link rel="canonical" href="https://blackvine.media/how-we-work/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -34,20 +34,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ContactPage",
-      "@id": "https://blackvine.media/contact/#webpage",
-      "url": "https://blackvine.media/contact/",
-      "name": "Contact Blackvine Media | CRM, Email & SMS Automation",
+      "@type": "WebPage",
+      "@id": "https://blackvine.media/how-we-work/#webpage",
+      "url": "https://blackvine.media/how-we-work/",
+      "name": "How Blackvine Media Works | The Revenue Leak Audit Process",
       "isPartOf": { "@id": "https://blackvine.media/#website" },
       "about": { "@id": "https://blackvine.media/#organization" },
       "publisher": { "@id": "https://blackvine.media/#organization" }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://blackvine.media/contact/#breadcrumb",
+      "@id": "https://blackvine.media/how-we-work/#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackvine.media/" },
-        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://blackvine.media/contact/" }
+        { "@type": "ListItem", "position": 2, "name": "How We Work", "item": "https://blackvine.media/how-we-work/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blackvine.media/how-we-work/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What do I need to provide for the audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope, but it may include account screenshots, reports, data exports, workflow information, staff explanations, process documentation, or limited account access."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will you launch messages without my approval?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We do not launch client-facing communications without client approval, unless a different approval process is agreed to in writing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Am I required to sign up for ongoing management after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Ongoing monthly management is available, but it is not mandatory for every client. The right structure depends on your systems, internal capacity, and goals."
+          }
+        }
       ]
     }
   ]
@@ -56,9 +86,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <style>
 /* ==========================================================================
-   Blackvine Media — Contact Page V2
-   Same visual system as the approved Home Page V2 / Services Page V2 /
-   Industries Page V2 / landing pages / Revenue Leak Audit page.
+   Blackvine Media — How We Work Page V1
+   Same visual system as the approved Home / Services / About / Contact pages.
    Blackvine Charcoal #0E1116 | Deep Navy #101F33 | Vine Green #3F6B4F
    Soft Sage #A8B8A3 | Warm Ivory #F6F3EC | Slate Gray #68707A | White #FFFFFF
    Accent: Muted Amber #C89B4A (leak / opportunity highlight only)
@@ -134,15 +163,6 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .on-light .btn-secondary { color: var(--charcoal); border-color: rgba(63,107,79,0.35); background: rgba(63,107,79,0.04); }
 .on-light .btn-secondary:hover { border-color: var(--vine); color: var(--vine); background: rgba(63,107,79,0.08); }
 
-/* ---------- Scout Insight bar ---------- */
-.scout-insight-bar { display: flex; align-items: center; gap: 1rem; background: rgba(168,184,163,0.07); border: 1px solid rgba(168,184,163,0.28); border-radius: var(--radius-md); padding: 0.85rem 1.75rem; max-width: 980px; margin: 2.75rem auto 0; backdrop-filter: blur(6px); box-shadow: 0 0 30px rgba(168,184,163,0.1); position: relative; z-index: 1; }
-.scout-insight-bar .scout-mark { flex-shrink: 0; width: 26px; height: 26px; color: var(--sage); }
-.scout-insight-bar p { font-size: 0.92rem; color: rgba(246,243,236,0.86); margin: 0; }
-.scout-insight-bar strong { color: var(--sage); font-weight: 700; }
-@media (max-width: 640px) {
-  .scout-insight-bar { flex-direction: column; text-align: center; padding: 1rem 1.25rem; }
-}
-
 /* ---------- Glow + texture utilities ---------- */
 .glow-orb { position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 0; }
 .grain-veil { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 20%, rgba(168,184,163,0.05), transparent 40%), radial-gradient(circle at 85% 70%, rgba(200,155,74,0.04), transparent 45%); pointer-events: none; z-index: 0; }
@@ -188,6 +208,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .scene--angle-both .scene-surface { clip-path: polygon(0 3.5%, 100% 0, 100% 96.5%, 0 100%); }
 .scene--raise { margin-top: -48px; }
 .scene--raise .scene-surface { box-shadow: 0 -30px 60px rgba(0,0,0,0.35); }
+.scene--compact { padding: 3.75rem 0; }
 
 .cta-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 2.75rem; position: relative; z-index: 2; }
 
@@ -195,101 +216,55 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-
 /* ---------- Hero ---------- */
-.hero { position: relative; padding: 3rem 0 6.5rem; overflow: hidden; background: radial-gradient(120% 100% at 80% -10%, rgba(63,107,79,0.28), transparent 55%), linear-gradient(180deg, var(--navy) 0%, var(--charcoal) 100%); }
+.hero { position: relative; padding: 3rem 0 5rem; overflow: hidden; background: radial-gradient(120% 100% at 80% -10%, rgba(63,107,79,0.28), transparent 55%), linear-gradient(180deg, var(--navy) 0%, var(--charcoal) 100%); }
 .hero .glow-orb--1 { width: 480px; height: 480px; top: -160px; right: -120px; background: rgba(168,184,163,0.16); }
 .hero .glow-orb--2 { width: 320px; height: 320px; bottom: -100px; left: -80px; background: rgba(200,155,74,0.10); }
-.hero-copy { max-width: 700px; margin: 0 auto; text-align: center; }
-.hero h1 { font-size: clamp(1.8rem, 4.6vw, 2.7rem); margin-bottom: 1.15rem; }
+.hero-copy { max-width: 760px; margin: 0 auto; text-align: center; }
+.hero h1 { font-size: clamp(1.8rem, 4.6vw, 2.6rem); margin-bottom: 1.15rem; }
 .hero-sub { color: rgba(246,243,236,0.78); font-size: 1.04rem; margin: 0 auto 2rem; max-width: 62ch; }
-.hero-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; margin-bottom: 0; }
+.hero-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; }
 
-/* ---------- Hero map + Scout Inspection badge ---------- */
-.hero-map { position: relative; z-index: 1; max-width: 760px; margin: 3rem auto 0; }
-.hero-map-frame { position: relative; background: rgba(255,255,255,0.03); border: 1px solid rgba(168,184,163,0.16); border-radius: var(--radius-lg); padding: 2rem 1.4rem 2.1rem; backdrop-filter: blur(8px); box-shadow: 0 30px 70px rgba(0,0,0,0.4); }
-.hero-map-label { display: block; text-align: center; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 1.6rem; }
-
-.scout-inspect-badge { display: flex; align-items: center; gap: 0.85rem; background: rgba(168,184,163,0.07); border: 1px solid rgba(168,184,163,0.32); border-radius: var(--radius-md); padding: 0.85rem 1.1rem; margin: 0 auto 1.5rem; max-width: 300px; backdrop-filter: blur(6px); box-shadow: 0 0 26px rgba(168,184,163,0.16); }
-.scout-inspect-icon-wrap { position: relative; width: 44px; height: 44px; border-radius: 50%; background: radial-gradient(circle, rgba(63,107,79,0.55), rgba(168,184,163,0.08)); border: 1px solid rgba(168,184,163,0.5); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(168,184,163,0.35); animation: floaty 5s ease-in-out infinite; }
-.scout-inspect-icon-wrap svg { color: var(--sage); }
-.scout-inspect-text { display: flex; flex-direction: column; text-align: left; }
-.scout-inspect-label { font-family: var(--font-body); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.03em; color: var(--white); }
-.scout-inspect-sub { font-size: 0.72rem; color: rgba(246,243,236,0.58); font-style: italic; }
-
-/* ---------- Sequential path flow ---------- */
-.path-flow { position: relative; }
-.path-track { display: flex; flex-direction: column; gap: 0; }
-.path-step { display: flex; align-items: center; gap: 1rem; padding: 0.7rem 0.25rem; }
-.path-step-icon { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.path-step-body { display: flex; flex-direction: column; gap: 0.4rem; }
-.path-step-title { font-weight: 700; font-size: 0.84rem; color: var(--white); }
-.path-pill { display: inline-flex; align-items: center; width: fit-content; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.22rem 0.6rem; border-radius: 999px; }
-
-.path-step--live .path-step-icon { background: radial-gradient(circle, rgba(63,107,79,0.6), rgba(63,107,79,0.14)); border: 1px solid rgba(168,184,163,0.6); color: var(--sage); box-shadow: 0 0 16px rgba(168,184,163,0.32); }
-.path-step--live .path-pill { background: rgba(168,184,163,0.2); border: 1px solid rgba(168,184,163,0.55); color: #d3e0cf; }
-.path-step--opportunity .path-step-icon { background: rgba(200,155,74,0.14); border: 1px dashed rgba(200,155,74,0.65); color: var(--amber-bright); }
-.path-step--opportunity .path-pill { background: rgba(200,155,74,0.22); border: 1px solid rgba(200,155,74,0.6); color: #f4d9a4; }
-
-.path-arrow { display: flex; align-items: center; justify-content: center; padding-left: 22px; height: 26px; }
-.path-arrow-bar { position: relative; width: 3px; height: 100%; border-radius: 2px; }
-.path-arrow-bar::after { content: ""; position: absolute; left: 50%; bottom: -2px; width: 0; height: 0; transform: translateX(-50%); border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid currentColor; }
-.path-arrow--live { color: var(--sage); }
-.path-arrow--live .path-arrow-bar { background: var(--sage); }
-.path-arrow--out { color: var(--amber-bright); }
-.path-arrow--out .path-arrow-bar { background: linear-gradient(180deg, var(--sage), var(--amber-bright)); }
-
-@media (min-width: 640px) {
-  .path-track { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
-  .path-step { flex-direction: column; text-align: center; gap: 0.6rem; flex: 1; min-width: 110px; }
-  .path-arrow { flex: 0 0 auto; width: 26px; height: auto; padding-left: 0; align-self: center; margin-top: 23px; }
-  .path-arrow-bar { width: 100%; height: 3px; }
-  .path-arrow-bar::after { left: auto; right: -2px; bottom: 50%; top: 50%; transform: translateY(-50%); border-left: 7px solid currentColor; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-right: none; }
-  .path-arrow--out .path-arrow-bar { background: linear-gradient(90deg, var(--sage), var(--amber-bright)); }
-}
-
-/* ---------- Board / glass tile grid ---------- */
+/* ---------- Numbered process steps (reuses tile-glass + tile-index) ---------- */
 .board-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; position: relative; z-index: 1; }
 @media (min-width: 700px) { .board-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1040px) { .board-grid { grid-template-columns: repeat(3, 1fr); } }
-.board-grid--4 { display: grid; grid-template-columns: 1fr; gap: 1.4rem; position: relative; z-index: 1; }
-@media (min-width: 700px) { .board-grid--4 { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1100px) { .board-grid--4 { grid-template-columns: repeat(4, 1fr); } }
-
 .tile-glass { background: rgba(255,255,255,0.035); border: 1px solid rgba(168,184,163,0.14); border-radius: var(--radius-md); padding: 1.6rem; backdrop-filter: blur(6px); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; position: relative; overflow: hidden; }
 .tile-glass::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--vine), var(--sage)); opacity: 0.8; }
 .tile-glass:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.35); border-color: rgba(168,184,163,0.35); }
 .tile-glass-icon { width: 42px; height: 42px; border-radius: 12px; background: rgba(63,107,79,0.18); color: var(--sage); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
 .tile-glass h3 { font-size: 1.02rem; margin-bottom: 0.55rem; color: var(--white); }
 .tile-glass p { font-size: 0.9rem; color: rgba(246,243,236,0.68); }
+.tile-index { position: absolute; top: 1.2rem; right: 1.3rem; font-family: var(--font-head); font-size: 0.78rem; color: rgba(168,184,163,0.45); }
 .tile-glass--light { background: #F7F7F4; border: 1px solid rgba(63,107,79,0.18); box-shadow: 0 8px 22px rgba(14,17,22,0.09); }
 .tile-glass--light:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(14,17,22,0.15); border-color: rgba(63,107,79,0.4); }
 .tile-glass--light .tile-glass-icon { background: rgba(63,107,79,0.14); color: #3F6B4F; }
 .tile-glass--light h3 { color: #0E1116; }
 .tile-glass--light p { color: #4A5560; }
+.tile-glass--light .tile-index { color: #9AA79D; }
 
-/* ---------- Contact cards ---------- */
-.contact-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
-@media (min-width: 640px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
-.contact-card { background: rgba(255,255,255,0.035); border: 1px solid rgba(168,184,163,0.16); border-radius: var(--radius-lg); padding: 2.1rem 1.75rem; text-align: center; backdrop-filter: blur(6px); }
-.contact-card-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(63,107,79,0.18); color: var(--sage); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.15rem; }
-.contact-card-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.7rem; }
-.contact-card-value { display: block; font-family: var(--font-head); font-size: 1.3rem; color: var(--white); margin-bottom: 0.7rem; font-weight: 700; transition: color 0.2s ease; }
-.contact-card-value:hover { color: var(--sage); }
-.contact-card-note { font-size: 0.85rem; color: rgba(246,243,236,0.58); }
+/* ---------- Info panel (eligibility / timeline / service model) ---------- */
+.info-panel { background: rgba(255,255,255,0.03); border: 1px solid rgba(168,184,163,0.18); border-radius: var(--radius-lg); padding: 2rem 1.85rem; position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+.info-panel + .info-panel { margin-top: 1.5rem; }
+.info-panel h3 { font-size: 1.05rem; margin-bottom: 0.75rem; }
+.info-panel p { font-size: 0.94rem; color: rgba(246,243,236,0.75); margin-bottom: 0.85rem; }
+.info-panel p:last-child { margin-bottom: 0; }
+.info-panel .quote { border-left: 3px solid var(--sage); padding-left: 1rem; font-style: italic; color: rgba(246,243,236,0.85); }
+.info-panel ul { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 0.5rem; }
+.info-panel li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.9rem; color: rgba(246,243,236,0.75); }
+.info-panel li svg { flex-shrink: 0; width: 15px; height: 15px; margin-top: 0.2rem; color: var(--sage); }
+.on-light .info-panel { background: #FFFFFF; border-color: rgba(63,107,79,0.18); box-shadow: 0 8px 22px rgba(14,17,22,0.08); }
+.on-light .info-panel p { color: var(--slate); }
+.on-light .info-panel .quote { color: var(--charcoal); }
+.on-light .info-panel li { color: var(--slate); }
+.on-light .info-panel li svg { color: var(--vine); }
 
-/* ---------- Industry Path Cards ---------- */
-.industry-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; position: relative; z-index: 1; }
-@media (min-width: 640px) { .industry-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1040px) { .industry-grid { grid-template-columns: repeat(4, 1fr); } }
-.industry-card { background: var(--white); border-radius: var(--radius-md); padding: 1.6rem 1.5rem; box-shadow: 0 10px 24px rgba(14,17,22,0.18); border-top: 3px solid var(--sage); height: 100%; display: flex; flex-direction: column; }
-.industry-card .card-icon { width: 42px; height: 42px; border-radius: 12px; background: rgba(63,107,79,0.1); color: var(--vine); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
-.industry-card h3 { color: var(--charcoal); font-size: 1.04rem; margin-bottom: 0.55rem; }
-.industry-card p { font-size: 0.88rem; color: var(--slate); flex-grow: 1; margin-bottom: 1.1rem; }
-.industry-card .industry-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.84rem; font-weight: 700; color: var(--vine); }
-.industry-card .industry-link svg { width: 13px; height: 13px; transition: transform 0.2s ease; }
-.industry-card:hover .industry-link svg { transform: translateX(3px); }
+/* ---------- FAQ ---------- */
+.faq-list { display: flex; flex-direction: column; gap: 1rem; max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+.faq-item { background: rgba(255,255,255,0.035); border: 1px solid rgba(168,184,163,0.16); border-radius: var(--radius-md); padding: 1.4rem 1.6rem; }
+.faq-item h3 { font-size: 0.98rem; margin-bottom: 0.55rem; }
+.faq-item p { font-size: 0.9rem; color: rgba(246,243,236,0.7); }
+.on-light .faq-item p { color: var(--slate); }
 
 /* ---------- Final CTA band ---------- */
 .cta-band { position: relative; padding: 4.5rem 0; overflow: hidden; background: linear-gradient(180deg, var(--charcoal) 0%, var(--navy) 60%, var(--charcoal) 100%); }
@@ -338,19 +313,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </symbol>
 
     <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M4.5 4h4l1.5 4.5-2 2c1 2.5 3 4.5 5.5 5.5l2-2 4.5 1.5v4c0 1-1 2-2 2C10 21 3 14 3 6.5c0-1 1-2 1.5-2.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-phone-missed" viewBox="0 0 24 24"><path d="M4 5c0 8.3 6.7 15 15 15l1-4.2-4.8-2-2 2c-2-1-3.7-2.7-4.7-4.7l2-2-2-4.8L4 5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 4l5 5M20 4h-5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="icon-crm-nodes" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 8v3a2 2 0 002 2h2M18 8v3a2 2 0 01-2 2h-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-inbox" viewBox="0 0 24 24"><path d="M4 12h4l2 3h4l2-3h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="6" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
     <symbol id="icon-calendar-check" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0113.7-5.7L20 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M20 4v4h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12a8 8 0 01-13.7 5.7L4 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 20v-4h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4V5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
-    <symbol id="icon-envelope" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-megaphone" viewBox="0 0 24 24"><path d="M3 10v4h3l6 4V6l-6 4H3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 9a4 4 0 010 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
-    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
-    <symbol id="icon-tooth" viewBox="0 0 24 24"><path d="M12 3c-3 0-5.2 2-5.2 5 0 3 1 4.2 1.2 7.2.1 2 1 3.8 1.8 3.8s1-2.6 2.2-5c1.2 2.4 1.4 5 2.2 5s1.7-1.8 1.8-3.8C16.2 12.2 17.2 11 17.2 8c0-3-2.2-5-5.2-5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-spine" viewBox="0 0 24 24"><path d="M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 6h8M8 10h8M8 14h8M8 18h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 10-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 005.4-5.4l-2.6 2.6-2-2 2.6-2.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 14.2c2.5.4 4.5 2.5 4.5 5.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-file-text" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7V3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3v4h4M9 12h6M9 16h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
   </defs>
 </svg>
 
@@ -388,108 +360,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="glow-orb glow-orb--2"></div>
     <div class="container">
       <div class="hero-copy">
-        <span class="eyebrow" style="justify-content:center;">Contact Blackvine Media</span>
-        <h1>Ready to Find the Leaks in Your Revenue System?</h1>
-        <p class="hero-sub">The best next step is a free Revenue Leak Audit. We&rsquo;ll review where your CRM, lead response, missed-call handling, email and SMS follow-up, reminders, rebooking, reactivation, and tracking may be losing revenue.</p>
+        <span class="eyebrow" style="justify-content:center;">How We Work</span>
+        <h1>A Founder-Led Process, From First Audit to Post-Launch Review</h1>
+        <p class="hero-sub">The Revenue Leak Audit is a founder-led review of the systems and processes between a new inquiry and booked or retained revenue, supported by internal analysis tools. Here is how the process generally runs.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="/revenue-leak-audit/">Book a Free Revenue Leak Audit</a>
         </div>
-      </div>
-
-      <div class="hero-map reveal">
-        <div class="hero-map-frame">
-          <div class="scout-inspect-badge">
-            <span class="scout-inspect-icon-wrap"><svg width="24" height="24"><use href="#icon-scout"></use></svg></span>
-            <span class="scout-inspect-text">
-              <span class="scout-inspect-label">Scout Inspection</span>
-              <span class="scout-inspect-sub">Mapping the next step</span>
-            </span>
-          </div>
-          <span class="hero-map-label">Contact Routing Map</span>
-
-          <div class="path-flow">
-            <div class="path-track" aria-label="Contact routing map: Question or Inquiry to Revenue Leak Audit to System Review to Next Steps">
-              <div class="path-step path-step--live">
-                <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-chat"></use></svg></span>
-                <span class="path-step-body">
-                  <span class="path-step-title">Question / Inquiry</span>
-                  <span class="path-pill">Connected</span>
-                </span>
-              </div>
-              <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
-
-              <div class="path-step path-step--live">
-                <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-target"></use></svg></span>
-                <span class="path-step-body">
-                  <span class="path-step-title">Revenue Leak Audit</span>
-                  <span class="path-pill">Connected</span>
-                </span>
-              </div>
-              <div class="path-arrow path-arrow--live"><span class="path-arrow-bar"></span></div>
-
-              <div class="path-step path-step--live">
-                <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-crm-nodes"></use></svg></span>
-                <span class="path-step-body">
-                  <span class="path-step-title">System Review</span>
-                  <span class="path-pill">Connected</span>
-                </span>
-              </div>
-              <div class="path-arrow path-arrow--out"><span class="path-arrow-bar"></span></div>
-
-              <div class="path-step path-step--opportunity">
-                <span class="path-step-icon"><svg width="19" height="19"><use href="#icon-calendar-check"></use></svg></span>
-                <span class="path-step-body">
-                  <span class="path-step-title">Next Steps</span>
-                  <span class="path-pill">Opportunity</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="scout-insight-bar reveal">
-        <svg class="scout-mark" width="28" height="28"><use href="#icon-scout"></use></svg>
-        <p><strong>Scout Insight:</strong> If you are trying to improve lead response, follow-up, rebooking, reactivation, or tracking, start with the audit. It gives the conversation a clear system to review instead of starting with guesswork.</p>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SECTION 2 — Best Next Step
+       SECTION 2 — The 10-Step Process
        ========================================================================== -->
   <section class="scene scene-ivory on-light scene--angle-top scene--raise">
     <div class="scene-surface"></div>
     <div class="container">
       <div class="section-head center reveal">
-        <span class="eyebrow">Best Next Step</span>
-        <h2>Start With the Revenue Leak Audit</h2>
-        <p>Most questions about Blackvine Media are easiest to answer after looking at the system. The free Revenue Leak Audit is designed to review where revenue may be slipping through your CRM, lead response, missed calls, email and SMS follow-up, appointment reminders, rebooking, reactivation, and tracking setup.</p>
+        <span class="eyebrow">The Process</span>
+        <h2>From Intake to Post-Launch Review</h2>
+        <p>The process below reflects how a Revenue Leak Audit and implementation may unfold. The exact steps and depth of each phase depend on the client's systems, data, and approved scope.</p>
       </div>
 
-      <div class="board-grid--4">
-        <div class="tile-glass tile-glass--light reveal">
+      <div class="board-grid reveal">
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">01</span>
           <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-crm-nodes"></use></svg></span>
-          <h3>Review the System</h3>
-          <p>We look at how leads, calls, forms, customers, patients, clients, and past opportunities move through your backend system.</p>
+          <h3>Business &amp; System Intake</h3>
+          <p>We gather information about lead sources, forms, phone and missed-call process, CRM, scheduling, email and SMS tools, current follow-up, reminders, cancellations, no-shows, rebooking, reactivation, tracking, and reporting &mdash; often via screenshots, exports, workflow information, or limited account access. The exact information required depends on the audit scope.</p>
         </div>
 
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
-          <h3>Find Follow-Up Gaps</h3>
-          <p>We look for places where missed calls, slow response, manual follow-up, cancellations, no-shows, or inactive records may be creating leaks.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">02</span>
           <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
-          <h3>Clarify the Priority</h3>
-          <p>The goal is to see what should be fixed first before spending more on traffic, tools, or disconnected campaigns.</p>
+          <h3>Revenue-Path Mapping</h3>
+          <p>We map what happens from initial inquiry through lead capture, CRM entry, staff response, follow-up, booking, reminder, service delivery, rebooking, reactivation, and attribution &mdash; to see where contacts are delayed, lost, or left without a clear next step.</p>
         </div>
 
-        <div class="tile-glass tile-glass--light reveal">
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">03</span>
           <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
-          <h3>Map the Next Step</h3>
-          <p>If there is a fit, the next conversation can focus on the CRM, email, SMS, reminder, rebooking, reactivation, or tracking systems that matter most.</p>
+          <h3>Revenue-Leak Identification</h3>
+          <p>We review for issues such as slow response time, missed calls without follow-up, forms that don&rsquo;t route correctly, leads that never enter the CRM, inconsistent lifecycle stages, weak reminder logic, missing cancellation or no-show recovery, inactive contacts, and weak or missing tracking.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">04</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-clock"></use></svg></span>
+          <h3>Prioritization</h3>
+          <p>Not every issue is fixed at once. We rank what we find based on revenue impact, urgency, technical difficulty, current system limitations, available data, staff capacity, implementation cost, and the risk of disrupting existing operations.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">05</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-file-text"></use></svg></span>
+          <h3>Revenue Leak Map</h3>
+          <p>You may receive a practical summary of what&rsquo;s happening, where revenue may be leaking, why it matters, which systems are involved, recommended actions, a suggested order, and any items that need further technical validation. We don&rsquo;t promise a fixed number of recommendations, a rigid report format, or guaranteed recovered revenue.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">06</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-wrench"></use></svg></span>
+          <h3>Scope Recommendation</h3>
+          <p>Possible recommendations may include CRM cleanup, better lifecycle stages, new segmentation, form routing, speed-to-lead automation, missed-call follow-up, email and SMS sequences, reminders, cancellation and no-show recovery, rebooking, reactivation, tracking, reporting, staff process changes, integration, or CRM migration. An audit does not automatically mean every service is recommended.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">07</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-calendar-check"></use></svg></span>
+          <h3>Implementation Proposal</h3>
+          <p>When implementation is appropriate, we define the approved scope, systems involved, required access, client responsibilities, message-approval process, deliverables, testing requirements, expected timeline, and post-launch support.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">08</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-crm-nodes"></use></svg></span>
+          <h3>Build &amp; Testing</h3>
+          <p>We configure and test data capture, contact creation, field mapping, workflow triggers, branches, delays, suppression rules, unsubscribes and opt-outs, staff notifications, booking links, conversion events, and source attribution.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">09</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-check"></use></svg></span>
+          <h3>Client Approval &amp; Launch</h3>
+          <p>You review and approve workflow logic, message copy, timing, offers, staff assignments, business rules, consent language, and reporting requirements. We do not launch client-facing communications without client approval, unless a different process is agreed to in writing.</p>
+        </div>
+
+        <div class="tile-glass tile-glass--light">
+          <span class="tile-index">10</span>
+          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-users"></use></svg></span>
+          <h3>Handoff &amp; Post-Launch Review</h3>
+          <p>We may provide documentation, staff guidance, workflow explanation, an initial post-launch review, and ongoing management when it&rsquo;s included in the approved scope.</p>
         </div>
       </div>
 
@@ -500,7 +461,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ==========================================================================
-       SECTION 3 — Direct Contact
+       SECTION 3 — Eligibility, Timeline, Service Model
        ========================================================================== -->
   <section class="scene scene-navy scene--angle-both scene--raise">
     <div class="scene-surface">
@@ -508,148 +469,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="container">
       <div class="section-head center reveal">
-        <span class="eyebrow">Direct Contact</span>
-        <h2>Need to Reach Out Directly?</h2>
-        <p>Use the contact details below for direct questions. For audit requests, use the Revenue Leak Audit page so the right business and follow-up details are captured.</p>
+        <span class="eyebrow">Good to Know</span>
+        <h2>Eligibility, Timing, and Ongoing Support</h2>
       </div>
 
-      <div class="contact-grid reveal">
-        <div class="contact-card">
-          <span class="contact-card-icon"><svg width="24" height="24"><use href="#icon-phone"></use></svg></span>
-          <span class="contact-card-label">Call Blackvine Media</span>
-          <!-- TODO: add call click tracking to tel link -->
-          <a class="contact-card-value" href="tel:+17208692292">(720) 869-2292</a>
-          <span class="contact-card-note">For direct questions or follow-up.</span>
+      <div class="reveal">
+        <div class="info-panel">
+          <h3>Who the Revenue Leak Audit Is For</h3>
+          <p>Revenue Leak Audits may be offered at no cost to qualified businesses. Blackvine reserves the right to decline requests that are not a good fit &mdash; for example, when a business falls outside our service focus, lacks enough lead or contact activity to justify an audit, can&rsquo;t provide enough information for a meaningful review, expects guaranteed financial results, or doesn&rsquo;t appear ready to implement recommendations.</p>
+          <p class="quote">Revenue Leak Audits are offered to qualified businesses. Blackvine may decline requests that fall outside its service focus, cannot be meaningfully evaluated, or are not a strong fit for implementation.</p>
         </div>
 
-        <div class="contact-card">
-          <span class="contact-card-icon"><svg width="24" height="24"><use href="#icon-envelope"></use></svg></span>
-          <span class="contact-card-label">Email Blackvine Media</span>
-          <!-- TODO: add email click tracking to mailto link -->
-          <a class="contact-card-value" href="mailto:Jack@blackvine.media">Jack@blackvine.media</a>
-          <span class="contact-card-note">For general questions or business inquiries.</span>
+        <div class="info-panel">
+          <h3>Implementation Timing</h3>
+          <p>We don&rsquo;t publish a fixed implementation timeline, because it genuinely depends on your systems.</p>
+          <p class="quote">Implementation timing depends on the condition of the current systems, the number and complexity of workflows, integration requirements, available access, data quality, client review speed, and the approved scope.</p>
+          <p class="quote">The expected implementation timeline is defined after the Revenue Leak Audit and technical review.</p>
         </div>
-      </div>
 
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/revenue-leak-audit/">Book Audit Instead</a>
+        <div class="info-panel">
+          <h3>Implementation and Ongoing Management</h3>
+          <p>Our preferred model has two parts: an initial implementation, where we audit, design, build, configure, test, and launch the approved systems for an implementation fee &mdash; and optional ongoing monthly management afterward, which may include workflow monitoring, troubleshooting, message revisions, segment updates, reporting review, attribution checks, deliverability monitoring, and new workflow or campaign development.</p>
+          <p class="quote">Blackvine can provide both implementation and ongoing management. The recommended service structure depends on the client&rsquo;s systems, internal capacity, goals, and approved scope.</p>
+          <p>Ongoing management is not mandatory for every client. Documentation, staff guidance, and handoff support may be included when appropriate.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SECTION 4 — What to Ask About
+       SECTION 4 — Process FAQ (concise)
        ========================================================================== -->
-  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise" id="faq">
     <div class="scene-surface"></div>
     <div class="container">
       <div class="section-head center reveal">
-        <span class="eyebrow">What We Can Review</span>
-        <h2>Questions Blackvine Can Help With</h2>
-        <p>Blackvine Media focuses on backend revenue systems for high-ticket service businesses. Contact is useful for general questions, but the audit is better when you want a structured review.</p>
+        <span class="eyebrow">Process Questions</span>
+        <h2>A Few Common Questions About How We Work</h2>
+        <p>This is a short, process-focused list. For ownership, integration, reporting, message-approval, and post-launch questions, see the full FAQ on the <a href="/services/" style="color:var(--vine); text-decoration:underline;">Services</a> page.</p>
       </div>
 
-      <div class="board-grid">
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-crm-nodes"></use></svg></span>
-          <h3>CRM Automation</h3>
-          <p>How leads, customers, patients, clients, stages, sources, statuses, and follow-up paths are organized.</p>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <h3>What do I need to provide for the audit?</h3>
+          <p>It depends on scope, but it may include account screenshots, reports, data exports, workflow information, staff explanations, process documentation, or limited account access.</p>
         </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-envelope"></use></svg></span>
-          <h3>Email Marketing Automation</h3>
-          <p>How inquiries, estimates, consultations, treatment interest, rebooking, and reactivation are followed up by email.</p>
+        <div class="faq-item">
+          <h3>Will you launch messages without my approval?</h3>
+          <p>No. We do not launch client-facing communications without client approval, unless a different approval process is agreed to in writing.</p>
         </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-chat"></use></svg></span>
-          <h3>SMS Follow-Up</h3>
-          <p>How missed-call text-back, lead response, appointment reminders, cancellation recovery, no-show follow-up, and rebooking prompts work.</p>
+        <div class="faq-item">
+          <h3>Am I required to sign up for ongoing management after launch?</h3>
+          <p>No. Ongoing monthly management is available, but it is not mandatory for every client. The right structure depends on your systems, internal capacity, and goals.</p>
         </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-phone-missed"></use></svg></span>
-          <h3>Lead Capture</h3>
-          <p>How calls, forms, landing pages, Google Business Profile, and ads feed the CRM.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-refresh"></use></svg></span>
-          <h3>Rebooking and Reactivation</h3>
-          <p>How past customers, inactive patients, old leads, open estimates, and dormant lists are brought back into the conversation.</p>
-        </div>
-
-        <div class="tile-glass tile-glass--light reveal">
-          <span class="tile-glass-icon"><svg width="20" height="20"><use href="#icon-target"></use></svg></span>
-          <h3>Tracking and Source Visibility</h3>
-          <p>How calls, forms, ads, landing pages, CRM records, and follow-up activity connect to real opportunities.</p>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/services/">Explore Services</a>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SECTION 5 — Industry Paths
-       ========================================================================== -->
-  <section class="scene scene-charcoal scene--angle-top scene--raise">
-    <div class="scene-surface"><div class="grain-veil"></div></div>
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Industry Paths</span>
-        <h2>Built for High-Value Service Businesses</h2>
-        <p>The follow-up system should match the way each business books revenue. Blackvine Media supports dental practices, med spas, chiropractors, and service businesses with CRM, email, SMS, reminder, rebooking, reactivation, and tracking systems.</p>
-      </div>
-
-      <div class="industry-grid">
-        <div class="industry-card reveal">
-          <span class="card-icon"><svg width="20" height="20"><use href="#icon-tooth"></use></svg></span>
-          <h3>Dental Practices</h3>
-          <p>New patients, missed calls, treatment plans, recall, and inactive patients.</p>
-          <a class="industry-link" href="/dental-marketing-automation/">Dental Practices <svg><use href="#icon-arrow-right"></use></svg></a>
-        </div>
-
-        <div class="industry-card reveal">
-          <span class="card-icon"><svg width="20" height="20"><use href="#icon-sparkle"></use></svg></span>
-          <h3>Med Spas</h3>
-          <p>Consultation leads, treatment interest, rebooking, and inactive clients.</p>
-          <a class="industry-link" href="/med-spa-marketing-automation/">Med Spas <svg><use href="#icon-arrow-right"></use></svg></a>
-        </div>
-
-        <div class="industry-card reveal">
-          <span class="card-icon"><svg width="20" height="20"><use href="#icon-spine"></use></svg></span>
-          <h3>Chiropractors</h3>
-          <p>New patient inquiries, care-plan retention, reminders, and reactivation.</p>
-          <a class="industry-link" href="/chiropractor-marketing-automation/">Chiropractors <svg><use href="#icon-arrow-right"></use></svg></a>
-        </div>
-
-        <div class="industry-card reveal">
-          <span class="card-icon"><svg width="20" height="20"><use href="#icon-wrench"></use></svg></span>
-          <h3>Service Businesses</h3>
-          <p>Lead inquiries, missed calls, estimate follow-up, and customer reactivation.</p>
-          <a class="industry-link" href="/service-business-marketing-automation/">Service Businesses <svg><use href="#icon-arrow-right"></use></svg></a>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/industries/">Explore Industries</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 6 — Final CTA
+       SECTION 5 — Final CTA
        ========================================================================== -->
   <section class="cta-band">
     <div class="container">
       <div class="cta-band-vine"></div>
       <div class="cta-band-head reveal">
-        <h2>Start With a Clear Look at the System</h2>
-        <p>The fastest way to start is with a free Revenue Leak Audit. We&rsquo;ll review where your CRM, lead response, missed-call handling, email and SMS follow-up, reminders, rebooking, reactivation, and tracking may be losing revenue.</p>
+        <h2>Start With the Revenue Leak Audit</h2>
+        <p>The audit is the first, founder-led step in this process &mdash; and it&rsquo;s free for qualified businesses.</p>
       </div>
 
       <div class="cta-row">
@@ -792,14 +677,10 @@ document.addEventListener('DOMContentLoaded', function () {
      -----------------------------------------------------------------------
      - Insert GA4 config / gtag.js snippet in <head>.
      - Insert Google Tag Manager container snippet once container ID is confirmed.
-     - Fire a "cta_click" event on every .btn click, labeled by which CTA was used
-       (hero, best next step, direct contact, what we can review, industries,
-       final CTA).
-     - Fire a "book_audit_click" event on every link pointing to
-       /revenue-leak-audit/ to track intent to convert from the contact page.
+     - Fire a "cta_click" event on every .btn click.
+     - Fire a "book_audit_click" event on every link pointing to /revenue-leak-audit/.
      - Add Google Ads conversion tracking once the audit booking event is confirmed.
-     - Add call click tracking to tel: links once a tracking number (e.g. CallRail)
-       is confirmed.
+     - Add call click tracking to tel: links once a tracking number is confirmed.
      - Add email click tracking to mailto: links.
   ------------------------------------------------------------------------ */
 

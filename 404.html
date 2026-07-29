@@ -321,13 +321,14 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .cta-band { position: relative; padding: 4.5rem 0; overflow: hidden; background: linear-gradient(180deg, var(--charcoal) 0%, var(--navy) 60%, var(--charcoal) 100%); }
 .cta-band-vine { width: 2px; height: 42px; margin: 0 auto 1.25rem; background: repeating-linear-gradient(180deg, var(--sage) 0 4px, transparent 4px 8px); position: relative; z-index: 1; }
 .cta-band-head { text-align: center; max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
-.cta-band h2 { font-size: clamp(1.6rem, 4.2vw, 2.2rem); margin-bottom: 1rem; }
+.cta-band h1, .cta-band h2 { font-size: clamp(1.6rem, 4.2vw, 2.2rem); margin-bottom: 1rem; }
 .cta-band p { color: rgba(246,243,236,0.72); }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy); color: rgba(246,243,236,0.85); padding: 3.5rem 0 1.75rem; position: relative; z-index: 1; }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.25rem; margin-bottom: 2.5rem; }
-@media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+@media (min-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .footer-grid { grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; } }
 .footer-brand .logo { color: var(--white); margin-bottom: 0.9rem; }
 .footer-brand p { font-size: 0.9rem; color: rgba(246,243,236,0.68); max-width: 34ch; }
 .footer-col h4 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
@@ -412,13 +413,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
       <div class="cta-band-vine"></div>
       <div class="cta-band-head reveal">
-        <h2>Page Not Found</h2>
-        <p>The page you are looking for may have moved or no longer exists.</p>
+        <h1>Page Not Found</h1>
+        <p>The page you were looking for may have moved or no longer exists. Here are a few places to go instead.</p>
+      </div>
+
+      <div class="cta-row" style="flex-wrap:wrap; gap:0.75rem;">
+        <a class="btn btn-secondary" href="/">Home</a>
+        <a class="btn btn-secondary" href="/services/">Services</a>
+        <a class="btn btn-secondary" href="/industries/">Industries</a>
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="/">Return Home</a>
-        <a class="btn btn-secondary" href="/revenue-leak-audit/">Book Free Audit</a>
+        <a class="btn btn-primary" href="/revenue-leak-audit/">Get a Free Revenue Leak Audit</a>
       </div>
     </div>
   </section>
@@ -443,10 +449,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h4>Company</h4>
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/how-we-work/">How We Work</a></li>
           <li><a href="/services/">Services</a></li>
           <li><a href="/industries/">Industries</a></li>
+          <li><a href="/technology/">Technology</a></li>
           <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
           <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Trust</h4>
+        <ul>
+          <li><a href="/data-privacy-and-communications/">Data, Privacy &amp; Communications</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -472,7 +489,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="footer-bottom">
-      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved.</span>
+      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved. Blackvine Media is operated by Blackvine Creative LLC, a Wyoming limited liability company.</span>
       <span>CRM, Email &amp; SMS Automation for High-Ticket Service Businesses</span>
     </div>
   </div>

@@ -29,7 +29,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- TODO: fire "book_audit_click" event on links to /revenue-leak-audit/ once tracking is wired up -->
 <!-- TODO: add call click tracking to tel: links once a tracking number (e.g. CallRail) is confirmed -->
 <!-- TODO: add email click tracking to mailto: links once tracking is wired up -->
-<!-- TODO: Organization + Service schema (JSON-LD) — see Website Strategy doc section 20 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://blackvine.media/med-spa-marketing-automation/#service",
+      "name": "Med Spa Marketing Automation & CRM Follow-Up Systems",
+      "serviceType": "CRM, email, and SMS automation for med spas",
+      "provider": { "@id": "https://blackvine.media/#organization" },
+      "areaServed": "United States",
+      "url": "https://blackvine.media/med-spa-marketing-automation/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blackvine.media/med-spa-marketing-automation/#webpage",
+      "url": "https://blackvine.media/med-spa-marketing-automation/",
+      "name": "Med Spa Marketing Automation & CRM Follow-Up Systems | Blackvine Media",
+      "isPartOf": { "@id": "https://blackvine.media/#website" },
+      "about": { "@id": "https://blackvine.media/#organization" },
+      "publisher": { "@id": "https://blackvine.media/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://blackvine.media/med-spa-marketing-automation/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackvine.media/" },
+        { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://blackvine.media/industries/" },
+        { "@type": "ListItem", "position": 3, "name": "Med Spas", "item": "https://blackvine.media/med-spa-marketing-automation/" }
+      ]
+    }
+  ]
+}
+</script>
 
 <style>
 /* ==========================================================================
@@ -377,10 +410,29 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .explore-link { font-size: 0.86rem; font-weight: 600; color: var(--vine); background: rgba(63,107,79,0.06); border: 1px solid rgba(63,107,79,0.25); border-radius: 999px; padding: 0.55rem 1.1rem; transition: background 0.2s ease, border-color 0.2s ease; }
 .explore-link:hover { background: rgba(63,107,79,0.12); border-color: rgba(63,107,79,0.45); }
 
+/* ---------- Example Workflow Architecture diagram (educational) ---------- */
+.workflow-note { text-align: center; font-size: 0.85rem; font-style: italic; color: var(--slate); max-width: 640px; margin: 0 auto 2.5rem; padding: 0.75rem 1.25rem; border: 1px dashed rgba(63,107,79,0.35); border-radius: var(--radius-sm); background: rgba(63,107,79,0.04); }
+.workflow-flow { position: relative; max-width: 1000px; margin: 0 auto; }
+.workflow-track { display: flex; flex-direction: column; gap: 0; }
+.workflow-step { display: flex; align-items: center; gap: 1rem; padding: 0.7rem 0.25rem; }
+.workflow-step-icon { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(63,107,79,0.1); border: 1px solid rgba(63,107,79,0.3); color: var(--vine); }
+.workflow-step-title { font-weight: 700; font-size: 0.82rem; color: var(--charcoal); }
+.workflow-arrow { display: flex; align-items: center; justify-content: center; padding-left: 21px; height: 24px; color: var(--sage); }
+.workflow-arrow-bar { position: relative; width: 3px; height: 100%; border-radius: 2px; background: var(--sage); }
+.workflow-arrow-bar::after { content: ""; position: absolute; left: 50%; bottom: -2px; width: 0; height: 0; transform: translateX(-50%); border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid currentColor; }
+@media (min-width: 640px) {
+  .workflow-track { flex-direction: row; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+  .workflow-step { flex-direction: column; text-align: center; gap: 0.55rem; flex: 1; min-width: 110px; max-width: 140px; }
+  .workflow-arrow { flex: 0 0 auto; width: 24px; height: auto; padding-left: 0; align-self: center; margin-top: 22px; }
+  .workflow-arrow-bar { width: 100%; height: 3px; }
+  .workflow-arrow-bar::after { left: auto; right: -2px; bottom: 50%; top: 50%; transform: translateY(-50%); border-left: 7px solid currentColor; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-right: none; }
+}
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy); color: rgba(246,243,236,0.85); padding: 3.5rem 0 1.75rem; position: relative; z-index: 1; }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.25rem; margin-bottom: 2.5rem; }
-@media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+@media (min-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .footer-grid { grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; } }
 .footer-brand .logo { color: var(--white); margin-bottom: 0.9rem; }
 .footer-brand p { font-size: 0.9rem; color: rgba(246,243,236,0.68); max-width: 34ch; }
 .footer-col h4 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
@@ -707,6 +759,89 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ==========================================================================
+       SECTION 3B — Example Workflow Architecture (Educational)
+       ========================================================================== -->
+  <section class="scene scene-ivory on-light scene--angle-top scene--raise">
+    <div class="scene-surface"></div>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Educational Example</span>
+        <h2>Example Workflow Architecture: Consultation Follow-Up</h2>
+        <p class="workflow-note">Example workflow architecture &mdash; shown for educational purposes, not as a client result.</p>
+      </div>
+
+      <div class="workflow-flow reveal">
+        <div class="workflow-track" aria-label="Example workflow: Consultation Inquiry to CRM Record to Treatment-Interest Segment to Immediate Response to Staff Notification to Timed Email and SMS Follow-Up to Consultation Booking to Reminder to Completed Treatment to Rebooking Interval to Reactivation When Inactive">
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-chat"></use></svg></span>
+            <span class="workflow-step-title">Consultation Inquiry</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-crm-nodes"></use></svg></span>
+            <span class="workflow-step-title">CRM Record</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-target"></use></svg></span>
+            <span class="workflow-step-title">Treatment-Interest Segment</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-phone-missed"></use></svg></span>
+            <span class="workflow-step-title">Immediate Response</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-inbox"></use></svg></span>
+            <span class="workflow-step-title">Staff Notification</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-envelope"></use></svg></span>
+            <span class="workflow-step-title">Timed Email &amp; SMS Follow-Up</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-calendar-check"></use></svg></span>
+            <span class="workflow-step-title">Consultation Booking</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-clock"></use></svg></span>
+            <span class="workflow-step-title">Reminder</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-sparkle"></use></svg></span>
+            <span class="workflow-step-title">Completed Treatment</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-calendar-check"></use></svg></span>
+            <span class="workflow-step-title">Rebooking Interval</span>
+          </div>
+          <div class="workflow-arrow"><span class="workflow-arrow-bar"></span></div>
+
+          <div class="workflow-step">
+            <span class="workflow-step-icon"><svg width="19" height="19"><use href="#icon-refresh"></use></svg></span>
+            <span class="workflow-step-title">Reactivation When Inactive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        SECTION 4 — Before You Spend More on Med Spa Ads
        ========================================================================== -->
   <section class="scene scene-charcoal scene--angle-top scene--raise">
@@ -846,10 +981,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h4>Company</h4>
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/how-we-work/">How We Work</a></li>
           <li><a href="/services/">Services</a></li>
           <li><a href="/industries/">Industries</a></li>
+          <li><a href="/technology/">Technology</a></li>
           <li><a href="/revenue-leak-audit/">Revenue Leak Audit</a></li>
           <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Trust</h4>
+        <ul>
+          <li><a href="/data-privacy-and-communications/">Data, Privacy &amp; Communications</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -875,7 +1021,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="footer-bottom">
-      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved.</span>
+      <span>&copy; <span data-year></span> Blackvine Media. All rights reserved. Blackvine Media is operated by Blackvine Creative LLC, a Wyoming limited liability company.</span>
       <span>CRM, Email &amp; SMS Automation for Med Spas</span>
     </div>
   </div>
