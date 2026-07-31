@@ -510,6 +510,13 @@
   }
 
   async function submitToHubSpot(summaryText){
+    const hutk = getCookie('hubspotutk');
+    const context = {
+      pageUri: window.location.href,
+      pageName: document.title
+    };
+    if(hutk) context.hutk = hutk;
+
     const payload = {
       fields: [
         { name: 'email', value: val('email') },
@@ -517,11 +524,7 @@
         { name: 'phone', value: val('phone') },
         { name: 'discovery_form_notes', value: summaryText }
       ],
-      context: {
-        hutk: getCookie('hubspotutk'),
-        pageUri: window.location.href,
-        pageName: document.title
-      }
+      context: context
     };
     const url = `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`;
     const res = await fetch(url, {
