@@ -111,10 +111,10 @@ h1,h2,h3{font-family:var(--sans);font-weight:900;text-transform:uppercase;letter
 /* ============================= BACKGROUND SYSTEM ============================= */
 .bg-system{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .bg-wordmark{
-  position:absolute;top:38%;left:54%;
-  transform:translate(-50%,-50%) rotate(-3.5deg);
-  font-size:clamp(140px,32vw,620px);
-  font-weight:900;line-height:.8;letter-spacing:-.02em;
+  position:absolute;top:42%;left:50%;
+  transform:translate(-50%,-50%) rotate(-2deg);
+  font-size:clamp(90px,22vw,480px);
+  font-weight:900;line-height:.82;letter-spacing:-.02em;
   color:#FFFFFF;opacity:.04;filter:blur(14px);
   white-space:nowrap;text-align:center;
   will-change:transform;
@@ -309,10 +309,10 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollBar"></div></div>
 <div class="chrome-scrim" id="chromeScrim"></div>
 <div class="chrome-tag" id="chromeTag">BLACKVINE ✕ RACKET SOCIAL CLUB<span>CENTENNIAL, CO — PRIVATE STRATEGY BRIEF</span></div>
-<a class="chrome-cta" id="chromeCta" href="#cta">Talk to Jack ↗</a>
+<a class="chrome-cta" id="chromeCta" href="#cta">Talk to Us ↗</a>
 
 <div class="bg-system" aria-hidden="true">
-  <div class="bg-wordmark" id="bgWordmark">RACKET<br>SOCIAL<br>CLUB</div>
+  <div class="bg-wordmark" id="bgWordmark">RACKET<br>SOCIAL</div>
   <div class="bg-topglow"></div>
   <div class="bg-vignette"></div>
   <div class="bg-grain"></div>
@@ -954,9 +954,9 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
     <h2 class="h-hero mt-sm reveal center" style="transition-delay:.05s">Want us to build it?</h2>
     <p class="body-copy mt-md reveal center" style="max-width:520px;transition-delay:.1s">We've already mapped the opportunity. If you'd like to talk through what implementation could look like, reach out directly.</p>
     <div class="cta-actions reveal" style="transition-delay:.15s">
-      <a class="cta-btn cta-btn--solid" href="mailto:Jack@blackvine.media">Email Jack ↗</a>
-      <a class="cta-btn" href="tel:+17208692292">Call Jack ↗</a>
-      <a class="cta-btn" href="sms:+17208692292">Text Jack ↗</a>
+      <a class="cta-btn cta-btn--solid" href="mailto:eli@blackvine.media">Email Us ↗</a>
+      <a class="cta-btn" href="tel:+17209007284">Call Us ↗</a>
+      <a class="cta-btn" href="sms:+17209007284">Text Us ↗</a>
     </div>
     <div class="cta-foot reveal" style="transition-delay:.2s">Prepared privately for Racket Social Club — Centennial, CO. Not for distribution.</div>
   </div>
@@ -1017,7 +1017,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
       var max = doc.scrollHeight - doc.clientHeight;
       var pct = max > 0 ? (scrollTop / max) * 100 : 0;
       if(bar) bar.style.width = pct + '%';
-      if(wordmark) wordmark.style.transform = 'translate(-50%,-50%) rotate(-3.5deg) translateY(' + (scrollTop * 0.02) + 'px)';
+      if(wordmark) wordmark.style.transform = 'translate(-50%,-50%) rotate(-2deg) translateY(' + (scrollTop * 0.02) + 'px)';
       ticking = false;
     });
   }
