@@ -200,11 +200,11 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 
 /* ============================= EMAIL FLOAT ============================= */
 .email-float{position:relative;width:100%;max-width:430px;margin:0 auto}
-.email-float-frame{position:relative;overflow:hidden;background:var(--paper);border-radius:2px;transform:rotate(var(--rot,0deg));box-shadow:0 50px 90px -28px rgba(0,0,0,.7),0 16px 40px -12px rgba(0,0,0,.55);transition:transform .5s ease}
+.email-float-frame{position:relative;overflow:hidden;background:var(--paper);border-radius:2px;transform-origin:center;box-shadow:0 50px 90px -28px rgba(0,0,0,.7),0 16px 40px -12px rgba(0,0,0,.55);transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s ease}
 .email-float-frame iframe{position:absolute;top:0;left:0;width:620px;border:0;transform-origin:top left;display:block}
 .email-float-tag{margin-top:20px;display:flex;justify-content:space-between;gap:12px;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
 .email-float-tag b{color:var(--white);font-weight:800}
-@media(hover:hover){.email-float:hover .email-float-frame{transform:rotate(0deg) scale(1.015)}}
+@media(hover:hover){.email-float:hover .email-float-frame{transform:translateY(-6px) scale(1.03);box-shadow:0 60px 110px -26px rgba(0,0,0,.78),0 22px 50px -10px rgba(0,0,0,.6)}}
 
 /* ============================= OUTCOME CHAIN ============================= */
 .chain{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:48px}
@@ -373,7 +373,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
     <div class="system-grid">
       <div class="system-grid-email reveal">
         <span class="wf-col-label">What the Member Sees</span>
-        <div class="email-float" style="--rot:-2.5deg">
+        <div class="email-float">
           <div class="email-float-frame">
             <iframe src="/racket-social-club/emails/01-fast-start.html" title="Email — You're In. Let's Play." loading="lazy"></iframe>
           </div>
@@ -611,7 +611,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 
       <div class="system-grid-email reveal" style="transition-delay:.1s">
         <span class="wf-col-label">What the Member Sees</span>
-        <div class="email-float" style="--rot:2.5deg">
+        <div class="email-float">
           <div class="email-float-frame">
             <iframe src="/racket-social-club/emails/02-progression.html" title="Email — Keep the Rally Going." loading="lazy"></iframe>
           </div>
@@ -641,7 +641,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 
     <div class="system-grid mt-lg">
       <div class="system-grid-email reveal">
-        <div class="email-float" style="--rot:-2deg">
+        <div class="email-float">
           <div class="email-float-frame">
             <iframe src="/racket-social-club/emails/03-reactivation.html" title="Email — Don't Start Over." loading="lazy"></iframe>
           </div>
@@ -752,7 +752,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 
     <div class="supporting-grid">
       <div class="supporting-card reveal">
-        <div class="email-float" style="--rot:-3deg">
+        <div class="email-float">
           <div class="email-float-frame"><iframe src="/racket-social-club/emails/04-membership-upsell.html" title="Email — Play More. Pay Smarter." loading="lazy"></iframe></div>
         </div>
         <div class="supporting-logic">
@@ -762,7 +762,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
       </div>
 
       <div class="supporting-card reveal" style="transition-delay:.1s">
-        <div class="email-float" style="--rot:2deg">
+        <div class="email-float">
           <div class="email-float-frame"><iframe src="/racket-social-club/emails/05-equipment-cross-sell.html" title="Email — Stop Guessing. Play the Right Racket." loading="lazy"></iframe></div>
         </div>
         <div class="supporting-logic">
@@ -772,7 +772,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
       </div>
 
       <div class="supporting-card reveal" style="transition-delay:.18s">
-        <div class="email-float" style="--rot:-2deg">
+        <div class="email-float">
           <div class="email-float-frame"><iframe src="/racket-social-club/emails/06-retention.html" title="Email — Keep Your Momentum." loading="lazy"></iframe></div>
         </div>
         <div class="supporting-logic">
