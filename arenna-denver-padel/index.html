@@ -180,7 +180,7 @@ body.cta-in-view .bg-wordmark{opacity:.08}
 .fc-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;padding:0 7px;font-family:var(--sans);font-size:12px;font-weight:800;line-height:1.18;color:#FFF9F4;letter-spacing:-.005em}
 .fc-label--mint{color:var(--ink)}
 .fc-label--soft{color:var(--mist);font-weight:700}
-.fc-diamond-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;padding:0 2px;font-family:var(--sans);font-size:10px;font-weight:800;line-height:1.12;color:#FFF9F4;overflow-wrap:break-word;word-break:break-word;hyphens:auto}
+.fc-diamond-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;padding:0 4px;font-family:var(--sans);font-size:11px;font-weight:800;line-height:1.15;color:#FFF9F4;white-space:normal;overflow-wrap:normal;word-break:normal;hyphens:none}
 
 .fc-glow{filter:drop-shadow(0 0 6px rgba(189,214,193,.4))}
 
@@ -393,20 +393,20 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <path class="fc-line" d="M134,96 L134,108" marker-end="url(#fcArrow)"/>
           <path class="fc-line fc-line--mint" d="M134,142 L134,154" marker-end="url(#fcArrowMint)"/>
           <path class="fc-line" d="M134,188 L134,200" marker-end="url(#fcArrow)"/>
-          <path class="fc-line" d="M134,234 L134,249" marker-end="url(#fcArrow)"/>
-          <path class="fc-line" d="M134,311 L134,336" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,234 L134,258" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,302 L134,336" marker-end="url(#fcArrow)"/>
           <path class="fc-line" d="M134,370 L134,382" marker-end="url(#fcArrow)"/>
-          <path class="fc-line" d="M134,416 L134,429" marker-end="url(#fcArrow)"/>
-          <path class="fc-line" d="M134,491 L134,516" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,416 L134,438" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,482 L134,516" marker-end="url(#fcArrow)"/>
           <path class="fc-line" d="M134,550 L134,562" marker-end="url(#fcArrow)"/>
-          <path class="fc-line" d="M134,596 L134,609" marker-end="url(#fcArrow)"/>
-          <path class="fc-line fc-line--mint" d="M134,671 L134,696" marker-end="url(#fcArrowMint)"/>
+          <path class="fc-line" d="M134,596 L134,618" marker-end="url(#fcArrow)"/>
+          <path class="fc-line fc-line--mint" d="M134,662 L134,696" marker-end="url(#fcArrowMint)"/>
           <path class="fc-line" d="M134,730 L134,742" marker-end="url(#fcArrow)"/>
 
           <!-- YES branches reconnecting into shared buyer path -->
-          <path class="fc-line fc-line--mint" d="M165,280 L372,280 L372,640" marker-end="url(#fcArrowMint)"/>
-          <path class="fc-line fc-line--mint" d="M165,460 L372,460"/>
-          <path class="fc-line fc-line--mint" d="M165,640 L372,640"/>
+          <path class="fc-line fc-line--mint" d="M209,280 L372,280 L372,640" marker-end="url(#fcArrowMint)"/>
+          <path class="fc-line fc-line--mint" d="M209,460 L372,460"/>
+          <path class="fc-line fc-line--mint" d="M209,640 L372,640"/>
           <path class="fc-line fc-line--mint" d="M372,674 L372,696" marker-end="url(#fcArrowMint)"/>
           <path class="fc-line fc-line--mint" d="M372,730 L372,742" marker-end="url(#fcArrowMint)"/>
 
@@ -435,8 +435,8 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <foreignObject x="50" y="200" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send First Rally Plan</div></foreignObject>
 
           <!-- decision 1 -->
-          <rect class="fc-diamond" x="112" y="258" width="44" height="44" transform="rotate(45 134 280)"/>
-          <foreignObject x="117" y="263" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
+          <polygon class="fc-diamond" points="134,258 209,280 134,302 59,280"/>
+          <foreignObject x="103" y="268" width="62" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
 
           <!-- 6 wait -->
           <rect class="fc-rect fc-rect--wait" x="50" y="336" width="168" height="34" rx="3"/>
@@ -446,8 +446,8 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <foreignObject x="50" y="382" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Education Email</div></foreignObject>
 
           <!-- decision 2 -->
-          <rect class="fc-diamond" x="112" y="438" width="44" height="44" transform="rotate(45 134 460)"/>
-          <foreignObject x="117" y="443" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
+          <polygon class="fc-diamond" points="134,438 209,460 134,482 59,460"/>
+          <foreignObject x="103" y="448" width="62" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
 
           <!-- 8 wait -->
           <rect class="fc-rect fc-rect--wait" x="50" y="516" width="168" height="34" rx="3"/>
@@ -457,8 +457,8 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <foreignObject x="50" y="562" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Stronger Incentive</div></foreignObject>
 
           <!-- decision 3 -->
-          <rect class="fc-diamond" x="112" y="618" width="44" height="44" transform="rotate(45 134 640)"/>
-          <foreignObject x="117" y="623" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
+          <polygon class="fc-diamond" points="134,618 209,640 134,662 59,640"/>
+          <foreignObject x="103" y="628" width="62" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
 
           <!-- 10 mint -->
           <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="696" width="168" height="34" rx="3"/>
@@ -537,20 +537,19 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <path class="fc-line" d="M134,96 L134,108" marker-end="url(#fcArrow2)"/>
           <path class="fc-line fc-line--mint" d="M134,142 L134,154" marker-end="url(#fcArrowMint2)"/>
           <path class="fc-line" d="M134,188 L134,200" marker-end="url(#fcArrow2)"/>
-          <path class="fc-line" d="M134,234 L134,246" marker-end="url(#fcArrow2)"/>
-          <path class="fc-line" d="M134,280 L134,294" marker-end="url(#fcArrow2)"/>
-          <path class="fc-line" d="M134,356 L134,381" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,234 L134,303" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,347 L134,381" marker-end="url(#fcArrow2)"/>
           <path class="fc-line" d="M134,415 L134,427" marker-end="url(#fcArrow2)"/>
-          <path class="fc-line" d="M134,461 L134,475" marker-end="url(#fcArrow2)"/>
-          <path class="fc-line" d="M134,537 L134,562" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,461 L134,484" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,528 L134,562" marker-end="url(#fcArrow2)"/>
           <path class="fc-line" d="M134,596 L134,608" marker-end="url(#fcArrow2)"/>
-          <path class="fc-line" d="M134,642 L134,656" marker-end="url(#fcArrow2)"/>
-          <path class="fc-line fc-line--mint" d="M134,718 L134,743" marker-end="url(#fcArrowMint2)"/>
+          <path class="fc-line" d="M134,642 L134,665" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line fc-line--mint" d="M134,709 L134,743" marker-end="url(#fcArrowMint2)"/>
           <path class="fc-line" d="M134,777 L134,789" marker-end="url(#fcArrow2)"/>
 
-          <path class="fc-line fc-line--mint" d="M165,325 L372,325 L372,697" marker-end="url(#fcArrowMint2)"/>
-          <path class="fc-line fc-line--mint" d="M165,506 L372,506"/>
-          <path class="fc-line fc-line--mint" d="M165,687 L372,687"/>
+          <path class="fc-line fc-line--mint" d="M209,325 L372,325 L372,697" marker-end="url(#fcArrowMint2)"/>
+          <path class="fc-line fc-line--mint" d="M209,506 L372,506"/>
+          <path class="fc-line fc-line--mint" d="M209,687 L372,687"/>
           <path class="fc-line fc-line--mint" d="M372,731 L372,743" marker-end="url(#fcArrowMint2)"/>
 
           <text x="107" y="369" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
@@ -571,24 +570,24 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <rect class="fc-rect fc-rect--email" x="50" y="200" width="168" height="34" rx="3"/>
           <foreignObject x="50" y="200" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Membership Optimizer</div></foreignObject>
 
-          <rect class="fc-diamond" x="112" y="303" width="44" height="44" transform="rotate(45 134 325)"/>
-          <foreignObject x="117" y="308" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade?</div></foreignObject>
+          <polygon class="fc-diamond" points="134,303 209,325 134,347 59,325"/>
+          <foreignObject x="103" y="313" width="62" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade?</div></foreignObject>
 
           <rect class="fc-rect fc-rect--wait" x="50" y="381" width="168" height="34" rx="3"/>
           <foreignObject x="50" y="381" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
           <rect class="fc-rect fc-rect--email" x="50" y="427" width="168" height="34" rx="3"/>
           <foreignObject x="50" y="427" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Value Breakdown</div></foreignObject>
 
-          <rect class="fc-diamond" x="112" y="484" width="44" height="44" transform="rotate(45 134 506)"/>
-          <foreignObject x="117" y="489" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade yet?</div></foreignObject>
+          <polygon class="fc-diamond" points="134,484 209,506 134,528 59,506"/>
+          <foreignObject x="103" y="494" width="62" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade yet?</div></foreignObject>
 
           <rect class="fc-rect fc-rect--wait" x="50" y="562" width="168" height="34" rx="3"/>
           <foreignObject x="50" y="562" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
           <rect class="fc-rect fc-rect--email" x="50" y="608" width="168" height="34" rx="3"/>
           <foreignObject x="50" y="608" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Final Reminder</div></foreignObject>
 
-          <rect class="fc-diamond" x="112" y="665" width="44" height="44" transform="rotate(45 134 687)"/>
-          <foreignObject x="117" y="670" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade yet?</div></foreignObject>
+          <polygon class="fc-diamond" points="134,665 209,687 134,709 59,687"/>
+          <foreignObject x="103" y="675" width="62" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade yet?</div></foreignObject>
 
           <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="743" width="168" height="34" rx="3"/>
           <foreignObject x="50" y="743" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: Current Plan Nurture</div></foreignObject>
@@ -666,8 +665,8 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <path class="fc-line fc-line--mint" d="M134,550 L134,562" marker-end="url(#fcArrowMint3)"/>
 
           <!-- YES branches reconnecting into shared buyer path -->
-          <path class="fc-line fc-line--mint" d="M165,280 L372,280 L372,460" marker-end="url(#fcArrowMint3)"/>
-          <path class="fc-line fc-line--mint" d="M165,460 L372,460"/>
+          <path class="fc-line fc-line--mint" d="M209,280 L372,280 L372,460" marker-end="url(#fcArrowMint3)"/>
+          <path class="fc-line fc-line--mint" d="M209,460 L372,460"/>
           <path class="fc-line fc-line--mint" d="M372,494 L372,516" marker-end="url(#fcArrowMint3)"/>
 
           <!-- branch labels -->
@@ -690,8 +689,8 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <foreignObject x="50" y="154" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Build My Play Plan</div></foreignObject>
 
           <!-- decision 1 -->
-          <rect class="fc-diamond" x="112" y="258" width="44" height="44" transform="rotate(45 134 280)"/>
-          <foreignObject x="117" y="263" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
+          <polygon class="fc-diamond" points="134,258 209,280 134,302 59,280"/>
+          <foreignObject x="103" y="268" width="62" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
 
           <!-- 5 wait -->
           <rect class="fc-rect fc-rect--wait" x="50" y="336" width="168" height="34" rx="3"/>
@@ -701,8 +700,8 @@ body.cta-in-view .bg-wordmark{opacity:.08}
           <foreignObject x="50" y="382" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Second Recommendation</div></foreignObject>
 
           <!-- decision 2 -->
-          <rect class="fc-diamond" x="112" y="438" width="44" height="44" transform="rotate(45 134 460)"/>
-          <foreignObject x="117" y="443" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Book yet?</div></foreignObject>
+          <polygon class="fc-diamond" points="134,438 209,460 134,482 59,460"/>
+          <foreignObject x="103" y="448" width="62" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Book yet?</div></foreignObject>
 
           <!-- 7 mint -->
           <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="516" width="168" height="34" rx="3"/>
