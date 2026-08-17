@@ -141,73 +141,50 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 .pitch-scroll{margin-top:clamp(56px,8vw,88px)}
 
 /* ============================= PIPELINE (reframe) ============================= */
-.pipeline{margin:56px auto 0;max-width:340px;display:flex;flex-direction:column;align-items:center}
+.pipeline{margin:52px auto 0;max-width:210px;display:flex;flex-direction:column;align-items:center}
 .pipeline-node{
-  width:100%;text-align:center;padding:14px 22px;border:1px solid var(--line);border-radius:2px;
-  font-size:.82rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);
-  background:rgba(255,255,255,.02);
+  width:100%;text-align:center;padding:9px 14px;border:1px solid var(--line);border-radius:3px;
+  font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);
+  background:rgba(255,255,255,.028);
 }
 .pipeline-node.is-lime{border-color:var(--lime-line);color:var(--lime);background:var(--lime-dim)}
-.pipeline-connector{width:1px;height:30px;background:linear-gradient(to bottom,var(--line),var(--lime-line));position:relative;transform:scaleY(0);transform-origin:top;transition:transform .7s ease}
+.pipeline-connector{width:1px;height:18px;margin-top:1px;background:var(--line);position:relative;transform:scaleY(0);transform-origin:top;transition:transform .5s ease}
+.pipeline-connector::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:0;height:0;border-left:3px solid transparent;border-right:3px solid transparent;border-top:4px solid rgba(255,255,255,.45)}
+.pipeline-connector--lime{background:var(--lime-line)}
+.pipeline-connector--lime::after{border-top-color:#D7FF45}
 .pipeline.is-in .pipeline-connector{transform:scaleY(1)}
 .pipeline-note{margin-top:40px;text-align:center;font-size:1.05rem;font-weight:700;color:var(--white)}
 
-/* ============================= WORKFLOW SYSTEM ============================= */
-.wf-legend{display:flex;flex-wrap:wrap;gap:18px 26px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line-soft)}
-.wf-legend-item{display:flex;align-items:center;gap:8px;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
-.wf-swatch{width:11px;height:11px;border-radius:2px;flex:none}
-.wf-swatch--trigger{background:var(--white)}
-.wf-swatch--segment{background:transparent;border:1.5px solid var(--lime)}
-.wf-swatch--email{background:var(--lime)}
-.wf-swatch--wait{background:transparent;border:1.5px dashed var(--soft)}
-.wf-swatch--decision{background:transparent;border:1.5px solid var(--white);transform:rotate(45deg)}
-.wf-swatch--journey{background:var(--white);opacity:.85}
+/* ============================= COMPACT FLOWCHART (fc-*) ============================= */
+/* Shared visual grammar for every automation on the site:
+   rounded rect = something happened · square rect = the system takes an action ·
+   lime-bordered rect = customer gets an email · dashed rect = the system waits ·
+   diamond = a simple question · lime fill = customer moves to a new group */
+.wf-col-label{display:block;font-size:.62rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:16px}
+.wf-diagram-frame{width:100%;max-width:480px}
+.wf-diagram{width:100%;height:auto;display:block;overflow:visible}
 
-.wf{display:flex;flex-direction:column;align-items:stretch;gap:0}
-.wf-node{position:relative;padding:16px 20px;border-radius:2px;font-size:.95rem;font-weight:700;color:var(--white);background:rgba(255,255,255,.025);border:1px solid var(--line)}
-.wf-node-tag{display:block;font-size:.62rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}
-.wf-node-sub{display:block;margin-top:5px;font-size:.8rem;font-weight:500;color:var(--soft);text-transform:none;letter-spacing:0}
+.fc-rect{fill:rgba(255,255,255,.028);stroke:rgba(255,255,255,.4);stroke-width:1.1}
+.fc-rect--start{stroke:#fff;stroke-width:1.3}
+.fc-rect--lime{fill:rgba(215,255,69,.12);stroke:#D7FF45;stroke-width:1.2}
+.fc-rect--email{stroke:rgba(215,255,69,.55)}
+.fc-rect--wait{stroke:rgba(255,255,255,.3);stroke-dasharray:3,3}
 
-.wf-node--event{background:transparent;border:1px solid var(--line-soft);color:var(--mist)}
-.wf-node--event .wf-node-tag{color:var(--soft)}
-.wf-node--trigger{border-color:rgba(255,255,255,.35)}
-.wf-node--trigger .wf-node-tag{color:var(--white)}
-.wf-node--segment{border-color:var(--lime-line);background:var(--lime-dim)}
-.wf-node--segment .wf-node-tag{color:var(--lime)}
-.wf-node--journey{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.04)}
-.wf-node--journey .wf-node-tag{color:var(--white)}
-.wf-node--email{border-color:var(--lime-line)}
-.wf-node--email .wf-node-tag{color:var(--lime)}
-.wf-node--wait{border-style:dashed;border-color:rgba(255,255,255,.2);color:var(--soft);background:transparent}
-.wf-node--wait .wf-node-tag{color:var(--soft)}
-.wf-node--decision{border-color:var(--white);text-align:center}
-.wf-node--decision .wf-node-tag{color:var(--white);text-align:center}
-.wf-node--outcome{border-color:var(--line-soft);color:var(--mist);font-weight:600}
-.wf-node--outcome .wf-node-tag{color:var(--soft)}
-.wf-node--highlight{border-color:var(--lime);background:var(--lime-dim)}
-.wf-node--highlight .wf-node-tag{color:var(--lime)}
-.wf-node--highlight{color:var(--lime)}
+.fc-diamond{fill:rgba(255,255,255,.02);stroke:#fff;stroke-width:1.1}
 
-.wf-link{width:1px;height:26px;margin:0 auto;background:var(--line);transform:scaleY(0);transform-origin:top;transition:transform .6s ease}
-.wf-link.is-in{transform:scaleY(1)}
-.wf-link--lime{background:var(--lime-line)}
+.fc-line{stroke:rgba(255,255,255,.4);stroke-width:1.1;fill:none}
+.fc-line--lime{stroke:#D7FF45}
 
-.wf-fork{display:grid;grid-template-columns:1fr 216px;gap:22px;align-items:start;margin:22px 0}
-.wf-fork-no{display:flex;flex-direction:column;gap:0;order:1}
-.wf-fork-yes{display:flex;flex-direction:column;gap:10px;order:2;padding:16px;border:1px solid var(--lime-line);background:var(--lime-dim);border-radius:2px}
-.wf-fork-label{font-size:.62rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2px}
-.wf-fork-yes .wf-fork-label{color:var(--lime)}
-.wf-fork-no-label{font-size:.62rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-bottom:10px;display:block}
-.wf-fork-yes .wf-node{padding:11px 13px;font-size:.78rem}
-.wf-fork-yes .wf-node-tag{font-size:.56rem}
+.fc-branch-label{font-family:var(--sans);font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.fc-branch-label--no{fill:var(--soft)}
+.fc-branch-label--yes{fill:#D7FF45}
 
-@media (max-width:760px){
-  .wf-fork{grid-template-columns:1fr}
-  .wf-fork-yes{order:1}
-  .wf-fork-no{order:2;margin-top:18px}
-}
+.fc-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;padding:0 7px;font-family:var(--sans);font-size:12px;font-weight:800;line-height:1.18;color:#fff;letter-spacing:-.005em}
+.fc-label--lime{color:var(--ink)}
+.fc-label--soft{color:var(--mist);font-weight:700}
+.fc-diamond-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;padding:0 2px;font-family:var(--sans);font-size:10px;font-weight:800;line-height:1.12;color:#fff;overflow-wrap:break-word;word-break:break-word;hyphens:auto}
 
-.wf-block{padding:32px;border:1px solid var(--line-soft);border-radius:4px;background:rgba(255,255,255,.015)}
+.fc-glow{filter:drop-shadow(0 0 6px rgba(215,255,69,.35))}
 
 /* ============================= SYSTEM SECTION LAYOUT ============================= */
 .system-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px);align-items:start;margin-top:clamp(56px,7vw,84px)}
@@ -375,9 +352,9 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
       <div class="pipeline-node reveal">Automation</div>
       <div class="pipeline-connector"></div>
       <div class="pipeline-node reveal">Offer</div>
-      <div class="pipeline-connector"></div>
+      <div class="pipeline-connector pipeline-connector--lime"></div>
       <div class="pipeline-node is-lime reveal">Conversion</div>
-      <div class="pipeline-connector"></div>
+      <div class="pipeline-connector pipeline-connector--lime"></div>
       <div class="pipeline-node is-lime reveal">Next Segment</div>
     </div>
 
@@ -395,6 +372,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 
     <div class="system-grid">
       <div class="system-grid-email reveal">
+        <span class="wf-col-label">What the Member Sees</span>
         <div class="email-float" style="--rot:-2.5deg">
           <div class="email-float-frame">
             <iframe src="/racket-social-club/emails/01-fast-start.html" title="Email — You're In. Let's Play." loading="lazy"></iframe>
@@ -404,79 +382,104 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
       </div>
 
       <div class="system-grid-wf reveal" style="transition-delay:.12s">
-        <div class="wf-legend">
-          <span class="wf-legend-item"><span class="wf-swatch wf-swatch--trigger"></span>Trigger</span>
-          <span class="wf-legend-item"><span class="wf-swatch wf-swatch--segment"></span>Segment</span>
-          <span class="wf-legend-item"><span class="wf-swatch wf-swatch--email"></span>Email</span>
-          <span class="wf-legend-item"><span class="wf-swatch wf-swatch--wait"></span>Wait</span>
-          <span class="wf-legend-item"><span class="wf-swatch wf-swatch--decision"></span>Decision</span>
-          <span class="wf-legend-item"><span class="wf-swatch wf-swatch--journey"></span>Next Journey</span>
-        </div>
+        <span class="wf-col-label">What Blackvine Builds Behind It</span>
+        <div class="wf-diagram-frame">
+        <svg class="wf-diagram" viewBox="0 0 480 800" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="fcArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="rgba(255,255,255,.55)"/></marker>
+            <marker id="fcArrowLime" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#D7FF45"/></marker>
+          </defs>
 
-        <div class="wf">
-          <div class="wf-node wf-node--event"><span class="wf-node-tag">Event</span>Membership Purchased</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--trigger"><span class="wf-node-tag">Trigger</span>Membership record created</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--segment"><span class="wf-node-tag">Segment Change</span>New Member</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--journey"><span class="wf-node-tag">Workflow Enrollment</span>New Member Activation + Upsell</div>
-          <div class="wf-link wf-link--lime"></div>
-          <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 01</span>You're In. Let's Play.<span class="wf-node-sub">New Member Fast Start offer</span></div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Purchase?</div>
-        </div>
+          <!-- trunk connectors -->
+          <path class="fc-line" d="M134,50 L134,62" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,96 L134,108" marker-end="url(#fcArrow)"/>
+          <path class="fc-line fc-line--lime" d="M134,142 L134,154" marker-end="url(#fcArrowLime)"/>
+          <path class="fc-line" d="M134,188 L134,200" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,234 L134,249" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,311 L134,336" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,370 L134,382" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,416 L134,429" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,491 L134,516" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,550 L134,562" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,596 L134,609" marker-end="url(#fcArrow)"/>
+          <path class="fc-line fc-line--lime" d="M134,671 L134,696" marker-end="url(#fcArrowLime)"/>
+          <path class="fc-line" d="M134,730 L134,742" marker-end="url(#fcArrow)"/>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--wait"><span class="wf-node-tag">Wait</span>3–5 days</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 02</span>Education + objection handling</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Purchase?</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Purchase</span>Purchase</div>
-            <div class="wf-node wf-node--email"><span class="wf-node-tag">Email</span>Thank-you email</div>
-            <div class="wf-node wf-node--segment"><span class="wf-node-tag">Segment Change</span>Fast Start Bundle Owner</div>
-            <a href="#system-02" class="wf-node wf-node--highlight"><span class="wf-node-tag">Next Journey</span>Bundle activation → lessons → player level → Player Progression System</a>
-          </div>
-        </div>
+          <!-- YES branches reconnecting into shared buyer path -->
+          <path class="fc-line fc-line--lime" d="M165,280 L372,280 L372,640" marker-end="url(#fcArrowLime)"/>
+          <path class="fc-line fc-line--lime" d="M165,460 L372,460"/>
+          <path class="fc-line fc-line--lime" d="M165,640 L372,640"/>
+          <path class="fc-line fc-line--lime" d="M372,674 L372,696" marker-end="url(#fcArrowLime)"/>
+          <path class="fc-line fc-line--lime" d="M372,730 L372,742" marker-end="url(#fcArrowLime)"/>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--wait"><span class="wf-node-tag">Wait</span>3–5 days</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 03</span>Stronger incentive / urgency</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Purchase?</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Purchase</span>Thank-you</div>
-            <a href="#system-02" class="wf-node wf-node--highlight"><span class="wf-node-tag">Segment Change</span>Fast Start Bundle Owner</a>
-          </div>
-        </div>
+          <!-- branch labels -->
+          <text x="107" y="327" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="272" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="507" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="452" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="687" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="632" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--segment"><span class="wf-node-tag">Segment Change</span>Standard New Member</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--wait"><span class="wf-node-tag">Wait</span>Cooldown</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Next Journey</span>Next relevant journey</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Purchase</span>Thank-you</div>
-            <div class="wf-node wf-node--highlight"><span class="wf-node-tag">Segment Change</span>Fast Start Bundle Owner</div>
-          </div>
-        </div>
+          <!-- 1 start -->
+          <rect class="fc-rect fc-rect--start" x="50" y="16" width="168" height="34" rx="17"/>
+          <foreignObject x="50" y="16" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Membership Purchased</div></foreignObject>
+          <!-- 2 -->
+          <rect class="fc-rect" x="50" y="62" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="62" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">New Membership Detected</div></foreignObject>
+          <!-- 3 lime -->
+          <rect class="fc-rect fc-rect--lime fc-glow" x="50" y="108" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="108" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: New Member</div></foreignObject>
+          <!-- 4 -->
+          <rect class="fc-rect" x="50" y="154" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="154" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Start New Member Journey</div></foreignObject>
+          <!-- 5 email -->
+          <rect class="fc-rect fc-rect--email" x="50" y="200" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="200" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Welcome Offer</div></foreignObject>
 
+          <!-- decision 1 -->
+          <rect class="fc-diamond" x="112" y="258" width="44" height="44" transform="rotate(45 134 280)"/>
+          <foreignObject x="117" y="263" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they buy?</div></foreignObject>
+
+          <!-- 6 wait -->
+          <rect class="fc-rect fc-rect--wait" x="50" y="336" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="336" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <!-- 7 email -->
+          <rect class="fc-rect fc-rect--email" x="50" y="382" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="382" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Education Email</div></foreignObject>
+
+          <!-- decision 2 -->
+          <rect class="fc-diamond" x="112" y="438" width="44" height="44" transform="rotate(45 134 460)"/>
+          <foreignObject x="117" y="443" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they buy?</div></foreignObject>
+
+          <!-- 8 wait -->
+          <rect class="fc-rect fc-rect--wait" x="50" y="516" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="516" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <!-- 9 email -->
+          <rect class="fc-rect fc-rect--email" x="50" y="562" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="562" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Final Incentive</div></foreignObject>
+
+          <!-- decision 3 -->
+          <rect class="fc-diamond" x="112" y="618" width="44" height="44" transform="rotate(45 134 640)"/>
+          <foreignObject x="117" y="623" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they buy?</div></foreignObject>
+
+          <!-- 10 lime -->
+          <rect class="fc-rect fc-rect--lime fc-glow" x="50" y="696" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="696" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: Standard Member</div></foreignObject>
+          <!-- 11 -->
+          <rect class="fc-rect" x="50" y="742" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="742" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Enter Next Journey</div></foreignObject>
+
+          <!-- shared buyer path -->
+          <rect class="fc-rect fc-rect--email" x="288" y="640" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="640" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Thank-You</div></foreignObject>
+          <rect class="fc-rect fc-rect--lime fc-glow" x="288" y="696" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="696" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: Fast Start Owner</div></foreignObject>
+          <a href="#system-02">
+            <rect class="fc-rect fc-rect--lime fc-glow" x="288" y="742" width="168" height="34" rx="3"/>
+            <foreignObject x="288" y="742" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Enter Player Progression ↗</div></foreignObject>
+          </a>
+        </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -525,73 +528,89 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 
     <div class="system-grid system-grid--reverse">
       <div class="system-grid-wf reveal">
-        <div class="wf">
-          <div class="wf-node wf-node--event"><span class="wf-node-tag">Event</span>Program / Session Completed</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--trigger"><span class="wf-node-tag">Trigger</span>Intro, clinic, lesson or program marked complete</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--journey"><span class="wf-node-tag">Data Evaluation</span>Sport · Player level · Programs completed<span class="wf-node-sub">Booking history · Coach recommendation · Availability</span></div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--segment"><span class="wf-node-tag">Segment Change</span>Ready for Next Level</div>
-          <div class="wf-link wf-link--lime"></div>
-          <div class="wf-node wf-node--journey"><span class="wf-node-tag">Next-Best-Offer Selected</span>Intro → Beginner Clinic<span class="wf-node-sub">Clinics → Private Lesson · Private Lesson → League · League → Tournament</span></div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--journey"><span class="wf-node-tag">Workflow Enrollment</span>Player Progression</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 01</span>Keep the Rally Going.<span class="wf-node-sub">Personalized next-session recommendation</span></div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Booked?</div>
-        </div>
+        <span class="wf-col-label">What Blackvine Builds Behind It</span>
+        <div class="wf-diagram-frame">
+        <svg class="wf-diagram" viewBox="0 0 480 850" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="fcArrow2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="rgba(255,255,255,.55)"/></marker>
+            <marker id="fcArrowLime2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#D7FF45"/></marker>
+          </defs>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--wait"><span class="wf-node-tag">Wait</span>3–5 days</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 02</span>Education: why this is the correct next step</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Booked?</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Booking</span>Confirmation / thank-you</div>
-            <div class="wf-node wf-node--highlight"><span class="wf-node-tag">Segment</span>Active Progression</div>
-            <div class="wf-node-sub" style="padding:0 4px">Session completed → trigger fires again → system repeats</div>
-          </div>
-        </div>
+          <path class="fc-line" d="M134,50 L134,62" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,96 L134,108" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line fc-line--lime" d="M134,142 L134,154" marker-end="url(#fcArrowLime2)"/>
+          <path class="fc-line" d="M134,188 L134,200" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,234 L134,246" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,280 L134,294" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,356 L134,381" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,415 L134,427" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,461 L134,475" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,537 L134,562" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,596 L134,608" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,642 L134,656" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line fc-line--lime" d="M134,718 L134,743" marker-end="url(#fcArrowLime2)"/>
+          <path class="fc-line" d="M134,777 L134,789" marker-end="url(#fcArrow2)"/>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--wait"><span class="wf-node-tag">Wait</span>3–5 days</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 03</span>Bundle / priority spot / incentive</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Booked?</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Booking</span>Confirmed</div>
-            <div class="wf-node wf-node--highlight"><span class="wf-node-tag">Segment</span>Active Progression</div>
-          </div>
-        </div>
+          <path class="fc-line fc-line--lime" d="M165,325 L372,325 L372,697" marker-end="url(#fcArrowLime2)"/>
+          <path class="fc-line fc-line--lime" d="M165,506 L372,506"/>
+          <path class="fc-line fc-line--lime" d="M165,687 L372,687"/>
+          <path class="fc-line fc-line--lime" d="M372,731 L372,743" marker-end="url(#fcArrowLime2)"/>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--segment"><span class="wf-node-tag">Segment Change</span>Active Player — Nurture</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Next Journey</span>Monthly play journey</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Booking</span>Confirmed</div>
-            <div class="wf-node wf-node--highlight"><span class="wf-node-tag">Segment</span>Active Progression</div>
-          </div>
+          <text x="107" y="369" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="317" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="550" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="498" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="731" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="679" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+
+          <rect class="fc-rect fc-rect--start" x="50" y="16" width="168" height="34" rx="17"/>
+          <foreignObject x="50" y="16" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Member Finishes a Session</div></foreignObject>
+          <rect class="fc-rect" x="50" y="62" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="62" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">System Checks Their Progress</div></foreignObject>
+          <rect class="fc-rect fc-rect--lime fc-glow" x="50" y="108" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="108" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: Ready for Next Level</div></foreignObject>
+          <rect class="fc-rect" x="50" y="154" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="154" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">System Picks Next Session</div></foreignObject>
+          <rect class="fc-rect" x="50" y="200" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="200" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Start Progression Journey</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="246" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="246" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Recommendation Email</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="303" width="44" height="44" transform="rotate(45 134 325)"/>
+          <foreignObject x="117" y="308" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Book it?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--wait" x="50" y="381" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="381" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="427" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="427" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Explainer Email</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="484" width="44" height="44" transform="rotate(45 134 506)"/>
+          <foreignObject x="117" y="489" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Book yet?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--wait" x="50" y="562" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="562" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="608" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="608" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Incentive Email</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="665" width="44" height="44" transform="rotate(45 134 687)"/>
+          <foreignObject x="117" y="670" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Book yet?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--lime fc-glow" x="50" y="743" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="743" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: Nurture Group</div></foreignObject>
+          <rect class="fc-rect" x="50" y="789" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="789" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Start Monthly Check-Ins</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--email" x="288" y="697" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="697" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Booking Confirmation</div></foreignObject>
+          <rect class="fc-rect fc-rect--lime fc-glow" x="288" y="743" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="743" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: Active Player</div></foreignObject>
+        </svg>
         </div>
+        <p class="body-copy--sm mt-xs" style="max-width:340px">The cycle repeats automatically — each completed session fires the trigger again.</p>
       </div>
 
       <div class="system-grid-email reveal" style="transition-delay:.1s">
+        <span class="wf-col-label">What the Member Sees</span>
         <div class="email-float" style="--rot:2.5deg">
           <div class="email-float-frame">
             <iframe src="/racket-social-club/emails/02-progression.html" title="Email — Keep the Rally Going." loading="lazy"></iframe>
@@ -631,64 +650,82 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
       </div>
 
       <div class="system-grid-wf reveal" style="transition-delay:.1s">
-        <div class="wf">
-          <div class="wf-node wf-node--event"><span class="wf-node-tag">Event</span>60 Days Without Activity</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--trigger"><span class="wf-node-tag">Trigger</span>Inactivity threshold reached</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--segment"><span class="wf-node-tag">Segment Change</span>Comeback Eligible</div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--journey"><span class="wf-node-tag">Workflow Enrollment</span>Player Reactivation</div>
-          <div class="wf-link wf-link--lime"></div>
-          <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 01</span>Don't Start Over.<span class="wf-node-sub">Comeback Pass</span></div>
-          <div class="wf-link"></div>
-          <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Return booking?</div>
-        </div>
+        <span class="wf-col-label">What Blackvine Builds Behind It</span>
+        <div class="wf-diagram-frame">
+        <svg class="wf-diagram" viewBox="0 0 480 760" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="fcArrow3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="rgba(255,255,255,.55)"/></marker>
+            <marker id="fcArrowLime3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#D7FF45"/></marker>
+          </defs>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--wait"><span class="wf-node-tag">Wait</span>3–5 days</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 02</span>Education + objection handling</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Return?</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Welcome Back</span>Confirmation email</div>
-            <a href="#system-02" class="wf-node wf-node--highlight"><span class="wf-node-tag">Segment Change</span>Reactivated Player → Player Progression System</a>
-          </div>
-        </div>
+          <path class="fc-line" d="M134,50 L134,62" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line fc-line--lime" d="M134,96 L134,108" marker-end="url(#fcArrowLime3)"/>
+          <path class="fc-line" d="M134,142 L134,154" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,188 L134,202" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,264 L134,289" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,323 L134,335" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,369 L134,383" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,445 L134,470" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,504 L134,516" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,550 L134,564" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line fc-line--lime" d="M134,626 L134,651" marker-end="url(#fcArrowLime3)"/>
+          <path class="fc-line" d="M134,685 L134,697" marker-end="url(#fcArrow3)"/>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--wait"><span class="wf-node-tag">Wait</span>3–5 days</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--email"><span class="wf-node-tag">Email 03</span>Stronger comeback incentive</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--decision"><span class="wf-node-tag">Decision</span>Return?</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <a href="#system-02" class="wf-node wf-node--highlight"><span class="wf-node-tag">Segment Change</span>Reactivated Player → Progression</a>
-          </div>
-        </div>
+          <path class="fc-line fc-line--lime" d="M165,233 L372,233 L372,605" marker-end="url(#fcArrowLime3)"/>
+          <path class="fc-line fc-line--lime" d="M165,414 L372,414"/>
+          <path class="fc-line fc-line--lime" d="M165,595 L372,595"/>
+          <path class="fc-line fc-line--lime" d="M372,639 L372,651" marker-end="url(#fcArrowLime3)"/>
+          <path class="fc-line fc-line--lime" d="M372,685 L372,697" marker-end="url(#fcArrowLime3)"/>
 
-        <div class="wf-fork">
-          <div class="wf-fork-no">
-            <span class="wf-fork-no-label">No</span>
-            <div class="wf-node wf-node--segment"><span class="wf-node-tag">Segment Change</span>Lapsed Player</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--wait"><span class="wf-node-tag">Wait</span>Cooldown</div>
-            <div class="wf-link"></div>
-            <div class="wf-node wf-node--outcome"><span class="wf-node-tag">Next Journey</span>Future seasonal / event / league win-back</div>
-          </div>
-          <div class="wf-fork-yes">
-            <span class="wf-fork-label">Yes</span>
-            <div class="wf-node wf-node--highlight"><span class="wf-node-tag">Segment Change</span>Reactivated Player → Progression</div>
-          </div>
+          <text x="107" y="277" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="225" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="458" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="406" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="639" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="587" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+
+          <rect class="fc-rect fc-rect--start" x="50" y="16" width="168" height="34" rx="17"/>
+          <foreignObject x="50" y="16" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">60 Days Since Last Visit</div></foreignObject>
+          <rect class="fc-rect fc-rect--lime fc-glow" x="50" y="62" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="62" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: Comeback Eligible</div></foreignObject>
+          <rect class="fc-rect" x="50" y="108" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="108" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Start Win-Back Journey</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="154" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="154" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Comeback Offer</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="211" width="44" height="44" transform="rotate(45 134 233)"/>
+          <foreignObject x="117" y="216" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Back now?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--wait" x="50" y="289" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="289" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="335" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="335" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Follow-Up Email</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="392" width="44" height="44" transform="rotate(45 134 414)"/>
+          <foreignObject x="117" y="397" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Back yet?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--wait" x="50" y="470" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="470" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="516" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="516" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Bigger Incentive</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="573" width="44" height="44" transform="rotate(45 134 595)"/>
+          <foreignObject x="117" y="578" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Back yet?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--lime fc-glow" x="50" y="651" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="651" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: Lapsed Player</div></foreignObject>
+          <rect class="fc-rect" x="50" y="697" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="697" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Wait for Next Campaign</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--email" x="288" y="605" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="605" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Welcome Back</div></foreignObject>
+          <rect class="fc-rect fc-rect--lime fc-glow" x="288" y="651" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="651" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Move to: Reactivated Player</div></foreignObject>
+          <a href="#system-02">
+            <rect class="fc-rect fc-rect--lime fc-glow" x="288" y="697" width="168" height="34" rx="3"/>
+            <foreignObject x="288" y="697" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--lime">Re-Enter Progression ↗</div></foreignObject>
+          </a>
+        </svg>
         </div>
       </div>
     </div>
@@ -936,7 +973,7 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
 (function(){
   "use strict";
 
-  var revealEls = document.querySelectorAll('.reveal, .wf-link');
+  var revealEls = document.querySelectorAll('.reveal');
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
@@ -999,10 +1036,10 @@ body.cta-in-view .bg-wordmark{opacity:.075;transition:opacity 1.4s ease}
     var detail = card.querySelector('.opp-card-detail');
     if(detail){
       detail.innerHTML = '<div class="opp-detail-inner">' +
-        '<div class="opp-detail-field"><span>Trigger</span><b>' + card.dataset.trigger + '</b></div>' +
-        '<div class="opp-detail-field"><span>Segment</span><b>' + card.dataset.segment + '</b></div>' +
-        '<div class="opp-detail-field"><span>Channels</span><b>' + card.dataset.channels + '</b></div>' +
-        '<div class="opp-detail-field"><span>Objective</span><b>' + card.dataset.objective + '</b></div>' +
+        '<div class="opp-detail-field"><span>● What Happens</span><b>' + card.dataset.trigger + '</b></div>' +
+        '<div class="opp-detail-field"><span>➤ Moves To</span><b>' + card.dataset.segment + '</b></div>' +
+        '<div class="opp-detail-field"><span>✉ Channels</span><b>' + card.dataset.channels + '</b></div>' +
+        '<div class="opp-detail-field"><span>Goal</span><b>' + card.dataset.objective + '</b></div>' +
       '</div>';
     }
     card.addEventListener('click', function(){
