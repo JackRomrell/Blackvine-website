@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arenna Denver Padel × Blackvine — Private Strategy Brief</title>
+<meta name="description" content="A private revenue infrastructure brief built for Arenna Denver Padel, Denver CO.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#464A5F">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+/* ============================= RESET ============================= */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important} }
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* ============================= TOKENS ============================= */
+:root{
+  --ink:#464A5F;
+  --white:#FFF9F4;
+  --paper:#FFF9F4;
+  --mist:#C9C3B8;
+  --soft:#928C82;
+  --faint:#68635B;
+  --line:rgba(255,249,244,.13);
+  --line-soft:rgba(255,249,244,.07);
+  --mint:#BDD6C1;
+  --mint-dim:rgba(189,214,193,.12);
+  --mint-line:rgba(189,214,193,.4);
+  --orange:#DD824C;
+  --orange-line:rgba(221,130,76,.4);
+  --display:'Red Hat Display',Arial,Helvetica,sans-serif;
+  --sans:'Inter',Arial,Helvetica,sans-serif;
+  --container:1360px;
+  --edge:clamp(24px,6vw,96px);
+  --radius:3px;
+}
+
+/* ============================= BASE ============================= */
+body{
+  background:var(--ink);
+  color:var(--white);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.5;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+main{position:relative;z-index:2}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-size:.72rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--orange);
+}
+.eyebrow--mist{color:var(--soft)}
+.eyebrow::before{content:'';width:22px;height:1px;background:currentColor;opacity:.7}
+
+h1,h2,h3{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.03em;line-height:.98;color:var(--white)}
+.h-hero{font-size:clamp(2.6rem,6.4vw,6rem);letter-spacing:-.035em}
+.h-xl{font-size:clamp(2.1rem,4.6vw,4rem)}
+.h-lg{font-size:clamp(1.7rem,3.2vw,2.7rem)}
+.h-md{font-size:clamp(1.3rem,2vw,1.7rem);letter-spacing:-.02em}
+
+.body-copy{font-size:clamp(1.02rem,1.3vw,1.18rem);line-height:1.65;color:var(--mist);font-weight:400;text-transform:none;letter-spacing:0}
+.body-copy--sm{font-size:.95rem;line-height:1.6;color:var(--soft)}
+
+.container{max-width:var(--container);margin:0 auto;padding-left:var(--edge);padding-right:var(--edge)}
+
+.sec{position:relative;padding:clamp(88px,13vw,168px) 0;isolation:isolate}
+
+.mint{color:var(--mint)}
+.mist{color:var(--mist)}
+.soft{color:var(--soft)}
+
+/* ============================= REVEAL ============================= */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,.8,.24,1),transform .9s cubic-bezier(.16,.8,.24,1)}
+.reveal.is-in{opacity:1;transform:none}
+
+/* ============================= CHROME (fixed overlay) ============================= */
+.scroll-progress{position:fixed;top:0;left:0;width:100%;height:2px;background:rgba(255,249,244,.07);z-index:100}
+.scroll-progress-bar{height:100%;width:0%;background:var(--mint);transition:width .08s linear}
+
+.chrome-scrim{position:fixed;top:0;left:0;width:100%;height:90px;z-index:99;background:linear-gradient(to bottom,rgba(70,74,95,.9) 0%,rgba(70,74,95,0) 100%);pointer-events:none;opacity:0;transition:opacity .6s ease}
+.chrome-scrim.is-visible{opacity:1}
+
+.chrome-tag{
+  position:fixed;top:22px;left:var(--edge);z-index:100;
+  display:flex;flex-direction:column;gap:2px;
+  font-size:.66rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--white);
+  opacity:0;transform:translateY(-8px);
+  transition:opacity .6s ease,transform .6s ease;
+  pointer-events:none;
+}
+.chrome-tag.is-visible{opacity:1;transform:none}
+.chrome-tag span{color:var(--soft);font-weight:700;letter-spacing:.14em;font-size:.6rem}
+
+.chrome-cta{
+  position:fixed;top:20px;right:var(--edge);z-index:100;
+  font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink);background:var(--mint);padding:10px 16px;border-radius:2px;
+  opacity:0;transform:translateY(-8px);
+  transition:opacity .6s ease,transform .6s ease,background .2s ease;
+}
+.chrome-cta.is-visible{opacity:1;transform:none;pointer-events:auto}
+.chrome-cta:hover{background:var(--white)}
+
+/* ============================= BACKGROUND SYSTEM ============================= */
+.bg-system{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.bg-wordmark{
+  position:absolute;top:42%;left:50%;
+  transform:translate(-50%,-50%) rotate(-2deg);
+  font-family:var(--display);
+  font-size:clamp(90px,22vw,480px);
+  font-weight:900;line-height:.82;letter-spacing:-.01em;
+  color:var(--white);opacity:.045;filter:blur(14px);
+  white-space:nowrap;text-align:center;
+  will-change:transform;
+  transition:opacity 1.4s ease;
+}
+.bg-vignette{position:absolute;inset:-10%;background:radial-gradient(ellipse at 50% 30%,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.45) 100%)}
+.bg-topglow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:120%;height:70%;background:radial-gradient(ellipse at center,rgba(189,214,193,.06) 0%,rgba(189,214,193,0) 62%)}
+.bg-grain{position:absolute;inset:0;opacity:.035;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+body.cta-in-view .bg-wordmark{opacity:.08}
+
+/* ============================= SCROLL CUE ============================= */
+.scroll-cue{display:inline-flex;align-items:center;gap:.6em;font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
+.scroll-cue .arrow{display:inline-block;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* ============================= PITCH ============================= */
+.sec--pitch{padding-top:clamp(150px,20vw,220px);min-height:92vh;display:flex;align-items:center}
+.pitch-stat{margin-top:clamp(48px,6vw,72px);display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.pitch-stat-num{font-family:var(--display);font-size:clamp(3rem,7vw,5.5rem);font-weight:900;color:var(--orange);letter-spacing:-.03em;line-height:1}
+.pitch-stat-label{font-size:.78rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);max-width:220px}
+.pitch-scroll{margin-top:clamp(56px,8vw,88px)}
+
+/* ============================= PIPELINE (reframe) ============================= */
+.pipeline{margin:52px auto 0;max-width:210px;display:flex;flex-direction:column;align-items:center}
+.pipeline-node{
+  width:100%;text-align:center;padding:9px 14px;border:1px solid var(--line);border-radius:3px;
+  font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);
+  background:rgba(255,249,244,.03);
+}
+.pipeline-node.is-mint{border-color:var(--mint-line);color:var(--mint);background:var(--mint-dim)}
+.pipeline-connector{width:1px;height:18px;margin-top:1px;background:var(--line);position:relative;transform:scaleY(0);transform-origin:top;transition:transform .5s ease}
+.pipeline-connector::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:0;height:0;border-left:3px solid transparent;border-right:3px solid transparent;border-top:4px solid rgba(255,249,244,.5)}
+.pipeline-connector--mint{background:var(--mint-line)}
+.pipeline-connector--mint::after{border-top-color:#BDD6C1}
+.pipeline.is-in .pipeline-connector{transform:scaleY(1)}
+.pipeline-note{margin-top:40px;text-align:center;font-size:1.05rem;font-weight:700;color:var(--white)}
+
+/* ============================= COMPACT FLOWCHART (fc-*) ============================= */
+.wf-col-label{display:block;font-size:.62rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:16px}
+.wf-diagram-frame{width:100%;max-width:480px}
+.wf-diagram{width:100%;height:auto;display:block;overflow:visible}
+
+.fc-rect{fill:rgba(255,249,244,.035);stroke:rgba(255,249,244,.4);stroke-width:1.1}
+.fc-rect--start{stroke:#FFF9F4;stroke-width:1.3}
+.fc-rect--mint{fill:rgba(189,214,193,.14);stroke:#BDD6C1;stroke-width:1.2}
+.fc-rect--email{stroke:rgba(189,214,193,.6)}
+.fc-rect--wait{stroke:rgba(255,249,244,.3);stroke-dasharray:3,3}
+
+.fc-diamond{fill:rgba(255,249,244,.02);stroke:#FFF9F4;stroke-width:1.1}
+
+.fc-line{stroke:rgba(255,249,244,.4);stroke-width:1.1;fill:none}
+.fc-line--mint{stroke:#BDD6C1}
+
+.fc-branch-label{font-family:var(--sans);font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.fc-branch-label--no{fill:var(--soft)}
+.fc-branch-label--yes{fill:#BDD6C1}
+
+.fc-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;padding:0 7px;font-family:var(--sans);font-size:12px;font-weight:800;line-height:1.18;color:#FFF9F4;letter-spacing:-.005em}
+.fc-label--mint{color:var(--ink)}
+.fc-label--soft{color:var(--mist);font-weight:700}
+.fc-diamond-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;padding:0 2px;font-family:var(--sans);font-size:10px;font-weight:800;line-height:1.12;color:#FFF9F4;overflow-wrap:break-word;word-break:break-word;hyphens:auto}
+
+.fc-glow{filter:drop-shadow(0 0 6px rgba(189,214,193,.4))}
+
+/* ============================= SYSTEM SECTION LAYOUT ============================= */
+.system-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px);align-items:start;margin-top:clamp(56px,7vw,84px)}
+.system-grid--reverse .system-grid-email{order:2}
+.system-grid--reverse .system-grid-wf{order:1}
+@media (max-width:980px){
+  .system-grid{grid-template-columns:1fr;gap:56px}
+  .system-grid--reverse .system-grid-email{order:1}
+  .system-grid--reverse .system-grid-wf{order:2}
+}
+.system-head{max-width:820px}
+.system-head .body-copy{margin-top:22px;max-width:640px}
+
+/* ============================= EMAIL FLOAT ============================= */
+.email-float{position:relative;width:100%;max-width:430px;margin:0 auto}
+.email-float-frame{position:relative;overflow:hidden;background:var(--paper);border-radius:2px;transform-origin:center;box-shadow:0 50px 90px -28px rgba(20,21,28,.55),0 16px 40px -12px rgba(20,21,28,.4);transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s ease}
+.email-float-frame iframe{position:absolute;top:0;left:0;width:620px;border:0;transform-origin:top left;display:block}
+.email-float-tag{margin-top:20px;display:flex;justify-content:space-between;gap:12px;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.email-float-tag b{color:var(--white);font-weight:800}
+@media(hover:hover){.email-float:hover .email-float-frame{transform:translateY(-6px) scale(1.03);box-shadow:0 60px 110px -26px rgba(20,21,28,.6),0 22px 50px -10px rgba(20,21,28,.45)}}
+
+/* ============================= OUTCOME CHAIN ============================= */
+.chain{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:48px}
+.chain-item{padding:12px 18px;border:1px solid var(--line);border-radius:20px;font-size:.82rem;font-weight:700;color:var(--mist);background:rgba(255,249,244,.02);white-space:nowrap}
+.chain-arrow{color:var(--mint);font-size:1rem;font-weight:700}
+.chain-cta{margin-top:52px}
+.link-arrow{display:inline-flex;align-items:center;gap:.5em;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;color:var(--mint);border-bottom:1px solid var(--mint-line);padding-bottom:4px;transition:opacity .2s ease}
+.link-arrow:hover{opacity:.7}
+
+/* ============================= TIMELINE (system 03) ============================= */
+.timeline{display:flex;gap:0;margin-top:52px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.timeline-step{flex:1;min-width:150px;padding:22px 20px;border-right:1px solid var(--line-soft)}
+.timeline-step:last-child{border-right:0}
+.timeline-day{font-size:.68rem;font-weight:800;letter-spacing:.14em;color:var(--soft);text-transform:uppercase}
+.timeline-seg{margin-top:10px;font-family:var(--display);font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:-.01em}
+.timeline-step.is-active .timeline-seg{color:var(--mint)}
+.timeline-step.is-active{background:var(--mint-dim)}
+
+/* ============================= LADDER (system 02 signals) ============================= */
+.ladder{display:flex;flex-direction:column;gap:0;margin-top:20px}
+.ladder-rung{display:flex;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid var(--line-soft)}
+.ladder-rung:last-child{border-bottom:0}
+.ladder-num{font-size:.7rem;font-weight:800;color:var(--soft);width:26px;flex:none}
+.ladder-label{font-family:var(--display);font-size:1.02rem;font-weight:800;text-transform:uppercase;letter-spacing:-.01em}
+.ladder-rung.is-mint .ladder-label{color:var(--mint)}
+.ladder-rung .arrow-icon{color:var(--soft);margin-left:auto;font-size:.9rem}
+
+/* ============================= LOOP CHAIN ============================= */
+.loop{display:flex;flex-wrap:wrap;gap:10px 6px;align-items:center;margin-top:44px}
+.loop-item{padding:11px 16px;border:1px solid var(--mint-line);border-radius:20px;font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);background:var(--mint-dim);white-space:nowrap}
+.loop-arrow{color:var(--soft)}
+
+/* ============================= SUPPORTING EMAILS ============================= */
+.supporting-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(40px,6vw,10vw);margin-top:clamp(64px,8vw,100px)}
+.supporting-card{width:280px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.supporting-card:nth-child(1){margin-top:0}
+.supporting-card:nth-child(2){margin-top:56px}
+.supporting-card:nth-child(3){margin-top:14px}
+@media(max-width:900px){.supporting-card:nth-child(2),.supporting-card:nth-child(3){margin-top:0}}
+.supporting-card .email-float{max-width:280px}
+.supporting-card .email-float-frame iframe{width:620px}
+.supporting-logic{margin-top:22px}
+.supporting-logic-title{font-family:var(--display);font-size:.98rem;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:10px}
+.supporting-logic-flow{font-size:.78rem;color:var(--soft);line-height:1.7}
+.supporting-logic-flow b{color:var(--mist);font-weight:700}
+
+/* ============================= OPPORTUNITIES MAP ============================= */
+.stage-rail{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 8px}
+.stage-pill{padding:8px 16px;border:1px solid var(--line);border-radius:20px;font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.stage-pill.is-mint{color:var(--mint);border-color:var(--mint-line)}
+
+.opp-stage{margin-top:64px}
+.opp-stage-head{display:flex;align-items:baseline;gap:16px;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.opp-stage-num{font-size:.72rem;font-weight:800;color:var(--mint);letter-spacing:.1em}
+.opp-stage-name{font-family:var(--display);font-size:1.5rem;font-weight:900;text-transform:uppercase;letter-spacing:-.02em}
+.opp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:var(--line-soft)}
+.opp-card{background:var(--ink);padding:20px 22px;cursor:pointer;position:relative;transition:background .25s ease}
+.opp-card:hover,.opp-card.is-open{background:rgba(189,214,193,.055)}
+.opp-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.opp-card-num{font-size:.68rem;font-weight:800;color:var(--soft)}
+.opp-card-title{margin-top:8px;font-size:.98rem;font-weight:800;line-height:1.3}
+.opp-card-plus{font-size:1rem;color:var(--soft);transition:transform .25s ease,color .25s ease;flex:none}
+.opp-card.is-open .opp-card-plus{transform:rotate(45deg);color:var(--mint)}
+.opp-card-detail{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.opp-card.is-open .opp-card-detail{max-height:220px}
+.opp-detail-inner{padding-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.opp-detail-field{font-size:.7rem}
+.opp-detail-field span{display:block;color:var(--soft);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.6rem;margin-bottom:4px}
+.opp-detail-field b{font-weight:700;color:var(--mist);text-transform:none;letter-spacing:0;font-size:.78rem}
+
+/* ============================= INFRA ============================= */
+.infra-flow{display:flex;flex-wrap:wrap;gap:12px;margin-top:48px}
+.infra-node{padding:16px 22px;border:1px solid var(--line);border-radius:2px;font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--mist);background:rgba(255,249,244,.02)}
+.infra-node.is-mint{border-color:var(--mint-line);color:var(--mint);background:var(--mint-dim)}
+.infra-statement{margin-top:64px;padding-top:52px;border-top:1px solid var(--line)}
+
+/* ============================= CTA ============================= */
+.sec--cta{min-height:88vh;display:flex;align-items:center;text-align:center}
+.sec--cta .container{display:flex;flex-direction:column;align-items:center}
+.cta-actions{margin-top:52px;display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.cta-btn{
+  display:inline-flex;align-items:center;gap:.6em;
+  padding:18px 30px;border:1px solid var(--line);border-radius:2px;
+  font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--white);
+  transition:border-color .25s ease,color .25s ease,background .25s ease;
+}
+.cta-btn:hover{border-color:var(--mint);color:var(--mint)}
+.cta-btn--solid{background:var(--mint);color:var(--ink);border-color:var(--mint)}
+.cta-btn--solid:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
+.cta-foot{margin-top:80px;font-size:.7rem;color:var(--faint);letter-spacing:.06em}
+
+/* ============================= FOOTER ============================= */
+.site-foot{position:relative;z-index:2;padding:32px var(--edge) 44px;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.68rem;color:var(--faint);letter-spacing:.06em}
+
+/* ============================= UTIL ============================= */
+.mt-xxs{margin-top:8px}.mt-xs{margin-top:16px}.mt-sm{margin-top:24px}.mt-md{margin-top:40px}.mt-lg{margin-top:64px}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollBar"></div></div>
+<div class="chrome-scrim" id="chromeScrim"></div>
+<div class="chrome-tag" id="chromeTag">Blackvine ✕ Arenna Denver Padel<span>Denver, CO — Private Strategy Brief</span></div>
+<a class="chrome-cta" id="chromeCta" href="#cta">Talk to Us ↗</a>
+
+<div class="bg-system" aria-hidden="true">
+  <div class="bg-wordmark" id="bgWordmark">ARENNA</div>
+  <div class="bg-topglow"></div>
+  <div class="bg-vignette"></div>
+  <div class="bg-grain"></div>
+</div>
+
+<main>
+
+<!-- ============================= 01 OPENING PITCH ============================= -->
+<section class="sec sec--pitch" id="pitch">
+  <div class="container">
+    <div class="eyebrow reveal">Blackvine × Arenna</div>
+    <h1 class="h-hero mt-sm reveal" style="transition-delay:.05s">You already have the players.<br>Let's build the systems that make each one worth more.</h1>
+    <p class="body-copy mt-md reveal" style="max-width:660px;transition-delay:.15s">We analyzed Arenna's customer journey and identified opportunities to increase paid bookings, membership value, retention and reactivation using the customer behavior and credit system Arenna already has.</p>
+    <div class="pitch-stat reveal" style="transition-delay:.25s">
+      <div class="pitch-stat-num">20</div>
+      <div class="pitch-stat-label">Revenue opportunities identified inside Arenna's existing player base</div>
+    </div>
+    <div class="pitch-scroll reveal" style="transition-delay:.35s">
+      <span class="scroll-cue">Scroll to explore <span class="arrow">↓</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 02 REFRAME ============================= -->
+<section class="sec" id="reframe">
+  <div class="container center" style="max-width:760px">
+    <h2 class="h-xl reveal">This isn't an email redesign.</h2>
+    <p class="body-copy mt-md reveal" style="transition-delay:.1s">Emails are only what the customer sees.<br>The revenue system lives underneath them.</p>
+
+    <div class="pipeline mt-lg" id="pipeline">
+      <div class="pipeline-node reveal">Behavior</div>
+      <div class="pipeline-connector"></div>
+      <div class="pipeline-node reveal">Trigger</div>
+      <div class="pipeline-connector"></div>
+      <div class="pipeline-node reveal">Segment</div>
+      <div class="pipeline-connector"></div>
+      <div class="pipeline-node reveal">Automation</div>
+      <div class="pipeline-connector"></div>
+      <div class="pipeline-node reveal">Offer</div>
+      <div class="pipeline-connector pipeline-connector--mint"></div>
+      <div class="pipeline-node is-mint reveal">Conversion</div>
+      <div class="pipeline-connector pipeline-connector--mint"></div>
+      <div class="pipeline-node is-mint reveal">Next Segment</div>
+    </div>
+
+    <p class="pipeline-note reveal">Here's what that could look like inside Arenna.</p>
+  </div>
+</section>
+
+<!-- ============================= 03 HERO SYSTEM 01 — ACTIVATION ============================= -->
+<section class="sec sec--system" id="system-01">
+  <div class="container">
+    <div class="system-head">
+      <div class="eyebrow reveal">01 / Activation Engine</div>
+      <h2 class="h-xl mt-sm reveal" style="transition-delay:.05s">Turn a free intro into the start of a paid playing habit.</h2>
+    </div>
+
+    <div class="system-grid">
+      <div class="system-grid-email reveal">
+        <span class="wf-col-label">What the Member Sees</span>
+        <div class="email-float">
+          <div class="email-float-frame">
+            <iframe src="/arenna-denver-padel/emails/01-first-rally-plan.html" title="Email — The Rally Doesn't Stop Here." loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="email-float-tag"><span>Email 01</span><b>The Rally Doesn't Stop Here.</b></div>
+      </div>
+
+      <div class="system-grid-wf reveal" style="transition-delay:.12s">
+        <span class="wf-col-label">What Blackvine Builds Behind It</span>
+        <div class="wf-diagram-frame">
+        <svg class="wf-diagram" viewBox="0 0 480 800" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="fcArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="rgba(255,249,244,.55)"/></marker>
+            <marker id="fcArrowMint" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#BDD6C1"/></marker>
+          </defs>
+
+          <!-- trunk connectors -->
+          <path class="fc-line" d="M134,50 L134,62" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,96 L134,108" marker-end="url(#fcArrow)"/>
+          <path class="fc-line fc-line--mint" d="M134,142 L134,154" marker-end="url(#fcArrowMint)"/>
+          <path class="fc-line" d="M134,188 L134,200" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,234 L134,249" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,311 L134,336" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,370 L134,382" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,416 L134,429" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,491 L134,516" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,550 L134,562" marker-end="url(#fcArrow)"/>
+          <path class="fc-line" d="M134,596 L134,609" marker-end="url(#fcArrow)"/>
+          <path class="fc-line fc-line--mint" d="M134,671 L134,696" marker-end="url(#fcArrowMint)"/>
+          <path class="fc-line" d="M134,730 L134,742" marker-end="url(#fcArrow)"/>
+
+          <!-- YES branches reconnecting into shared buyer path -->
+          <path class="fc-line fc-line--mint" d="M165,280 L372,280 L372,640" marker-end="url(#fcArrowMint)"/>
+          <path class="fc-line fc-line--mint" d="M165,460 L372,460"/>
+          <path class="fc-line fc-line--mint" d="M165,640 L372,640"/>
+          <path class="fc-line fc-line--mint" d="M372,674 L372,696" marker-end="url(#fcArrowMint)"/>
+          <path class="fc-line fc-line--mint" d="M372,730 L372,742" marker-end="url(#fcArrowMint)"/>
+
+          <!-- branch labels -->
+          <text x="107" y="327" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="272" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="507" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="452" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="687" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="632" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+
+          <!-- 1 start -->
+          <rect class="fc-rect fc-rect--start" x="50" y="16" width="168" height="34" rx="17"/>
+          <foreignObject x="50" y="16" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Free Intro Completed</div></foreignObject>
+          <!-- 2 -->
+          <rect class="fc-rect" x="50" y="62" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="62" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Intro Clinic Marked Complete</div></foreignObject>
+          <!-- 3 mint -->
+          <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="108" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="108" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: No Second Booking</div></foreignObject>
+          <!-- 4 -->
+          <rect class="fc-rect" x="50" y="154" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="154" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Start First Rally Ladder</div></foreignObject>
+          <!-- 5 email -->
+          <rect class="fc-rect fc-rect--email" x="50" y="200" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="200" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send First Rally Plan</div></foreignObject>
+
+          <!-- decision 1 -->
+          <rect class="fc-diamond" x="112" y="258" width="44" height="44" transform="rotate(45 134 280)"/>
+          <foreignObject x="117" y="263" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
+
+          <!-- 6 wait -->
+          <rect class="fc-rect fc-rect--wait" x="50" y="336" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="336" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <!-- 7 email -->
+          <rect class="fc-rect fc-rect--email" x="50" y="382" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="382" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Education Email</div></foreignObject>
+
+          <!-- decision 2 -->
+          <rect class="fc-diamond" x="112" y="438" width="44" height="44" transform="rotate(45 134 460)"/>
+          <foreignObject x="117" y="443" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
+
+          <!-- 8 wait -->
+          <rect class="fc-rect fc-rect--wait" x="50" y="516" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="516" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <!-- 9 email -->
+          <rect class="fc-rect fc-rect--email" x="50" y="562" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="562" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Stronger Incentive</div></foreignObject>
+
+          <!-- decision 3 -->
+          <rect class="fc-diamond" x="112" y="618" width="44" height="44" transform="rotate(45 134 640)"/>
+          <foreignObject x="117" y="623" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
+
+          <!-- 10 mint -->
+          <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="696" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="696" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: Intro Nurture</div></foreignObject>
+          <!-- 11 -->
+          <rect class="fc-rect" x="50" y="742" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="742" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Cooldown → Future Journey</div></foreignObject>
+
+          <!-- shared buyer path -->
+          <rect class="fc-rect fc-rect--email" x="288" y="640" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="640" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Confirmation</div></foreignObject>
+          <rect class="fc-rect fc-rect--mint fc-glow" x="288" y="696" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="696" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: First Paid Player</div></foreignObject>
+          <a href="#system-02">
+            <rect class="fc-rect fc-rect--mint fc-glow" x="288" y="742" width="168" height="34" rx="3"/>
+            <foreignObject x="288" y="742" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Enter Progression Journey ↗</div></foreignObject>
+          </a>
+        </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 04 SYSTEM 01 OUTCOME ============================= -->
+<section class="sec" id="outcome-01">
+  <div class="container center" style="max-width:900px">
+    <h2 class="h-lg reveal">One free intro can create multiple revenue opportunities.</h2>
+    <div class="chain reveal" style="justify-content:center;transition-delay:.1s">
+      <span class="chain-item">Free intro</span><span class="chain-arrow">→</span>
+      <span class="chain-item">First paid session</span><span class="chain-arrow">→</span>
+      <span class="chain-item">Coaching</span><span class="chain-arrow">→</span>
+      <span class="chain-item">Progression</span><span class="chain-arrow">→</span>
+      <span class="chain-item">Recurring play</span><span class="chain-arrow">→</span>
+      <span class="chain-item">Membership</span><span class="chain-arrow">→</span>
+      <span class="chain-item">Higher lifetime value</span>
+    </div>
+    <p class="body-copy mt-lg reveal center" style="max-width:600px;transition-delay:.15s">The player doesn't disappear when a workflow ends. Their segment changes — and that segment enrolls them into the next appropriate revenue journey.</p>
+    <div class="chain-cta reveal" style="transition-delay:.2s">
+      <a href="#system-02" class="link-arrow">See the Expansion Engine ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 05 HERO SYSTEM 02 — EXPANSION ============================= -->
+<section class="sec sec--system" id="system-02">
+  <div class="container">
+    <div class="system-head">
+      <div class="eyebrow reveal">02 / Expansion Engine</div>
+      <h2 class="h-xl mt-sm reveal" style="transition-delay:.05s">Let player behavior tell you when it's time to upgrade.</h2>
+      <p class="body-copy reveal" style="transition-delay:.1s">Arenna's credit and booking behavior becomes the signal for the next-best membership recommendation.</p>
+    </div>
+
+    <div class="ladder reveal" style="transition-delay:.15s;max-width:640px">
+      <div class="ladder-rung"><span class="ladder-num">01</span><span class="ladder-label">Credits Used</span></div>
+      <div class="ladder-rung"><span class="ladder-num">02</span><span class="ladder-label">Credits Remaining</span></div>
+      <div class="ladder-rung"><span class="ladder-num">03</span><span class="ladder-label">Booking Frequency</span></div>
+      <div class="ladder-rung"><span class="ladder-num">04</span><span class="ladder-label">Booking-Window Behavior</span></div>
+      <div class="ladder-rung"><span class="ladder-num">05</span><span class="ladder-label">Court Usage</span></div>
+      <div class="ladder-rung"><span class="ladder-num">06</span><span class="ladder-label">Programs &amp; Clinics</span></div>
+      <div class="ladder-rung"><span class="ladder-num">07</span><span class="ladder-label">Events &amp; Household Behavior</span></div>
+      <div class="ladder-rung is-mint"><span class="ladder-num">08</span><span class="ladder-label">Upgrade Candidate</span></div>
+    </div>
+
+    <div class="system-grid system-grid--reverse">
+      <div class="system-grid-wf reveal">
+        <span class="wf-col-label">What Blackvine Builds Behind It</span>
+        <div class="wf-diagram-frame">
+        <svg class="wf-diagram" viewBox="0 0 480 850" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="fcArrow2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="rgba(255,249,244,.55)"/></marker>
+            <marker id="fcArrowMint2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#BDD6C1"/></marker>
+          </defs>
+
+          <path class="fc-line" d="M134,50 L134,62" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,96 L134,108" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line fc-line--mint" d="M134,142 L134,154" marker-end="url(#fcArrowMint2)"/>
+          <path class="fc-line" d="M134,188 L134,200" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,234 L134,246" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,280 L134,294" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,356 L134,381" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,415 L134,427" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,461 L134,475" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,537 L134,562" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,596 L134,608" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line" d="M134,642 L134,656" marker-end="url(#fcArrow2)"/>
+          <path class="fc-line fc-line--mint" d="M134,718 L134,743" marker-end="url(#fcArrowMint2)"/>
+          <path class="fc-line" d="M134,777 L134,789" marker-end="url(#fcArrow2)"/>
+
+          <path class="fc-line fc-line--mint" d="M165,325 L372,325 L372,697" marker-end="url(#fcArrowMint2)"/>
+          <path class="fc-line fc-line--mint" d="M165,506 L372,506"/>
+          <path class="fc-line fc-line--mint" d="M165,687 L372,687"/>
+          <path class="fc-line fc-line--mint" d="M372,731 L372,743" marker-end="url(#fcArrowMint2)"/>
+
+          <text x="107" y="369" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="317" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="550" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="498" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="731" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="679" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+
+          <rect class="fc-rect fc-rect--start" x="50" y="16" width="168" height="34" rx="17"/>
+          <foreignObject x="50" y="16" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Player Activity Changes</div></foreignObject>
+          <rect class="fc-rect" x="50" y="62" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="62" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Evaluate Credits &amp; Booking Behavior</div></foreignObject>
+          <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="108" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="108" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: Upgrade Candidate</div></foreignObject>
+          <rect class="fc-rect" x="50" y="154" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="154" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Select Recommended Plan</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="200" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="200" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Membership Optimizer</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="303" width="44" height="44" transform="rotate(45 134 325)"/>
+          <foreignObject x="117" y="308" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--wait" x="50" y="381" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="381" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="427" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="427" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Value Breakdown</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="484" width="44" height="44" transform="rotate(45 134 506)"/>
+          <foreignObject x="117" y="489" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade yet?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--wait" x="50" y="562" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="562" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <rect class="fc-rect fc-rect--email" x="50" y="608" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="608" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Final Reminder</div></foreignObject>
+
+          <rect class="fc-diamond" x="112" y="665" width="44" height="44" transform="rotate(45 134 687)"/>
+          <foreignObject x="117" y="670" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Upgrade yet?</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="743" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="743" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: Current Plan Nurture</div></foreignObject>
+          <rect class="fc-rect" x="50" y="789" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="789" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Return to Standard Journey</div></foreignObject>
+
+          <rect class="fc-rect fc-rect--email" x="288" y="697" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="697" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Confirmation</div></foreignObject>
+          <rect class="fc-rect fc-rect--mint fc-glow" x="288" y="743" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="743" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: Higher-Value Member</div></foreignObject>
+        </svg>
+        </div>
+        <p class="body-copy--sm mt-xs" style="max-width:340px">Based on how you already play, this plan may fit you better.</p>
+      </div>
+
+      <div class="system-grid-email reveal" style="transition-delay:.1s">
+        <span class="wf-col-label">What the Member Sees</span>
+        <div class="email-float">
+          <div class="email-float-frame">
+            <iframe src="/arenna-denver-padel/emails/02-membership-optimizer.html" title="Email — You're Already Playing Like an Active Member." loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="email-float-tag"><span>Email 02</span><b>You're Already Playing Like an Active Member.</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 06 HERO SYSTEM 03 — RETENTION ============================= -->
+<section class="sec sec--system" id="system-03">
+  <div class="container">
+    <div class="system-head">
+      <div class="eyebrow reveal">03 / Retention Engine</div>
+      <h2 class="h-xl mt-sm reveal" style="transition-delay:.05s">Turn unused value into the next booking before it becomes churn.</h2>
+    </div>
+
+    <div class="timeline reveal" style="transition-delay:.1s">
+      <div class="timeline-step"><div class="timeline-day">Active</div><div class="timeline-seg">—</div></div>
+      <div class="timeline-step"><div class="timeline-day">14 Days</div><div class="timeline-seg">Declining Activity</div></div>
+      <div class="timeline-step is-active"><div class="timeline-day">30 Days</div><div class="timeline-seg">At-Risk Player</div></div>
+      <div class="timeline-step"><div class="timeline-day">60+ Days</div><div class="timeline-seg">Reactivation Eligible</div></div>
+    </div>
+    <p class="body-copy--sm mt-xs reveal" style="transition-delay:.15s">Zooming into the 30-day trigger point below.</p>
+
+    <div class="system-grid mt-lg">
+      <div class="system-grid-email reveal">
+        <span class="wf-col-label">What the Member Sees</span>
+        <div class="email-float">
+          <div class="email-float-frame">
+            <iframe src="/arenna-denver-padel/emails/03-credit-to-play.html" title="Email — You Already Have Value Sitting in Your Account." loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="email-float-tag"><span>Email 03</span><b>You Already Have Value Sitting in Your Account.</b></div>
+      </div>
+
+      <div class="system-grid-wf reveal" style="transition-delay:.1s">
+        <span class="wf-col-label">What Blackvine Builds Behind It</span>
+        <div class="wf-diagram-frame">
+        <svg class="wf-diagram" viewBox="0 0 480 630" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="fcArrow3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="rgba(255,249,244,.55)"/></marker>
+            <marker id="fcArrowMint3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#BDD6C1"/></marker>
+          </defs>
+
+          <!-- trunk connectors -->
+          <path class="fc-line" d="M134,50 L134,62" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line fc-line--mint" d="M134,96 L134,108" marker-end="url(#fcArrowMint3)"/>
+          <path class="fc-line" d="M134,142 L134,154" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,188 L134,200" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,234 L134,258" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,302 L134,336" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,370 L134,382" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line" d="M134,416 L134,438" marker-end="url(#fcArrow3)"/>
+          <path class="fc-line fc-line--mint" d="M134,482 L134,516" marker-end="url(#fcArrowMint3)"/>
+          <path class="fc-line fc-line--mint" d="M134,550 L134,562" marker-end="url(#fcArrowMint3)"/>
+
+          <!-- YES branches reconnecting into shared buyer path -->
+          <path class="fc-line fc-line--mint" d="M165,280 L372,280 L372,460" marker-end="url(#fcArrowMint3)"/>
+          <path class="fc-line fc-line--mint" d="M165,460 L372,460"/>
+          <path class="fc-line fc-line--mint" d="M372,494 L372,516" marker-end="url(#fcArrowMint3)"/>
+
+          <!-- branch labels -->
+          <text x="107" y="327" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="272" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+          <text x="107" y="507" text-anchor="middle" class="fc-branch-label fc-branch-label--no">NO</text>
+          <text x="250" y="452" text-anchor="middle" class="fc-branch-label fc-branch-label--yes">YES</text>
+
+          <!-- 1 start -->
+          <rect class="fc-rect fc-rect--start" x="50" y="16" width="168" height="34" rx="17"/>
+          <foreignObject x="50" y="16" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Declining Activity / Unused Credits</div></foreignObject>
+          <!-- 2 mint -->
+          <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="62" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="62" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: At-Risk Player</div></foreignObject>
+          <!-- 3 -->
+          <rect class="fc-rect" x="50" y="108" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="108" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Build Play Recommendations</div></foreignObject>
+          <!-- 4 email -->
+          <rect class="fc-rect fc-rect--email" x="50" y="154" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="154" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Build My Play Plan</div></foreignObject>
+
+          <!-- decision 1 -->
+          <rect class="fc-diamond" x="112" y="258" width="44" height="44" transform="rotate(45 134 280)"/>
+          <foreignObject x="117" y="263" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Did they book?</div></foreignObject>
+
+          <!-- 5 wait -->
+          <rect class="fc-rect fc-rect--wait" x="50" y="336" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="336" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--soft">Wait 3–5 Days</div></foreignObject>
+          <!-- 6 email -->
+          <rect class="fc-rect fc-rect--email" x="50" y="382" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="382" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Second Recommendation</div></foreignObject>
+
+          <!-- decision 2 -->
+          <rect class="fc-diamond" x="112" y="438" width="44" height="44" transform="rotate(45 134 460)"/>
+          <foreignObject x="117" y="443" width="34" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-diamond-label">Book yet?</div></foreignObject>
+
+          <!-- 7 mint -->
+          <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="516" width="168" height="34" rx="3"/>
+          <foreignObject x="50" y="516" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: Reactivation Eligible</div></foreignObject>
+          <a href="#supporting">
+            <rect class="fc-rect fc-rect--mint fc-glow" x="50" y="562" width="168" height="34" rx="3"/>
+            <foreignObject x="50" y="562" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Enter Back In The Arenna ↗</div></foreignObject>
+          </a>
+
+          <!-- shared buyer path -->
+          <rect class="fc-rect fc-rect--email" x="288" y="460" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="460" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label">Send Confirmation</div></foreignObject>
+          <rect class="fc-rect fc-rect--mint fc-glow" x="288" y="516" width="168" height="34" rx="3"/>
+          <foreignObject x="288" y="516" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Move to: Active Player</div></foreignObject>
+          <a href="#system-02">
+            <rect class="fc-rect fc-rect--mint fc-glow" x="288" y="562" width="168" height="34" rx="3"/>
+            <foreignObject x="288" y="562" width="168" height="34"><div xmlns="http://www.w3.org/1999/xhtml" class="fc-label fc-label--mint">Re-Enter Expansion Engine ↗</div></foreignObject>
+          </a>
+        </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-lg reveal">
+      <div class="eyebrow eyebrow--mist">The lifecycle loop</div>
+      <div class="loop mt-xs">
+        <span class="loop-item">Expansion</span><span class="loop-arrow">→</span>
+        <span class="loop-item">Retention</span><span class="loop-arrow">→</span>
+        <span class="loop-item">Inactivity Watch</span><span class="loop-arrow">→</span>
+        <span class="loop-item">Reactivation</span><span class="loop-arrow">→</span>
+        <span class="loop-item">Expansion ↺</span>
+      </div>
+      <p class="body-copy--sm mt-sm" style="max-width:560px">These aren't three separate campaigns. They're one interconnected system that keeps every player in motion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 07 SUPPORTING EXAMPLES ============================= -->
+<section class="sec" id="supporting">
+  <div class="container center">
+    <h2 class="h-xl reveal">Those are three systems.<br><span class="mint">We found twenty.</span></h2>
+    <p class="body-copy mt-md reveal" style="max-width:600px;margin-left:auto;margin-right:auto;transition-delay:.08s">The same infrastructure creates dozens of smaller revenue moments across the player lifecycle. Three more, below.</p>
+
+    <div class="supporting-grid">
+      <div class="supporting-card reveal">
+        <div class="email-float">
+          <div class="email-float-frame"><iframe src="/arenna-denver-padel/emails/04-back-in-the-arenna.html" title="Email — Your Comeback Session Is Ready." loading="lazy"></iframe></div>
+        </div>
+        <div class="supporting-logic">
+          <div class="supporting-logic-title">Reactivation</div>
+          <div class="supporting-logic-flow"><b>Your Comeback Session Is Ready.</b><br>Inactive player → reactivation segment → comeback experience → return booking</div>
+        </div>
+      </div>
+
+      <div class="supporting-card reveal" style="transition-delay:.1s">
+        <div class="email-float">
+          <div class="email-float-frame"><iframe src="/arenna-denver-padel/emails/05-household-expansion.html" title="Email — Padel Is Better When the Whole House Plays." loading="lazy"></iframe></div>
+        </div>
+        <div class="supporting-logic">
+          <div class="supporting-logic-title">Household Expansion</div>
+          <div class="supporting-logic-flow"><b>Padel Is Better When the Whole House Plays.</b><br>Active member → household opportunity → household membership recommendation → additional recurring revenue</div>
+        </div>
+      </div>
+
+      <div class="supporting-card reveal" style="transition-delay:.18s">
+        <div class="email-float">
+          <div class="email-float-frame"><iframe src="/arenna-denver-padel/emails/06-next-90-days.html" title="Email — Your Next 90 Days of Padel." loading="lazy"></iframe></div>
+        </div>
+        <div class="supporting-logic">
+          <div class="supporting-logic-title">90-Day Progression</div>
+          <div class="supporting-logic-flow"><b>Your Next 90 Days of Padel.</b><br>Active player → 90-day progression offer → recurring bookings, coaching &amp; events → stronger retention</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 08 TWENTY OPPORTUNITIES ============================= -->
+<section class="sec" id="opportunities">
+  <div class="container">
+    <div class="eyebrow reveal">The Full Map</div>
+    <h2 class="h-xl mt-sm reveal" style="transition-delay:.05s">20 revenue opportunities inside the player lifecycle.</h2>
+    <p class="body-copy mt-md reveal" style="max-width:640px;transition-delay:.1s">Every stage of the Arenna member journey already produces the behavioral data a system like this needs. Tap any opportunity for how it would trigger.</p>
+
+    <div class="stage-rail reveal mt-md" style="transition-delay:.12s">
+      <span class="stage-pill">Acquire</span><span class="stage-pill">Activate</span><span class="stage-pill">Expand</span><span class="stage-pill">Retain</span><span class="stage-pill">Reactivate</span>
+    </div>
+
+    <div class="opp-stage reveal">
+      <div class="opp-stage-head"><span class="opp-stage-num">01 → 04</span><span class="opp-stage-name">Acquire</span></div>
+      <div class="opp-grid">
+        <div class="opp-card" data-trigger="Free intro clinic booked, no purchase yet" data-segment="Intro Booked — Pre-Conversion" data-channels="Email + SMS" data-objective="Convert booked intros into first bookings">
+          <div class="opp-card-top"><span class="opp-card-num">01</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Free Intro conversion</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Membership inquiry submitted, no response in 24–48h" data-segment="Inquiry — No Response" data-channels="Email + SMS" data-objective="Recover stalled sign-ups">
+          <div class="opp-card-top"><span class="opp-card-num">02</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Trial / inquiry follow-up</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Active member books a guest into open play" data-segment="Active Member — Guest Host" data-channels="Email" data-objective="Turn member guests into new players">
+          <div class="opp-card-top"><span class="opp-card-num">03</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Bring-a-friend acquisition</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Corporate or group event inquiry submitted" data-segment="Corporate Prospect" data-channels="Email" data-objective="Convert one-off events into standing accounts">
+          <div class="opp-card-top"><span class="opp-card-num">04</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Corporate / group event acquisition</div>
+          <div class="opp-card-detail"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="opp-stage reveal">
+      <div class="opp-stage-head"><span class="opp-stage-num">05 → 08</span><span class="opp-stage-name">Activate</span></div>
+      <div class="opp-grid">
+        <div class="opp-card" data-trigger="Free intro clinic marked complete" data-segment="Free Intro Complete — No Second Booking" data-channels="Email" data-objective="Convert a free intro into a paid playing habit">
+          <div class="opp-card-top"><span class="opp-card-num">05</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">First Rally Plan</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Free intro complete, no second booking in 5–7 days" data-segment="Intro — Stalled" data-channels="Email + SMS" data-objective="Get the second booking on the calendar">
+          <div class="opp-card-top"><span class="opp-card-num">06</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">No-second-booking rescue</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="First paid session attended" data-segment="Level Assessed" data-channels="Email" data-objective="Capture player level for personalization">
+          <div class="opp-card-top"><span class="opp-card-num">07</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Player-level onboarding</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Player level captured" data-segment="Level Captured — Ready" data-channels="Email" data-objective="Point new players to the right next session">
+          <div class="opp-card-top"><span class="opp-card-num">08</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">First paid session recommendation</div>
+          <div class="opp-card-detail"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="opp-stage reveal">
+      <div class="opp-stage-head"><span class="opp-stage-num">09 → 18</span><span class="opp-stage-name">Expand</span></div>
+      <div class="opp-grid">
+        <div class="opp-card" data-trigger="Credit usage and booking behavior shift" data-segment="Upgrade Candidate" data-channels="Email" data-objective="Recommend the membership tier that fits how they play">
+          <div class="opp-card-top"><span class="opp-card-num">09</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Personal Membership Optimizer</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Social-tier player books at Active-tier frequency" data-segment="Social — Active-Level Usage" data-channels="Email" data-objective="Move high-usage Social members onto Active">
+          <div class="opp-card-top"><span class="opp-card-num">10</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Social → Active upgrade</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Active-tier player nears credit ceiling monthly" data-segment="Active — Elite-Level Usage" data-channels="Email" data-objective="Move top players onto Elite">
+          <div class="opp-card-top"><span class="opp-card-num">11</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Active → Elite upgrade</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Monthly member reaches 6+ consecutive months" data-segment="Monthly — Annual Candidate" data-channels="Email" data-objective="Convert monthly members onto annual value">
+          <div class="opp-card-top"><span class="opp-card-num">12</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Monthly → Annual conversion</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Repeated clinic or open-play attendance" data-segment="Clinic Regular" data-channels="Email" data-objective="Convert group play into 1:1 coaching revenue">
+          <div class="opp-card-top"><span class="opp-card-num">13</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Private coaching upsell</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Clinic series completed" data-segment="Ready for Next Level" data-channels="Email" data-objective="Keep players moving up the skill ladder">
+          <div class="opp-card-top"><span class="opp-card-num">14</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Program / clinic progression</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Player level reaches event-eligible" data-segment="Event Ready" data-channels="Email + SMS" data-objective="Move players into recurring event revenue">
+          <div class="opp-card-top"><span class="opp-card-num">15</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Event / tournament progression</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Repeated bookings with the same household guest" data-segment="Household Opportunity" data-channels="Email" data-objective="Add household members onto the membership">
+          <div class="opp-card-top"><span class="opp-card-num">16</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Household expansion</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Player level captured + rental court usage" data-segment="Equipment-Ready" data-channels="Email" data-objective="Capture pro-shop and equipment revenue">
+          <div class="opp-card-top"><span class="opp-card-num">17</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Pro-shop / equipment cross-sell</div>
+          <div class="opp-card-detail"></div>
+        </div>
+        <div class="opp-card" data-trigger="Active player with no structured plan on file" data-segment="Progression Candidate" data-channels="Email" data-objective="Turn one-off play into a structured 90-day habit">
+          <div class="opp-card-top"><span class="opp-card-num">18</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">90-Day Padel Plan</div>
+          <div class="opp-card-detail"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="opp-stage reveal">
+      <div class="opp-stage-head"><span class="opp-stage-num">19</span><span class="opp-stage-name">Retain</span></div>
+      <div class="opp-grid">
+        <div class="opp-card" data-trigger="Credits sitting unused or booking frequency declines" data-segment="At-Risk Player" data-channels="Email" data-objective="Turn unused value into the next booking before it becomes churn">
+          <div class="opp-card-top"><span class="opp-card-num">19</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Credit-to-Play Retention Engine</div>
+          <div class="opp-card-detail"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="opp-stage reveal">
+      <div class="opp-stage-head"><span class="opp-stage-num">20</span><span class="opp-stage-name">Reactivate</span></div>
+      <div class="opp-grid">
+        <div class="opp-card" data-trigger="30 / 60 / 90-day inactivity threshold reached" data-segment="Comeback Eligible → Lapsed" data-channels="Email + SMS" data-objective="Recover revenue without paid re-acquisition">
+          <div class="opp-card-top"><span class="opp-card-num">20</span><span class="opp-card-plus">+</span></div>
+          <div class="opp-card-title">Back In The Arenna reactivation / win-back</div>
+          <div class="opp-card-detail"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 09 INFRASTRUCTURE ============================= -->
+<section class="sec" id="infrastructure">
+  <div class="container">
+    <h2 class="h-xl reveal">We don't just create the offer.<br><span class="mint">We build the infrastructure that knows when to deliver it.</span></h2>
+    <div class="infra-flow mt-lg reveal" style="transition-delay:.1s">
+      <span class="infra-node is-mint">CRM</span>
+      <span class="infra-node is-mint">Segmentation</span>
+      <span class="infra-node is-mint">Behavioral Triggers</span>
+      <span class="infra-node">Email</span>
+      <span class="infra-node">SMS</span>
+      <span class="infra-node">Automations</span>
+      <span class="infra-node">Personalization</span>
+      <span class="infra-node">Reporting</span>
+    </div>
+    <div class="infra-statement reveal">
+      <p class="body-copy" style="max-width:680px">Blackvine isn't selling email design. We're building the revenue infrastructure underneath the player lifecycle — the part Arenna members never see, and the part that decides how much each player is worth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 10 CTA ============================= -->
+<section class="sec sec--cta" id="cta">
+  <div class="container">
+    <div class="eyebrow reveal center">Blackvine × Arenna</div>
+    <h2 class="h-hero mt-sm reveal center" style="transition-delay:.05s">Want us to build it?</h2>
+    <p class="body-copy mt-md reveal center" style="max-width:520px;transition-delay:.1s">We've already mapped the opportunity. If you'd like to talk through what implementation could look like, reach out directly.</p>
+    <div class="cta-actions reveal" style="transition-delay:.15s">
+      <a class="cta-btn cta-btn--solid" href="mailto:eli@blackvine.media">Email Us ↗</a>
+      <a class="cta-btn" href="tel:+17209007284">Call Us ↗</a>
+      <a class="cta-btn" href="sms:+17209007284">Text Us ↗</a>
+    </div>
+    <div class="cta-foot reveal" style="transition-delay:.2s">Prepared privately for Arenna Denver Padel — Denver, CO. Not for distribution.</div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <span>Blackvine Media</span>
+  <span>Private strategy brief — Arenna Denver Padel, Denver CO</span>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var revealEls = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.14, rootMargin:'0px 0px -6% 0px'});
+  revealEls.forEach(function(el){ io.observe(el); });
+
+  var pipeline = document.getElementById('pipeline');
+  if(pipeline){
+    var pio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ pipeline.classList.add('is-in'); pio.unobserve(pipeline); } });
+    }, {threshold:.3});
+    pio.observe(pipeline);
+  }
+
+  var chromeTag = document.getElementById('chromeTag');
+  var chromeCta = document.getElementById('chromeCta');
+  var chromeScrim = document.getElementById('chromeScrim');
+  var pitch = document.getElementById('pitch');
+  if(pitch && chromeTag && chromeCta){
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var show = !e.isIntersecting;
+        chromeTag.classList.toggle('is-visible', show);
+        chromeCta.classList.toggle('is-visible', show);
+        if(chromeScrim) chromeScrim.classList.toggle('is-visible', show);
+      });
+    }, {threshold:0});
+    cio.observe(pitch);
+  }
+
+  var bar = document.getElementById('scrollBar');
+  var wordmark = document.getElementById('bgWordmark');
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var doc = document.documentElement;
+      var scrollTop = window.scrollY || doc.scrollTop;
+      var max = doc.scrollHeight - doc.clientHeight;
+      var pct = max > 0 ? (scrollTop / max) * 100 : 0;
+      if(bar) bar.style.width = pct + '%';
+      if(wordmark) wordmark.style.transform = 'translate(-50%,-50%) rotate(-2deg) translateY(' + (scrollTop * 0.02) + 'px)';
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var ctaSec = document.getElementById('cta');
+  if(ctaSec){
+    var ctaIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ document.body.classList.toggle('cta-in-view', e.isIntersecting); });
+    }, {threshold:.35});
+    ctaIo.observe(ctaSec);
+  }
+
+  document.querySelectorAll('.opp-card').forEach(function(card){
+    var detail = card.querySelector('.opp-card-detail');
+    if(detail){
+      detail.innerHTML = '<div class="opp-detail-inner">' +
+        '<div class="opp-detail-field"><span>● What Happens</span><b>' + card.dataset.trigger + '</b></div>' +
+        '<div class="opp-detail-field"><span>➤ Moves To</span><b>' + card.dataset.segment + '</b></div>' +
+        '<div class="opp-detail-field"><span>✉ Channels</span><b>' + card.dataset.channels + '</b></div>' +
+        '<div class="opp-detail-field"><span>Goal</span><b>' + card.dataset.objective + '</b></div>' +
+      '</div>';
+    }
+    card.addEventListener('click', function(){
+      card.classList.toggle('is-open');
+    });
+  });
+
+  function debounce(fn, wait){
+    var t;
+    return function(){
+      clearTimeout(t);
+      var args = arguments;
+      t = setTimeout(function(){ fn.apply(null, args); }, wait);
+    };
+  }
+
+  var DESIGN_WIDTH = 620;
+  function setupFrame(frame){
+    var iframe = frame.querySelector('iframe');
+    if(!iframe) return;
+    function applyScale(){
+      var w = frame.clientWidth;
+      var scale = w / DESIGN_WIDTH;
+      var naturalH = parseFloat(iframe.dataset.naturalHeight || '1480');
+      iframe.style.width = DESIGN_WIDTH + 'px';
+      iframe.style.height = naturalH + 'px';
+      iframe.style.transform = 'scale(' + scale + ')';
+      frame.style.height = Math.ceil(naturalH * scale) + 'px';
+    }
+    iframe.addEventListener('load', function(){
+      try{
+        var doc = iframe.contentDocument;
+        var h = Math.max(doc.documentElement.scrollHeight, doc.body.scrollHeight);
+        if(h) iframe.dataset.naturalHeight = h;
+      }catch(err){}
+      applyScale();
+    });
+    applyScale();
+    window.addEventListener('resize', debounce(applyScale, 150));
+  }
+  document.querySelectorAll('.email-float-frame').forEach(setupFrame);
+})();
+</script>
+</body>
+</html>
